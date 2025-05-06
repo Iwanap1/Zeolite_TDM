@@ -1,0 +1,1051 @@
+<full-text-retrieval-response xmlns="http://www.elsevier.com/xml/svapi/article/dtd" xmlns:bk="http://www.elsevier.com/xml/bk/dtd" xmlns:cals="http://www.elsevier.com/xml/common/cals/dtd" xmlns:ce="http://www.elsevier.com/xml/common/dtd" xmlns:ja="http://www.elsevier.com/xml/ja/dtd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:sa="http://www.elsevier.com/xml/common/struct-aff/dtd" xmlns:sb="http://www.elsevier.com/xml/common/struct-bib/dtd" xmlns:tb="http://www.elsevier.com/xml/common/table/dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xocs="http://www.elsevier.com/xml/xocs/dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><coredata><prism:url>https://api.elsevier.com/content/article/pii/S0167577X25005865</prism:url><dc:identifier>doi:10.1016/j.matlet.2025.138557</dc:identifier><eid>1-s2.0-S0167577X25005865</eid><prism:doi>10.1016/j.matlet.2025.138557</prism:doi><pii>S0167-577X(25)00586-5</pii><dc:title>Ultrafast and mesoporogen-free synthesis of hierarchical ZSM-5 zeolites </dc:title><prism:publicationName>Materials Letters</prism:publicationName><prism:aggregationType>Journal</prism:aggregationType><pubType>sco</pubType><prism:issn>0167577X</prism:issn><prism:volume>392</prism:volume><prism:startingPage>138557</prism:startingPage><prism:pageRange>138557</prism:pageRange><articleNumber>138557</articleNumber><dc:format>text/xml</dc:format><prism:coverDate>2025-08-01</prism:coverDate><prism:coverDisplayDate>1 August 2025</prism:coverDisplayDate><prism:copyright>© 2025 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.</prism:copyright><prism:publisher>Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.</prism:publisher><dc:creator>Ye, Feng</dc:creator><dc:creator>Fan, Shuanshi</dc:creator><dc:creator>Wang, Yanhong</dc:creator><dc:creator>Lang, Xuemei</dc:creator><dc:creator>Lv, Yihui</dc:creator><dc:creator>Chen, Weibo</dc:creator><dc:creator>Li, Gang</dc:creator><dc:description>
+                  The facile synthesis of hierarchical ZSM-5 zeolites without mesoporogens is highly desirable for industrial applications. In this study, hierarchical ZSM-5 zeolites with abundant mesopores and a nearly single-crystalline structure were rapidly synthesized in a mesoporogen-free system. Under conventional heating, the synthesis time was significantly reduced to just 15 min, significantly improving production efficiency. The key to this ultrafast process was the use of a tubular reactor, combined with the strategic selection of silicon and aluminum sources.
+               </dc:description><openaccess>0</openaccess><openaccessArticle>false</openaccessArticle><openaccessType/><openArchiveArticle>false</openArchiveArticle><openaccessSponsorName/><openaccessSponsorType/><openaccessUserLicense/><dcterms:subject>ZSM-5</dcterms:subject><dcterms:subject>Hierarchical zeolite</dcterms:subject><dcterms:subject>Ultrafast synthesis</dcterms:subject><dcterms:subject>Mesoporogen-free</dcterms:subject><link href="https://api.elsevier.com/content/article/pii/S0167577X25005865" rel="self"/><link href="https://www.sciencedirect.com/science/article/pii/S0167577X25005865" rel="scidir"/></coredata><objects><object ref="gr1" category="standard" type="IMAGE-DOWNSAMPLED" multimediatype="JPEG image file" mimetype="image/jpeg" width="711" height="611" size="169199">https://api.elsevier.com/content/object/eid/1-s2.0-S0167577X25005865-gr1.jpg?httpAccept=%2A%2F%2A</object><object ref="gr3" category="standard" type="IMAGE-DOWNSAMPLED" multimediatype="JPEG image file" mimetype="image/jpeg" width="624" height="309" size="55448">https://api.elsevier.com/content/object/eid/1-s2.0-S0167577X25005865-gr3.jpg?httpAccept=%2A%2F%2A</object><object ref="gr2" category="standard" type="IMAGE-DOWNSAMPLED" multimediatype="JPEG image file" mimetype="image/jpeg" width="625" height="296" size="52487">https://api.elsevier.com/content/object/eid/1-s2.0-S0167577X25005865-gr2.jpg?httpAccept=%2A%2F%2A</object><object ref="gr1" category="thumbnail" type="IMAGE-THUMBNAIL" multimediatype="GIF image file" mimetype="image/gif" width="191" height="164" size="26313">https://api.elsevier.com/content/object/eid/1-s2.0-S0167577X25005865-gr1.sml?httpAccept=%2A%2F%2A</object><object ref="gr3" category="thumbnail" type="IMAGE-THUMBNAIL" multimediatype="GIF image file" mimetype="image/gif" width="219" height="109" size="9508">https://api.elsevier.com/content/object/eid/1-s2.0-S0167577X25005865-gr3.sml?httpAccept=%2A%2F%2A</object><object ref="gr2" category="thumbnail" type="IMAGE-THUMBNAIL" multimediatype="GIF image file" mimetype="image/gif" width="219" height="104" size="8459">https://api.elsevier.com/content/object/eid/1-s2.0-S0167577X25005865-gr2.sml?httpAccept=%2A%2F%2A</object><object ref="gr1" category="high" type="IMAGE-HIGH-RES" multimediatype="JPEG image file" mimetype="image/jpeg" width="1890" height="1625" size="653121">https://api.elsevier.com/content/object/eid/1-s2.0-S0167577X25005865-gr1_lrg.jpg?httpAccept=%2A%2F%2A</object><object ref="gr3" category="high" type="IMAGE-HIGH-RES" multimediatype="JPEG image file" mimetype="image/jpeg" width="2762" height="1369" size="406541">https://api.elsevier.com/content/object/eid/1-s2.0-S0167577X25005865-gr3_lrg.jpg?httpAccept=%2A%2F%2A</object><object ref="gr2" category="high" type="IMAGE-HIGH-RES" multimediatype="JPEG image file" mimetype="image/jpeg" width="1700" height="806" size="170741">https://api.elsevier.com/content/object/eid/1-s2.0-S0167577X25005865-gr2_lrg.jpg?httpAccept=%2A%2F%2A</object><object ref="mmc1" category="standard" type="APPLICATION" multimediatype="Microsoft Word file" mimetype="application/word" size="35243">https://api.elsevier.com/content/object/eid/1-s2.0-S0167577X25005865-mmc1.docx?httpAccept=%2A%2F%2A</object></objects><scopus-id>105002247953</scopus-id><scopus-eid>2-s2.0-105002247953</scopus-eid><link href="https://api.elsevier.com/content/abstract/scopus_id/105002247953" rel="abstract"/><originalText><xocs:doc xsi:schemaLocation="http://www.elsevier.com/xml/xocs/dtd http://null/schema/dtds/document/fulltext/xcr/xocs-article.xsd"><xocs:meta xmlns:xoe="http://www.elsevier.com/xml/xoe/dtd">
+      <xocs:content-family>serial</xocs:content-family>
+      <xocs:content-type>JL</xocs:content-type>
+      <xocs:cid>271572</xocs:cid>
+      <xocs:ssids>
+         <xocs:ssid type="alllist">291210</xocs:ssid>
+         <xocs:ssid type="subj">291940</xocs:ssid>
+         <xocs:ssid type="content">31</xocs:ssid>
+      </xocs:ssids>
+      <xocs:srctitle>Materials Letters</xocs:srctitle>
+      <xocs:normalized-srctitle>MATERIALSLETTERS</xocs:normalized-srctitle>
+      <xocs:orig-load-date yyyymmdd="20250408">2025-04-08</xocs:orig-load-date>
+      <xocs:available-online-date yyyymmdd="20250408">2025-04-08</xocs:available-online-date>
+      <xocs:vor-load-date yyyymmdd="20250413">2025-04-13</xocs:vor-load-date>
+      <xocs:vor-available-online-date yyyymmdd="20250413">2025-04-13</xocs:vor-available-online-date>
+      <xocs:ew-transaction-id>2025-04-21T12:51:08</xocs:ew-transaction-id>
+      <xocs:eid>1-s2.0-S0167577X25005865</xocs:eid>
+      <xocs:pii-formatted>S0167-577X(25)00586-5</xocs:pii-formatted>
+      <xocs:pii-unformatted>S0167577X25005865</xocs:pii-unformatted>
+      <xocs:doi>10.1016/j.matlet.2025.138557</xocs:doi>
+      <xocs:item-stage>S300</xocs:item-stage>
+      <xocs:item-version-number>S300.1</xocs:item-version-number>
+      <xocs:item-weight>FULL-TEXT</xocs:item-weight>
+      <xocs:hub-eid>1-s2.0-S0167577X25X00112</xocs:hub-eid>
+      <xocs:timestamp yyyymmdd="20250421">2025-04-21T13:05:41.888332Z</xocs:timestamp>
+      <xocs:dco>0</xocs:dco>
+      <xocs:tomb>0</xocs:tomb>
+      <xocs:date-search-begin>20250801</xocs:date-search-begin>
+      <xocs:year-nav>2025</xocs:year-nav>
+      <xocs:indexeddate epoch="1744155561">2025-04-08T23:39:21.275157Z</xocs:indexeddate>
+      <xocs:articleinfo>articleinfo articlenumber articletitlenorm authfirstinitialnorm authfirstsurnamenorm cid cids contenttype copyright crossmark dateloaded dateloadedtxt datesearch datesort dateupdated dco docsubtype doctype doi eid ewtransactionid hubeid indexeddate issn issnnorm itemstage itemtransactionid itemweight openaccess openarchive pg pgfirst pii piinorm pubdatestart pubdatetxt pubyr sortorder srctitle srctitlenorm srctype ssids alllist content subj subheadings suppl tomb volfirst volissue volumelist webpdf webpdfpagecount yearnav figure table e-component body acknowledge affil appendices articletitle auth authfirstini authfull authkeywords authlast grantnumber grantsponsor grantsponsorid highlightsabst primabst ref</xocs:articleinfo>
+      <xocs:issns>
+         <xocs:issn-primary-formatted>0167-577X</xocs:issn-primary-formatted>
+         <xocs:issn-primary-unformatted>0167577X</xocs:issn-primary-unformatted>
+      </xocs:issns>
+      <xocs:crossmark is-crossmark="1">true</xocs:crossmark>
+      <xocs:vol-first>392</xocs:vol-first>
+      <xocs:volume-list>
+         <xocs:volume>392</xocs:volume>
+      </xocs:volume-list>
+      <xocs:suppl>C</xocs:suppl>
+      <xocs:vol-iss-suppl-text>Volume 392</xocs:vol-iss-suppl-text>
+      <xocs:sort-order>32</xocs:sort-order>
+      <xocs:first-fp>138557</xocs:first-fp>
+      <xocs:article-number>138557</xocs:article-number>
+      <xocs:pages>
+         <xocs:first-page>138557</xocs:first-page>
+      </xocs:pages>
+      <xocs:cover-date-orig>
+         <xocs:start-date>20250801</xocs:start-date>
+      </xocs:cover-date-orig>
+      <xocs:cover-date-text>1 August 2025</xocs:cover-date-text>
+      <xocs:cover-date-start>2025-08-01</xocs:cover-date-start>
+      <xocs:cover-date-year>2025</xocs:cover-date-year>
+      <xocs:document-type>article</xocs:document-type>
+      <xocs:document-subtype>sco</xocs:document-subtype>
+      <xocs:copyright-line>© 2025 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.</xocs:copyright-line>
+      <xocs:normalized-article-title>ULTRAFASTMESOPOROGENFREESYNTHESISHIERARCHICALZSM5ZEOLITES</xocs:normalized-article-title>
+      <xocs:normalized-first-auth-surname>YE</xocs:normalized-first-auth-surname>
+      <xocs:normalized-first-auth-initial>F</xocs:normalized-first-auth-initial>
+      <xocs:item-toc>
+         <xocs:item-toc-entry ref-elem="ce:sections">
+            <xocs:item-toc-label>1</xocs:item-toc-label>
+            <xocs:item-toc-section-title>Introduction</xocs:item-toc-section-title>
+         </xocs:item-toc-entry>
+         <xocs:item-toc-entry ref-elem="ce:sections">
+            <xocs:item-toc-label>2</xocs:item-toc-label>
+            <xocs:item-toc-section-title>Experimental</xocs:item-toc-section-title>
+            <xocs:item-toc-entry ref-elem="ce:sections">
+               <xocs:item-toc-label>2.1</xocs:item-toc-label>
+               <xocs:item-toc-section-title>Materials</xocs:item-toc-section-title>
+            </xocs:item-toc-entry>
+            <xocs:item-toc-entry ref-elem="ce:sections">
+               <xocs:item-toc-label>2.2</xocs:item-toc-label>
+               <xocs:item-toc-section-title>Synthesis of hierarchical ZSM-5 zeolites</xocs:item-toc-section-title>
+            </xocs:item-toc-entry>
+            <xocs:item-toc-entry ref-elem="ce:sections">
+               <xocs:item-toc-label>2.3</xocs:item-toc-label>
+               <xocs:item-toc-section-title>Characterization</xocs:item-toc-section-title>
+            </xocs:item-toc-entry>
+         </xocs:item-toc-entry>
+         <xocs:item-toc-entry ref-elem="ce:sections">
+            <xocs:item-toc-label>3</xocs:item-toc-label>
+            <xocs:item-toc-section-title>Results and discussion</xocs:item-toc-section-title>
+         </xocs:item-toc-entry>
+         <xocs:item-toc-entry ref-elem="ce:sections">
+            <xocs:item-toc-label>4</xocs:item-toc-label>
+            <xocs:item-toc-section-title>Conclusions</xocs:item-toc-section-title>
+         </xocs:item-toc-entry>
+         <xocs:item-toc-entry ref-elem="ce:sections">
+            <xocs:item-toc-section-title>CRediT authorship contribution statement</xocs:item-toc-section-title>
+         </xocs:item-toc-entry>
+         <xocs:item-toc-entry ref-elem="ce:acknowledgment">
+            <xocs:item-toc-section-title>Acknowledgements</xocs:item-toc-section-title>
+         </xocs:item-toc-entry>
+         <xocs:item-toc-entry ref-elem="ce:appendices">
+            <xocs:item-toc-label>Appendix A</xocs:item-toc-label>
+            <xocs:item-toc-section-title>Supplementary data</xocs:item-toc-section-title>
+         </xocs:item-toc-entry>
+         <xocs:item-toc-entry ref-elem="ce:bibliography">
+            <xocs:item-toc-section-title>References</xocs:item-toc-section-title>
+         </xocs:item-toc-entry>
+      </xocs:item-toc>
+      <xocs:references>
+         <xocs:ref-info refid="h0005">
+            <xocs:ref-normalized-surname>KERSTENS</xocs:ref-normalized-surname>
+            <xocs:ref-pub-year>2020</xocs:ref-pub-year>
+            <xocs:ref-article-number>2004690</xocs:ref-article-number>
+            <xocs:ref-normalized-initial>D</xocs:ref-normalized-initial>
+         </xocs:ref-info>
+         <xocs:ref-info refid="h0010">
+            <xocs:ref-normalized-surname>MENG</xocs:ref-normalized-surname>
+            <xocs:ref-pub-year>2018</xocs:ref-pub-year>
+            <xocs:ref-first-fp>135</xocs:ref-first-fp>
+            <xocs:ref-last-lp>142</xocs:ref-last-lp>
+            <xocs:ref-normalized-initial>L</xocs:ref-normalized-initial>
+         </xocs:ref-info>
+         <xocs:ref-info refid="h0015">
+            <xocs:ref-normalized-surname>ZHANG</xocs:ref-normalized-surname>
+            <xocs:ref-pub-year>2017</xocs:ref-pub-year>
+            <xocs:ref-first-fp>111</xocs:ref-first-fp>
+            <xocs:ref-last-lp>114</xocs:ref-last-lp>
+            <xocs:ref-normalized-initial>C</xocs:ref-normalized-initial>
+         </xocs:ref-info>
+         <xocs:ref-info refid="h0020">
+            <xocs:ref-normalized-surname>HAN</xocs:ref-normalized-surname>
+            <xocs:ref-pub-year>2016</xocs:ref-pub-year>
+            <xocs:ref-first-fp>112</xocs:ref-first-fp>
+            <xocs:ref-last-lp>117</xocs:ref-last-lp>
+            <xocs:ref-normalized-initial>S</xocs:ref-normalized-initial>
+         </xocs:ref-info>
+         <xocs:ref-info refid="h0025">
+            <xocs:ref-normalized-surname>YE</xocs:ref-normalized-surname>
+            <xocs:ref-pub-year>2025</xocs:ref-pub-year>
+            <xocs:ref-first-fp>125078</xocs:ref-first-fp>
+            <xocs:ref-normalized-initial>F</xocs:ref-normalized-initial>
+         </xocs:ref-info>
+         <xocs:ref-info refid="h0030">
+            <xocs:ref-normalized-surname>ZHANG</xocs:ref-normalized-surname>
+            <xocs:ref-pub-year>2019</xocs:ref-pub-year>
+            <xocs:ref-first-fp>3772</xocs:ref-first-fp>
+            <xocs:ref-last-lp>3776</xocs:ref-last-lp>
+            <xocs:ref-normalized-initial>Q</xocs:ref-normalized-initial>
+         </xocs:ref-info>
+         <xocs:ref-info refid="h0035">
+            <xocs:ref-normalized-surname>LIU</xocs:ref-normalized-surname>
+            <xocs:ref-pub-year>2014</xocs:ref-pub-year>
+            <xocs:ref-first-fp>2526</xocs:ref-first-fp>
+            <xocs:ref-normalized-initial>Z</xocs:ref-normalized-initial>
+         </xocs:ref-info>
+         <xocs:ref-info refid="h0040">
+            <xocs:ref-normalized-surname>LIU</xocs:ref-normalized-surname>
+            <xocs:ref-pub-year>2015</xocs:ref-pub-year>
+            <xocs:ref-first-fp>5775</xocs:ref-first-fp>
+            <xocs:ref-last-lp>5779</xocs:ref-last-lp>
+            <xocs:ref-normalized-initial>Z</xocs:ref-normalized-initial>
+         </xocs:ref-info>
+      </xocs:references>
+      <xocs:refkeys>
+         <xocs:refkey3>YEX2025X138557</xocs:refkey3>
+         <xocs:refkey4ai>YEX2025X138557XF</xocs:refkey4ai>
+      </xocs:refkeys>
+      <xocs:open-access>
+         <xocs:oa-article-status is-open-access="0" is-open-archive="0"/>
+      </xocs:open-access>
+      <xocs:open-research>
+         <xocs:or-embargo-opening-date>2027-04-13T00:00:00.000Z</xocs:or-embargo-opening-date>
+      </xocs:open-research>
+      <xocs:self-archiving>
+         <xocs:sa-start-date>2027-04-13T00:00:00.000Z</xocs:sa-start-date>
+         <xocs:sa-user-license>http://creativecommons.org/licenses/by-nc-nd/4.0/</xocs:sa-user-license>
+      </xocs:self-archiving>
+      <xocs:copyright-info>
+         <xocs:cp-notices>
+            <xocs:cp-notice lang="en">© 2025 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.</xocs:cp-notice>
+         </xocs:cp-notices>
+      </xocs:copyright-info>
+      <xocs:funding-list has-funding-info="1">
+         <xocs:funding-addon-generated-timestamp>2025-04-17T15:45:51.351Z</xocs:funding-addon-generated-timestamp>
+         <xocs:funding-addon-type>http://vtw.elsevier.com/data/voc/AddOnTypes/50.7/aggregated-refined</xocs:funding-addon-type>
+         <xocs:funding>
+            <xocs:funding-agency-matched-string>Guangdong Basic and Applied Basic Research Foundation</xocs:funding-agency-matched-string>
+            <xocs:funding-id>2022A1515012066</xocs:funding-id>
+            <xocs:funding-agency>Basic and Applied Basic Research Foundation of Guangdong Province</xocs:funding-agency>
+            <xocs:funding-agency-id>http://data.elsevier.com/vocabulary/SciValFunders/501100021171</xocs:funding-agency-id>
+            <xocs:funding-agency-country>http://sws.geonames.org/1814991/</xocs:funding-agency-country>
+         </xocs:funding>
+         <xocs:funding>
+            <xocs:funding-agency-country>http://sws.geonames.org/1814991</xocs:funding-agency-country>
+         </xocs:funding>
+         <xocs:funding>
+            <xocs:funding-agency-matched-string>Fundamental Research Funds for the Central Universities</xocs:funding-agency-matched-string>
+            <xocs:funding-id>2024ZYGXZR100</xocs:funding-id>
+            <xocs:funding-agency>Fundamental Research Funds for the Central Universities</xocs:funding-agency>
+            <xocs:funding-agency-id>http://data.elsevier.com/vocabulary/SciValFunders/501100012226</xocs:funding-agency-id>
+            <xocs:funding-agency-country>http://sws.geonames.org/1814991</xocs:funding-agency-country>
+         </xocs:funding>
+         <xocs:funding-text>This work was supported by the Fundamental Research Funds for the Central Universities (grant number 2024ZYGXZR100) and the Guangdong Basic and Applied Basic Research Foundation (grant number 2022A1515012066).</xocs:funding-text>
+      </xocs:funding-list>
+      <xocs:article-sharing-framework>
+         <xocs:asf-license>https://doi.org/10.15223/policy-017</xocs:asf-license>
+         <xocs:asf-license>https://doi.org/10.15223/policy-037</xocs:asf-license>
+         <xocs:asf-license>https://doi.org/10.15223/policy-012</xocs:asf-license>
+         <xocs:asf-license>https://doi.org/10.15223/policy-029</xocs:asf-license>
+         <xocs:asf-license>https://doi.org/10.15223/policy-004</xocs:asf-license>
+      </xocs:article-sharing-framework>
+      <xocs:attachment-metadata-doc>
+         <xocs:attachment-set-type>item</xocs:attachment-set-type>
+         <xocs:pii-formatted>S0167-577X(25)00586-5</xocs:pii-formatted>
+         <xocs:pii-unformatted>S0167577X25005865</xocs:pii-unformatted>
+         <xocs:eid>1-s2.0-S0167577X25005865</xocs:eid>
+         <xocs:doi>10.1016/j.matlet.2025.138557</xocs:doi>
+         <xocs:cid>271572</xocs:cid>
+         <xocs:timestamp>2025-04-21T13:05:41.888332Z</xocs:timestamp>
+         <xocs:cover-date-start>2025-08-01</xocs:cover-date-start>
+         <xocs:attachments>
+            <xocs:web-pdf>
+               <xocs:attachment-eid>1-s2.0-S0167577X25005865-main.pdf</xocs:attachment-eid>
+               <xocs:ucs-locator>https://s3-eu-west-1.amazonaws.com/prod-ucs-content-store-eu-west/content/pii:S0167577X25005865/MAIN/application/pdf/fa7a0a453b5ae45374e07691e3490cfe/main.pdf</xocs:ucs-locator>
+               <xocs:filename>main.pdf</xocs:filename>
+               <xocs:extension>pdf</xocs:extension>
+               <xocs:pdf-optimized>true</xocs:pdf-optimized>
+               <xocs:filesize>5625034</xocs:filesize>
+               <xocs:web-pdf-purpose>MAIN</xocs:web-pdf-purpose>
+               <xocs:web-pdf-page-count>4</xocs:web-pdf-page-count>
+               <xocs:web-pdf-images>
+                  <xocs:web-pdf-image>
+                     <xocs:attachment-eid>1-s2.0-S0167577X25005865-main_1.png</xocs:attachment-eid>
+                     <xocs:ucs-locator>https://s3-eu-west-1.amazonaws.com/prod-ucs-content-store-eu-west/content/pii:S0167577X25005865/PREVIEW/image/png/a3cfefcd1d5286bf84bdd2d74109c2ce/main_1.png</xocs:ucs-locator>
+                     <xocs:filename>main_1.png</xocs:filename>
+                     <xocs:extension>png</xocs:extension>
+                     <xocs:filesize>56127</xocs:filesize>
+                     <xocs:pixel-height>849</xocs:pixel-height>
+                     <xocs:pixel-width>656</xocs:pixel-width>
+                     <xocs:attachment-type>IMAGE-WEB-PDF</xocs:attachment-type>
+                     <xocs:pdf-page-num>1</xocs:pdf-page-num>
+                  </xocs:web-pdf-image>
+               </xocs:web-pdf-images>
+            </xocs:web-pdf>
+            <xocs:attachment>
+               <xocs:attachment-eid>1-s2.0-S0167577X25005865-gr1.jpg</xocs:attachment-eid>
+               <xocs:ucs-locator>https://s3-eu-west-1.amazonaws.com/prod-ucs-content-store-eu-west/content/pii:S0167577X25005865/gr1/DOWNSAMPLED/image/jpeg/f52cb10e430cf8ff63c12509c3eadb82/gr1.jpg</xocs:ucs-locator>
+               <xocs:file-basename>gr1</xocs:file-basename>
+               <xocs:filename>gr1.jpg</xocs:filename>
+               <xocs:extension>jpg</xocs:extension>
+               <xocs:filesize>169199</xocs:filesize>
+               <xocs:pixel-height>611</xocs:pixel-height>
+               <xocs:pixel-width>711</xocs:pixel-width>
+               <xocs:attachment-type>IMAGE-DOWNSAMPLED</xocs:attachment-type>
+            </xocs:attachment>
+            <xocs:attachment>
+               <xocs:attachment-eid>1-s2.0-S0167577X25005865-gr3.jpg</xocs:attachment-eid>
+               <xocs:ucs-locator>https://s3-eu-west-1.amazonaws.com/prod-ucs-content-store-eu-west/content/pii:S0167577X25005865/gr3/DOWNSAMPLED/image/jpeg/4f213dbc17725fd6009e37d6f0357cdd/gr3.jpg</xocs:ucs-locator>
+               <xocs:file-basename>gr3</xocs:file-basename>
+               <xocs:filename>gr3.jpg</xocs:filename>
+               <xocs:extension>jpg</xocs:extension>
+               <xocs:filesize>55448</xocs:filesize>
+               <xocs:pixel-height>309</xocs:pixel-height>
+               <xocs:pixel-width>624</xocs:pixel-width>
+               <xocs:attachment-type>IMAGE-DOWNSAMPLED</xocs:attachment-type>
+            </xocs:attachment>
+            <xocs:attachment>
+               <xocs:attachment-eid>1-s2.0-S0167577X25005865-gr2.jpg</xocs:attachment-eid>
+               <xocs:ucs-locator>https://s3-eu-west-1.amazonaws.com/prod-ucs-content-store-eu-west/content/pii:S0167577X25005865/gr2/DOWNSAMPLED/image/jpeg/d3beb5904ac343b9cd0c30c6e7d3a3d0/gr2.jpg</xocs:ucs-locator>
+               <xocs:file-basename>gr2</xocs:file-basename>
+               <xocs:filename>gr2.jpg</xocs:filename>
+               <xocs:extension>jpg</xocs:extension>
+               <xocs:filesize>52487</xocs:filesize>
+               <xocs:pixel-height>296</xocs:pixel-height>
+               <xocs:pixel-width>625</xocs:pixel-width>
+               <xocs:attachment-type>IMAGE-DOWNSAMPLED</xocs:attachment-type>
+            </xocs:attachment>
+            <xocs:attachment>
+               <xocs:attachment-eid>1-s2.0-S0167577X25005865-gr1.sml</xocs:attachment-eid>
+               <xocs:ucs-locator>https://s3-eu-west-1.amazonaws.com/prod-ucs-content-store-eu-west/content/pii:S0167577X25005865/gr1/THUMBNAIL/image/gif/0527ef346ed2715f06d0873152ac4100/gr1.sml</xocs:ucs-locator>
+               <xocs:file-basename>gr1</xocs:file-basename>
+               <xocs:filename>gr1.sml</xocs:filename>
+               <xocs:extension>sml</xocs:extension>
+               <xocs:filesize>26313</xocs:filesize>
+               <xocs:pixel-height>164</xocs:pixel-height>
+               <xocs:pixel-width>191</xocs:pixel-width>
+               <xocs:attachment-type>IMAGE-THUMBNAIL</xocs:attachment-type>
+            </xocs:attachment>
+            <xocs:attachment>
+               <xocs:attachment-eid>1-s2.0-S0167577X25005865-gr3.sml</xocs:attachment-eid>
+               <xocs:ucs-locator>https://s3-eu-west-1.amazonaws.com/prod-ucs-content-store-eu-west/content/pii:S0167577X25005865/gr3/THUMBNAIL/image/gif/cf07ed0952e5f1329dfb1ca9765cfb1e/gr3.sml</xocs:ucs-locator>
+               <xocs:file-basename>gr3</xocs:file-basename>
+               <xocs:filename>gr3.sml</xocs:filename>
+               <xocs:extension>sml</xocs:extension>
+               <xocs:filesize>9508</xocs:filesize>
+               <xocs:pixel-height>109</xocs:pixel-height>
+               <xocs:pixel-width>219</xocs:pixel-width>
+               <xocs:attachment-type>IMAGE-THUMBNAIL</xocs:attachment-type>
+            </xocs:attachment>
+            <xocs:attachment>
+               <xocs:attachment-eid>1-s2.0-S0167577X25005865-gr2.sml</xocs:attachment-eid>
+               <xocs:ucs-locator>https://s3-eu-west-1.amazonaws.com/prod-ucs-content-store-eu-west/content/pii:S0167577X25005865/gr2/THUMBNAIL/image/gif/0a9e0c7f686f44714cab35193a86113e/gr2.sml</xocs:ucs-locator>
+               <xocs:file-basename>gr2</xocs:file-basename>
+               <xocs:filename>gr2.sml</xocs:filename>
+               <xocs:extension>sml</xocs:extension>
+               <xocs:filesize>8459</xocs:filesize>
+               <xocs:pixel-height>104</xocs:pixel-height>
+               <xocs:pixel-width>219</xocs:pixel-width>
+               <xocs:attachment-type>IMAGE-THUMBNAIL</xocs:attachment-type>
+            </xocs:attachment>
+            <xocs:attachment>
+               <xocs:attachment-eid>1-s2.0-S0167577X25005865-gr1_lrg.jpg</xocs:attachment-eid>
+               <xocs:ucs-locator>https://s3-eu-west-1.amazonaws.com/prod-ucs-content-store-eu-west/content/pii:S0167577X25005865/HIGHRES/image/jpeg/b8081b1b9ebd2253231ddce7a829be66/gr1_lrg.jpg</xocs:ucs-locator>
+               <xocs:file-basename>gr1</xocs:file-basename>
+               <xocs:filename>gr1_lrg.jpg</xocs:filename>
+               <xocs:extension>jpg</xocs:extension>
+               <xocs:filesize>653121</xocs:filesize>
+               <xocs:pixel-height>1625</xocs:pixel-height>
+               <xocs:pixel-width>1890</xocs:pixel-width>
+               <xocs:attachment-type>IMAGE-HIGH-RES</xocs:attachment-type>
+            </xocs:attachment>
+            <xocs:attachment>
+               <xocs:attachment-eid>1-s2.0-S0167577X25005865-gr3_lrg.jpg</xocs:attachment-eid>
+               <xocs:ucs-locator>https://s3-eu-west-1.amazonaws.com/prod-ucs-content-store-eu-west/content/pii:S0167577X25005865/HIGHRES/image/jpeg/c19b537b202bada73c03d77f489da9db/gr3_lrg.jpg</xocs:ucs-locator>
+               <xocs:file-basename>gr3</xocs:file-basename>
+               <xocs:filename>gr3_lrg.jpg</xocs:filename>
+               <xocs:extension>jpg</xocs:extension>
+               <xocs:filesize>406541</xocs:filesize>
+               <xocs:pixel-height>1369</xocs:pixel-height>
+               <xocs:pixel-width>2762</xocs:pixel-width>
+               <xocs:attachment-type>IMAGE-HIGH-RES</xocs:attachment-type>
+            </xocs:attachment>
+            <xocs:attachment>
+               <xocs:attachment-eid>1-s2.0-S0167577X25005865-gr2_lrg.jpg</xocs:attachment-eid>
+               <xocs:ucs-locator>https://s3-eu-west-1.amazonaws.com/prod-ucs-content-store-eu-west/content/pii:S0167577X25005865/HIGHRES/image/jpeg/12f559ecb730a7247da7fac2db78572f/gr2_lrg.jpg</xocs:ucs-locator>
+               <xocs:file-basename>gr2</xocs:file-basename>
+               <xocs:filename>gr2_lrg.jpg</xocs:filename>
+               <xocs:extension>jpg</xocs:extension>
+               <xocs:filesize>170741</xocs:filesize>
+               <xocs:pixel-height>806</xocs:pixel-height>
+               <xocs:pixel-width>1700</xocs:pixel-width>
+               <xocs:attachment-type>IMAGE-HIGH-RES</xocs:attachment-type>
+            </xocs:attachment>
+            <xocs:attachment>
+               <xocs:attachment-eid>1-s2.0-S0167577X25005865-mmc1.docx</xocs:attachment-eid>
+               <xocs:ucs-locator>https://s3-eu-west-1.amazonaws.com/prod-ucs-content-store-eu-west/content/pii:S0167577X25005865/mmc1/MAIN/application/vnd.openxmlformats-officedocument.wordprocessingml.document/a43e1f8999afb2aab7bea54093d79162/mmc1.docx</xocs:ucs-locator>
+               <xocs:file-basename>mmc1</xocs:file-basename>
+               <xocs:filename>mmc1.docx</xocs:filename>
+               <xocs:extension>docx</xocs:extension>
+               <xocs:filesize>35243</xocs:filesize>
+               <xocs:attachment-type>APPLICATION</xocs:attachment-type>
+            </xocs:attachment>
+         </xocs:attachments>
+      </xocs:attachment-metadata-doc>
+   </xocs:meta><xocs:serial-item xmlns:xoe="http://www.elsevier.com/xml/xoe/dtd">
+      <article xmlns="http://www.elsevier.com/xml/ja/dtd" docsubtype="sco" xml:lang="en" version="5.7">
+         <item-info>
+            <jid>MLBLUE</jid>
+            <aid>138557</aid>
+            <ce:article-number>138557</ce:article-number>
+            <ce:pii>S0167-577X(25)00586-5</ce:pii>
+            <ce:doi>10.1016/j.matlet.2025.138557</ce:doi>
+            <ce:copyright type="full-transfer" year="2025">Elsevier B.V.</ce:copyright>
+         </item-info>
+         <ce:floats>
+            <ce:figure id="f0005">
+               <ce:label>Fig. 1</ce:label>
+               <ce:caption id="cn0005">
+                  <ce:simple-para id="sp0015" view="all">(a) Photographs of the synthesis gel solution before and after hydrothermal crystallization under different conditions. (b) XRD patterns of the obtained solid products after hydrothermal treatment. SEM (c, d) and TEM (e) images of the ZSM-5@200-60 sample. SEM (f, g) and TEM (h) images of the ZSM-5@250-20 sample. The insets in (e) and (h) show the SAED patterns of the corresponding zeolite samples.</ce:simple-para>
+               </ce:caption>
+               <ce:link locator="gr1" xlink:type="simple" xlink:role="http://data.elsevier.com/vocabulary/ElsevierContentTypes/23.4" xlink:href="pii:S0167577X25005865/gr1" id="lk00005"/>
+            </ce:figure>
+            <ce:figure id="f0010">
+               <ce:label>Fig. 2</ce:label>
+               <ce:caption id="cn0010">
+                  <ce:simple-para id="sp0020" view="all">(a) Nitrogen adsorption–desorption isotherms and (b) NLDFT pore size distributions of hierarchical ZSM-5 zeolites prepared under different conditions.</ce:simple-para>
+               </ce:caption>
+               <ce:link locator="gr2" xlink:type="simple" xlink:role="http://data.elsevier.com/vocabulary/ElsevierContentTypes/23.4" xlink:href="pii:S0167577X25005865/gr2" id="lk00010"/>
+            </ce:figure>
+            <ce:figure id="f0015">
+               <ce:label>Fig. 3</ce:label>
+               <ce:caption id="cn0015">
+                  <ce:simple-para id="sp0025" view="all">(a) Photographs and XRD patterns of the obtained solid products prepared at 250 °C with adding ZSM-5 seeds. (b) Effect of silicon and aluminum sources on the synthesis of hierarchical ZSM-5 zeolites at 250 °C for 60 min.</ce:simple-para>
+               </ce:caption>
+               <ce:link locator="gr3" xlink:type="simple" xlink:role="http://data.elsevier.com/vocabulary/ElsevierContentTypes/23.4" xlink:href="pii:S0167577X25005865/gr3" id="lk00015"/>
+            </ce:figure>
+            <ce:table xmlns="http://www.elsevier.com/xml/common/cals/dtd" frame="topbot" id="t0005" rowsep="0" colsep="0">
+               <ce:label>Table 1</ce:label>
+               <ce:caption id="cn0020">
+                  <ce:simple-para id="sp0030" view="all">Pore characteristics of hierarchical ZSM-5 zeolites.</ce:simple-para>
+               </ce:caption>
+               <tgroup cols="5">
+                  <colspec colname="col1" align="left"/>
+                  <colspec colname="col2" align="left"/>
+                  <colspec colname="col3" align="char" char="."/>
+                  <colspec colname="col4" align="char" char="."/>
+                  <colspec colname="col5" align="char" char="."/>
+                  <thead>
+                     <row rowsep="1" valign="top">
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd">Sample</entry>
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd">S<inf loc="post">BET</inf>
+                           <br/>(m<sup loc="post">2</sup> g<sup loc="post">−1</sup>)</entry>
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd">V<inf loc="post">pore</inf>
+                           <br/>(cm<sup loc="post">3</sup> g<sup loc="post">−1</sup>)</entry>
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd">V<inf loc="post">micro</inf>
+                           <br/>(cm<sup loc="post">3</sup> g<sup loc="post">−1</sup>)</entry>
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd">V<inf loc="post">meso</inf>
+                           <br/>(cm<sup loc="post">3</sup> g<sup loc="post">−1</sup>)</entry>
+                     </row>
+                  </thead>
+                  <tbody>
+                     <row valign="top">
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd">ZSM-5@200–60</entry>
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd">348</entry>
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd" align="char" char=".">0.252</entry>
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd" align="char" char=".">0.114</entry>
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd" align="char" char=".">0.138</entry>
+                     </row>
+                     <row valign="top">
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd">ZSM-5@250–20</entry>
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd">344</entry>
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd" align="char" char=".">0.223</entry>
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd" align="char" char=".">0.118</entry>
+                        <entry xmlns="http://www.elsevier.com/xml/common/dtd" align="char" char=".">0.105</entry>
+                     </row>
+                  </tbody>
+               </tgroup>
+            </ce:table>
+         </ce:floats>
+         <head>
+            <ce:title id="tm005">Ultrafast and mesoporogen-free synthesis of hierarchical ZSM-5 zeolites</ce:title>
+            <ce:author-group id="ag005">
+               <ce:author id="au005" author-id="S0167577X25005865-d42027704f1ba596e0a21aa49001a475">
+                  <ce:given-name>Feng</ce:given-name>
+                  <ce:surname>Ye</ce:surname>
+                  <ce:contributor-role role="http://credit.niso.org/contributor-roles/writing-original-draft">Writing – original draft</ce:contributor-role>
+                  <ce:contributor-role role="http://credit.niso.org/contributor-roles/investigation">Investigation</ce:contributor-role>
+               </ce:author>
+               <ce:author id="au010" author-id="S0167577X25005865-139718ec6a6b7b853b3086ecd20e9ab0">
+                  <ce:given-name>Shuanshi</ce:given-name>
+                  <ce:surname>Fan</ce:surname>
+                  <ce:contributor-role role="http://credit.niso.org/contributor-roles/writing-review-editing">Writing – review &amp; editing</ce:contributor-role>
+                  <ce:cross-ref refid="cor1" id="c0005">
+                     <ce:sup loc="post">⁎</ce:sup>
+                  </ce:cross-ref>
+                  
+               </ce:author>
+               <ce:author id="au015" author-id="S0167577X25005865-3872e2a2819b8a000bfa427660170ae2">
+                  <ce:given-name>Yanhong</ce:given-name>
+                  <ce:surname>Wang</ce:surname>
+                  <ce:contributor-role role="http://credit.niso.org/contributor-roles/writing-review-editing">Writing – review &amp; editing</ce:contributor-role>
+               </ce:author>
+               <ce:author id="au020" author-id="S0167577X25005865-795af0716755a0661191ebfa4af9eb53">
+                  <ce:given-name>Xuemei</ce:given-name>
+                  <ce:surname>Lang</ce:surname>
+                  <ce:contributor-role role="http://credit.niso.org/contributor-roles/writing-review-editing">Writing – review &amp; editing</ce:contributor-role>
+               </ce:author>
+               <ce:author id="au025" author-id="S0167577X25005865-232633f8b263f8cf63bc27da41d9d650">
+                  <ce:given-name>Yihui</ce:given-name>
+                  <ce:surname>Lv</ce:surname>
+                  <ce:contributor-role role="http://credit.niso.org/contributor-roles/investigation">Investigation</ce:contributor-role>
+               </ce:author>
+               <ce:author id="au030" author-id="S0167577X25005865-2335216a7d5f9a756fc90e4a98a99bb6">
+                  <ce:given-name>Weibo</ce:given-name>
+                  <ce:surname>Chen</ce:surname>
+                  <ce:contributor-role role="http://credit.niso.org/contributor-roles/investigation">Investigation</ce:contributor-role>
+               </ce:author>
+               <ce:author id="au035" author-id="S0167577X25005865-d85210915bdf2af436f9b8f78095a56c">
+                  <ce:given-name>Gang</ce:given-name>
+                  <ce:surname>Li</ce:surname>
+                  <ce:contributor-role role="http://credit.niso.org/contributor-roles/writing-review-editing">Writing – review &amp; editing</ce:contributor-role>
+                  <ce:contributor-role role="http://credit.niso.org/contributor-roles/funding-acquisition">Funding acquisition</ce:contributor-role>
+                  <ce:contributor-role role="http://credit.niso.org/contributor-roles/conceptualization">Conceptualization</ce:contributor-role>
+                  <ce:cross-ref refid="cor1" id="c0010">
+                     <ce:sup loc="post">⁎</ce:sup>
+                  </ce:cross-ref>
+                  
+               </ce:author>
+               <ce:affiliation id="af005" affiliation-id="S0167577X25005865-5446c15dd60540c94fa969bb3f074711">
+                  <ce:textfn>School of Chemistry and Chemical Engineering, South China University of Technology, Guangzhou 510641, China</ce:textfn>
+                  <sa:affiliation>
+                     <sa:organization>School of Chemistry and Chemical Engineering</sa:organization>
+                     <sa:organization>South China University of Technology</sa:organization>
+                     <sa:city>Guangzhou</sa:city>
+                     <sa:postal-code>510641</sa:postal-code>
+                     <sa:country iso3166-1-alpha-3="CHN">China</sa:country>
+                  </sa:affiliation>
+                  <ce:source-text id="stx005">School of Chemistry and Chemical Engineering, South China University of Technology, Guangzhou 510641, China</ce:source-text>
+               </ce:affiliation>
+               <ce:correspondence id="cor1">
+                  <ce:label>⁎</ce:label>
+                  <ce:text>Corresponding authors.</ce:text>
+               </ce:correspondence>
+            </ce:author-group>
+            <ce:date-received day="16" month="1" year="2025"/>
+            <ce:date-revised day="4" month="4" year="2025"/>
+            <ce:date-accepted day="8" month="4" year="2025"/>
+            
+            <ce:abstract class="author" id="ab010" view="all"><ce:abstract-sec id="as010" view="all">
+                  <ce:simple-para id="sp0010" view="all">The facile synthesis of hierarchical ZSM-5 zeolites without mesoporogens is highly desirable for industrial applications. In this study, hierarchical ZSM-5 zeolites with abundant mesopores and a nearly single-crystalline structure were rapidly synthesized in a mesoporogen-free system. Under conventional heating, the synthesis time was significantly reduced to just 15 min, significantly improving production efficiency. The key to this ultrafast process was the use of a tubular reactor, combined with the strategic selection of silicon and aluminum sources.</ce:simple-para>
+               </ce:abstract-sec></ce:abstract>
+            <ce:keywords class="keyword" id="kg005" view="all">
+               <ce:section-title id="st015">Keywords</ce:section-title>
+               <ce:keyword id="k0005">
+                  <ce:text>ZSM-5</ce:text>
+               </ce:keyword>
+               <ce:keyword id="k0010">
+                  <ce:text>Hierarchical zeolite</ce:text>
+               </ce:keyword>
+               <ce:keyword id="k0015">
+                  <ce:text>Ultrafast synthesis</ce:text>
+               </ce:keyword>
+               <ce:keyword id="k0020">
+                  <ce:text>Mesoporogen-free</ce:text>
+               </ce:keyword>
+            </ce:keywords>
+            <ce:data-availability id="da005" view="all">
+               <ce:section-title id="st020">Data availability</ce:section-title>
+               <ce:para id="p0020" view="all">Data will be made available on request.</ce:para>
+            </ce:data-availability>
+         </head>
+         <body view="all">
+            <ce:sections>
+               <ce:section id="s0005" view="all">
+                  <ce:label>1</ce:label>
+                  <ce:section-title id="st025">Introduction</ce:section-title>
+                  <ce:para id="p0025" view="all">Hierarchical zeolites, which possess both intrinsic zeolitic pores and additional secondary porosity, have attracted significant attention in catalysis due to their significantly enhanced diffusion properties compared to conventional microporous zeolites [<ce:cross-ref refid="b0005" id="c0015">1</ce:cross-ref>]. The synthesis of hierarchical zeolites typically relies on various mesoporogens to induce the formation of secondary porosity [<ce:cross-ref refid="b0010" id="c0020">2</ce:cross-ref>,<ce:cross-ref refid="b0015" id="c0025">3</ce:cross-ref>]. However, this route not only increases production costs but also raises environmental concerns. Additionally, the synthesis process usually takes several tens of hours [<ce:cross-ref refid="b0020" id="c0030">4</ce:cross-ref>], further limiting the scalability of hierarchical zeolites for industrial applications.</ce:para>
+                  <ce:para id="p0030" view="all">In this study, we propose a simple and efficient route for the ultrafast, mesoporogen-free synthesis of hierarchical ZSM-5 zeolites. Despite the absence of mesoporogens, high-quality hierarchical ZSM-5 zeolites with abundant mesopores were synthesized in just 15 min through conventional heating. This ultrafast, mesoporogen-free approach effectively reduces the production cost of hierarchical ZSM-5 zeolites, making them highly attractive for large-scale applications in the chemical industry.</ce:para>
+               </ce:section>
+               <ce:section id="s0010" view="all">
+                  <ce:label>2</ce:label>
+                  <ce:section-title id="st030">Experimental</ce:section-title>
+                  <ce:section id="s0015" view="all">
+                     <ce:label>2.1</ce:label>
+                     <ce:section-title id="st035">Materials</ce:section-title>
+                     <ce:para id="p0035" view="all">Tetraethyl orthosilicate (TEOS) (98 %), sodium aluminate (NaAlO<ce:inf loc="post">2</ce:inf>) (56 wt% Al<ce:inf loc="post">2</ce:inf>O<ce:inf loc="post">3</ce:inf>, 44 wt% Na<ce:inf loc="post">2</ce:inf>O), sodium hydroxide (NaOH) (97 %), aluminum isopropoxide (AIP) (98.5 wt%), and fumed silica (99.8 %) were purchased from Aladdin. Ludox 40 colloidal silica (40 wt%) was supplied by Sigma-Aldrich, and tetrapropylammonium hydroxide (TPAOH) (25 wt% aqueous solution) was obtained from Innochem.</ce:para>
+                  </ce:section>
+                  <ce:section id="s0020" view="all">
+                     <ce:label>2.2</ce:label>
+                     <ce:section-title id="st040">Synthesis of hierarchical ZSM-5 zeolites</ce:section-title>
+                     <ce:para id="p0040" view="all">A silicon source (TEOS, colloidal silica, or fumed silica) was dispersed in a TPAOH solution and stirred for 12 h. An aluminum source (NaAlO<ce:inf loc="post">2</ce:inf> or AIP), water, and NaOH (if needed) were mixed and stirred for 12 h, then added dropwise to the silicon solution. After stirring for 3 h, the final gel had a molar composition of 1SiO<ce:inf loc="post">2</ce:inf>: 0.033Al<ce:inf loc="post">2</ce:inf>O<ce:inf loc="post">3</ce:inf>: 0.033Na<ce:inf loc="post">2</ce:inf>O: 0.26 TPAOH: 50H<ce:inf loc="post">2</ce:inf>O. The gel was transferred into a stainless-steel tubular reactor (length: 20 cm, outer diameter: 8 mm, inner diameter: 6 mm) and crystallized under autogenous pressure in a preheated oven. After the reaction, the solid product was centrifuged, washed with deionized water, and dried at 80 °C overnight. It was then calcined at 550°C for 4 h to obtain the hierarchical ZSM-5 zeolite. Samples made with TEOS and NaAlO<ce:inf loc="post">2</ce:inf> were labeled ZSM-5@x-y, where <ce:italic>x</ce:italic>  and <ce:italic>y</ce:italic> represent the crystallization temperature (°C) and time (min), respectively. For the seed-assisted synthesis, the procedure was identical to that described above, except that 5 wt% ZSM-5 seeds (based on SiO<ce:inf loc="post">2</ce:inf> in the gel), prepared according to our reported work [<ce:cross-ref id="c0035" refid="b0025">5</ce:cross-ref>], were added to the final gel, followed by an additional 30 min of stirring. The samples were labeled ZSM-5-s@<ce:italic>x</ce:italic>-<ce:italic>y</ce:italic>.</ce:para>
+                  </ce:section>
+                  <ce:section id="s0025" view="all">
+                     <ce:label>2.3</ce:label>
+                     <ce:section-title id="st045">Characterization</ce:section-title>
+                     <ce:para id="p0045" view="all">Scanning electron microscopy (SEM) images were acquired using a Zeiss Merlin electron microscope. Transmission electron microscopy (TEM) images and selected area electron diffraction (SAED) patterns were obtained using a JEOL TEM-2100F field-emission transmission electron microscope. X-ray diffraction (XRD) patterns were recorded on a PANalytical X'pert Powder X-ray diffractometer. Nitrogen adsorption–desorption measurements were conducted at 77 K using a Micromeritics ASAP 2460 surface area and porosity analyzer.</ce:para>
+                  </ce:section>
+               </ce:section>
+               <ce:section id="s0030" view="all">
+                  <ce:label>3</ce:label>
+                  <ce:section-title id="st050">Results and discussion</ce:section-title>
+                  <ce:para id="p0050" view="all">
+                     <ce:cross-ref refid="f0005" id="c0040">Fig. 1</ce:cross-ref>
+                     <ce:float-anchor refid="f0005"/>a shows photographs of the synthesis gel, prepared using TEOS and NaAlO<ce:inf loc="post">2</ce:inf> as silicon and aluminum sources, before and after hydrothermal treatment under different conditions. The initial clear synthesis gel solution was transformed into a translucent state after crystallization at 200 °C for 40 min, indicating that the hydrothermal reaction had occurred. However, the XRD pattern suggests that the collected solid product was still amorphous, implying that the reaction time was most likely insufficient. By further extending the reaction time to 60 min, the gel solution became milky white, and the solid product was successfully converted into highly crystallized ZSM-5 zeolite (<ce:cross-ref refid="f0005" id="c0045">Fig. 1</ce:cross-ref>b). SEM images (<ce:cross-ref refid="f0005" id="c0050">Fig. 1</ce:cross-ref>c and 1d) reveal that the ZSM-5 zeolite appears to be composed of aggregated nanocrystals, resulting in a mulberry-like morphology with a particle size ranging from 0.5 to 1 μm. The TEM image (<ce:cross-ref refid="f0005" id="c0055">Fig. 1</ce:cross-ref>e) shows the presence of abundant mesopores inside the ZSM-5 zeolite particles, further confirming the hierarchical structure of the ZSM-5 zeolite. The SAED pattern (inset in <ce:cross-ref refid="f0005" id="c0060">Fig. 1</ce:cross-ref>e) suggests that the hierarchical ZSM-5 zeolite exhibited a nearly single-crystalline structure, likely resulting from the oriented and ordered aggregation of nanocrystals that form the zeolite [<ce:cross-ref id="optCMF4ZrGHkd" refid="b0030">6</ce:cross-ref>].</ce:para>
+                  <ce:para id="p0055" view="all">The synthesis time can be further shortened by increasing the crystallization temperature. When the reaction was conducted at 250 °C, the synthesis gel solution remained clear for the first 10 min, with no solid product formed. After another 10 min, the gel solution turned milky white (<ce:cross-ref refid="f0005" id="c0070">Fig. 1</ce:cross-ref>a), and the solid product was confirmed to be highly crystallized ZSM-5 crystals (<ce:cross-ref refid="f0005" id="c0075">Fig. 1</ce:cross-ref>b). SEM (<ce:cross-ref refid="f0005" id="c0080">Fig. 1</ce:cross-ref>f and 1 g) and TEM (<ce:cross-ref refid="f0005" id="c0085">Fig. 1</ce:cross-ref>h) images further confirm the successful formation of a mulberry-like hierarchical ZSM-5 zeolite with a slightly elongated morphology, while maintaining its nearly single-crystalline structure (inset in <ce:cross-ref refid="f0005" id="c0090">Fig. 1</ce:cross-ref>h).</ce:para>
+                  <ce:para id="p0060" view="all">
+                     <ce:cross-ref refid="f0010" id="c0095">Fig. 2</ce:cross-ref>
+                     <ce:float-anchor refid="f0010"/> presents the nitrogen adsorption–desorption isotherms of hierarchical zeolites ZSM-5@200-60 and ZSM-5@250-20, respectively. Both ZSM-5 zeolites exhibited a distinct hysteresis loop in their isotherms, indicating the presence of mesopores. As shown in <ce:cross-ref refid="t0005" id="c0100">Table 1</ce:cross-ref>
+                     <ce:float-anchor refid="t0005"/>, the micropore and mesopore volumes were 0.114 and 0.138 cm<ce:sup loc="post">3</ce:sup> g<ce:sup loc="post">−1</ce:sup> for ZSM-5@200-60, and 0.118 and 0.105 cm<ce:sup loc="post">3</ce:sup> g<ce:sup loc="post">−1</ce:sup> for ZSM-5@250-20, respectively. This resulted in total pore volumes of 0.252 and 0.223 cm<ce:sup loc="post">3</ce:sup> g<ce:sup loc="post">−1</ce:sup>, and BET surface areas of 348 and 344 m<ce:sup loc="post">2</ce:sup> g<ce:sup loc="post">−1</ce:sup>, respectively. These results further confirm the successful formation of a hierarchical structure in the ZSM-5 zeolites.</ce:para>
+                  <ce:para id="p0065" view="all">To further shorten the synthesis time of hierarchical ZSM-5 zeolites, we added ZSM-5 seeds (5 wt% based on SiO<ce:inf loc="post">2</ce:inf>) to the synthesis gel to accelerate zeolite nucleation. As shown in <ce:cross-ref refid="f0015" id="c0105">Fig. 3</ce:cross-ref>
+                     <ce:float-anchor refid="f0015"/>a, when the reaction was conducted at 250 °C, the crystallization time was further reduced to 10 and 15 min, resulting in poorly and highly crystallized ZSM-5 zeolites, respectively. This suggests that the promoting effect of the zeolite seed was minimal, and consequently, the growth of the hierarchical ZSM-5 zeolite was not effectively constrained by the nucleation step. It is worth noting that the morphology of the hierarchical ZSM-5 zeolite is similar to that in our previous study [<ce:cross-ref id="optBkX4vnBREZ" refid="b0025">5</ce:cross-ref>], where it was prepared using a conventional autoclave. However, the reaction time was significantly reduced. Therefore, the high crystallization rate can largely be attributed to the minimal thermal lag of the stainless-steel tube reactor [<ce:cross-ref refid="b0035" id="c0115">7</ce:cross-ref>,<ce:cross-ref refid="b0040" id="c0120">8</ce:cross-ref>], as its thin-walled tubular structure facilitated rapid heat transfer to the synthesis gel, especially at high reaction temperatures. It should be noted that, after being heated in a 250 °C oven for 30 min, the temperature inside the tubular reactor reached only approximately 180 °C (<ce:cross-ref refid="s0050" id="c0125">Fig. S1</ce:cross-ref>). This indicates a significant thermal lag and suggests there is still room to further shorten the crystallization time. Additionally, it is important to note that only the combination of TEOS and NaAlO<ce:inf loc="post">2</ce:inf> as silicon and aluminum sources yields highly crystallized hierarchical ZSM-5 zeolites (<ce:cross-ref refid="f0015" id="c0130">Fig. 3</ce:cross-ref>a). In contrast, when other combinations, such as TEOS and AIP, colloidal silica and NaAlO<ce:inf loc="post">2</ce:inf>, or fumed silica and NaAlO<ce:inf loc="post">2</ce:inf>, were used, only amorphous products were obtained (<ce:cross-ref refid="f0015" id="c0135">Fig. 3</ce:cross-ref>b), even though the reaction was conducted at 250 °C for as long as 60 min. This may be attributed to the high nucleation rate of the TEOS and NaAlO<ce:inf loc="post">2</ce:inf> combination, resulting from the high solubility of both Si and Al species in the system. These findings further highlight the critical role of silicon and aluminum sources in the ultrafast, mesoporogen-free synthesis of hierarchical ZSM-5 zeolites.</ce:para>
+               </ce:section>
+               <ce:section id="s0035" view="all">
+                  <ce:label>4</ce:label>
+                  <ce:section-title id="st055">Conclusions</ce:section-title>
+                  <ce:para id="p0070" view="all">Hierarchical ZSM-5 zeolites, characterized by abundant mesopores and a nearly single-crystalline structure, can be readily synthesized without the use of mesoporogens. The crystallization time is dramatically reduced to as short as 15 min at 250 °C in a tubular reactor under conventional heating. The ultrafast crystallization of the hierarchical ZSM-5 zeolite is attributed to the optimized silicon and aluminum sources in the gel, as well as the reduced thermal lag in the tubular reactor. The preparation method developed in this study offers significant advantages in terms of rapid synthesis and mesoporogen-free conditions, making hierarchical ZSM-5 zeolites highly promising for cost-effective scaling up in industrial applications.</ce:para>
+               </ce:section>
+               <ce:section id="s0040" view="all">
+                  <ce:section-title id="st060">CRediT authorship contribution statement</ce:section-title>
+                  <ce:para id="p0075" view="all">
+                     <ce:bold>Feng Ye:</ce:bold> Writing – original draft, Investigation. <ce:bold>Shuanshi Fan:</ce:bold> Writing – review &amp; editing. <ce:bold>Yanhong Wang:</ce:bold> Writing – review &amp; editing. <ce:bold>Xuemei Lang:</ce:bold> Writing – review &amp; editing. <ce:bold>Yihui Lv:</ce:bold> Investigation. <ce:bold>Weibo Chen:</ce:bold> Investigation. <ce:bold>Gang Li:</ce:bold> Writing – review &amp; editing, Funding acquisition, Conceptualization.</ce:para>
+               </ce:section>
+            </ce:sections>
+            <ce:conflict-of-interest id="coi005" view="all">
+               <ce:section-title id="st065">Declaration of competing interest</ce:section-title>
+               <ce:para id="p0080" view="all">The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.</ce:para>
+            </ce:conflict-of-interest>
+            <ce:acknowledgment id="ak005" view="all">
+               <ce:section-title id="st070">Acknowledgements</ce:section-title>
+               <ce:para id="p0085" view="all">This work was supported by the <ce:grant-sponsor sponsor-id="https://doi.org/10.13039/501100012226" xlink:type="simple" id="gp005" xlink:role="http://www.elsevier.com/xml/linking-roles/grant-sponsor">Fundamental Research Funds for the Central Universities</ce:grant-sponsor> (grant number <ce:grant-number refid="gp005">2024ZYGXZR100</ce:grant-number>) and the <ce:grant-sponsor sponsor-id="https://doi.org/10.13039/501100021171" xlink:type="simple" id="gp010" xlink:role="http://www.elsevier.com/xml/linking-roles/grant-sponsor">Guangdong Basic and Applied Basic Research Foundation</ce:grant-sponsor> (grant number <ce:grant-number refid="gp010">2022A1515012066</ce:grant-number>).</ce:para>
+            </ce:acknowledgment>
+            <ce:appendices view="all">
+               <ce:section view="compact-standard" id="s0045">
+                  <ce:label>Appendix A</ce:label>
+                  <ce:section-title id="st075">Supplementary data</ce:section-title>
+                  <ce:para id="p0090" view="all">Supplementary data to this article can be found online at <ce:inter-ref xlink:href="https://doi.org/10.1016/j.matlet.2025.138557" xlink:type="simple" id="ir005">https://doi.org/10.1016/j.matlet.2025.138557</ce:inter-ref>.</ce:para>
+               </ce:section>
+               <ce:section view="extended" id="s0050">
+                  <ce:label>Appendix A</ce:label>
+                  <ce:section-title id="st080">Supplementary data</ce:section-title>
+                  <ce:para id="p0095" view="all">The following are the Supplementary data to this article:<ce:display>
+                        <ce:e-component id="m0005">
+                           <ce:label>Supplementary Data 1</ce:label>
+                           <ce:link locator="mmc1" xlink:type="simple" xlink:role="http://data.elsevier.com/vocabulary/ElsevierContentTypes/46.1" xlink:href="pii:S0167577X25005865/mmc1" id="lk00020"/>
+                        </ce:e-component>
+                     </ce:display>
+                  </ce:para>
+               </ce:section>
+            </ce:appendices>
+         </body>
+         <tail view="all">
+            <ce:bibliography id="bi005" view="all">
+               <ce:section-title id="st085">References</ce:section-title>
+               <ce:bibliography-sec id="bs005" view="all">
+                  <ce:bib-reference id="b0005">
+                     <ce:label>[1]</ce:label>
+                     <sb:reference id="h0005">
+                        <sb:contribution langtype="en">
+                           <sb:authors>
+                              <sb:author>
+                                 <ce:given-name>D.</ce:given-name>
+                                 <ce:surname>Kerstens</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>B.</ce:given-name>
+                                 <ce:surname>Smeyers</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>J.</ce:given-name>
+                                 <ce:surname>Van Waeyenberg</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>Q.</ce:given-name>
+                                 <ce:surname>Zhang</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>J.</ce:given-name>
+                                 <ce:surname>Yu</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>B.F.</ce:given-name>
+                                 <ce:surname>Sels</ce:surname>
+                              </sb:author>
+                           </sb:authors>
+                           <sb:title>
+                              <sb:maintitle>State of the art and perspectives of hierarchical zeolites: Practical overview of synthesis methods and use in catalysis</sb:maintitle>
+                           </sb:title>
+                        </sb:contribution>
+                        <sb:host>
+                           <sb:issue>
+                              <sb:series>
+                                 <sb:title>
+                                    <sb:maintitle>Adv. Mater.</sb:maintitle>
+                                 </sb:title>
+                                 <sb:volume-nr>32</sb:volume-nr>
+                              </sb:series>
+                              <sb:date>2020</sb:date>
+                           </sb:issue>
+                           <sb:article-number>2004690</sb:article-number>
+                           <ce:doi>10.1002/adma.202004690</ce:doi>
+                        </sb:host>
+                     </sb:reference>
+                     <ce:source-text id="stx010">D. Kerstens, B. Smeyers, J. Van Waeyenberg, Q. Zhang, J. Yu, B.F. Sels, State of the art and perspectives of hierarchical zeolites: Practical overview of synthesis methods and use in catalysis, Adv. Mater. 32 (2020) 2004690. https://doi.org/10.1002/adma.202004690.</ce:source-text>
+                  </ce:bib-reference>
+                  <ce:bib-reference id="b0010">
+                     <ce:label>[2]</ce:label>
+                     <sb:reference id="h0010">
+                        <sb:contribution langtype="en">
+                           <sb:authors>
+                              <sb:author>
+                                 <ce:given-name>L.</ce:given-name>
+                                 <ce:surname>Meng</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>X.</ce:given-name>
+                                 <ce:surname>Zhu</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>W.</ce:given-name>
+                                 <ce:surname>Wannapakdee</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>R.</ce:given-name>
+                                 <ce:surname>Pestman</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>M.G.</ce:given-name>
+                                 <ce:surname>Goesten</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>L.</ce:given-name>
+                                 <ce:surname>Gao</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>A.J.F.</ce:given-name>
+                                 <ce:surname>Van Hoof</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>E.J.M.</ce:given-name>
+                                 <ce:surname>Hensen</ce:surname>
+                              </sb:author>
+                           </sb:authors>
+                           <sb:title>
+                              <sb:maintitle>A dual-templating synthesis strategy to hierarchical ZSM-5 zeolites as efficient catalysts for the methanol-to-hydrocarbons reaction</sb:maintitle>
+                           </sb:title>
+                        </sb:contribution>
+                        <sb:host>
+                           <sb:issue>
+                              <sb:series>
+                                 <sb:title>
+                                    <sb:maintitle>J. Catal.</sb:maintitle>
+                                 </sb:title>
+                                 <sb:volume-nr>361</sb:volume-nr>
+                              </sb:series>
+                              <sb:date>2018</sb:date>
+                           </sb:issue>
+                           <sb:pages>
+                              <sb:first-page>135</sb:first-page>
+                              <sb:last-page>142</sb:last-page>
+                           </sb:pages>
+                           <ce:doi>10.1016/j.jcat.2018.02.032</ce:doi>
+                        </sb:host>
+                     </sb:reference>
+                     <ce:source-text id="stx015">L. Meng, X. Zhu, W. Wannapakdee, R. Pestman, M.G. Goesten, L. Gao, A.J.F. Van Hoof, E.J.M. Hensen, A dual-templating synthesis strategy to hierarchical ZSM-5 zeolites as efficient catalysts for the methanol-to-hydrocarbons reaction, J. Catal. 361 (2018) 135–142. https://doi.org/10.1016/j.jcat.2018.02.032.</ce:source-text>
+                  </ce:bib-reference>
+                  <ce:bib-reference id="b0015">
+                     <ce:label>[3]</ce:label>
+                     <sb:reference id="h0015">
+                        <sb:contribution langtype="en">
+                           <sb:authors>
+                              <sb:author>
+                                 <ce:given-name>C.</ce:given-name>
+                                 <ce:surname>Zhang</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>H.</ce:given-name>
+                                 <ce:surname>Chen</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>X.</ce:given-name>
+                                 <ce:surname>Zhang</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>Q.</ce:given-name>
+                                 <ce:surname>Wang</ce:surname>
+                              </sb:author>
+                           </sb:authors>
+                           <sb:title>
+                              <sb:maintitle>TPABr-grafted MWCNT as bifunctional template to synthesize hierarchical ZSM-5 zeolite</sb:maintitle>
+                           </sb:title>
+                        </sb:contribution>
+                        <sb:host>
+                           <sb:issue>
+                              <sb:series>
+                                 <sb:title>
+                                    <sb:maintitle>Mater. Lett.</sb:maintitle>
+                                 </sb:title>
+                                 <sb:volume-nr>197</sb:volume-nr>
+                              </sb:series>
+                              <sb:date>2017</sb:date>
+                           </sb:issue>
+                           <sb:pages>
+                              <sb:first-page>111</sb:first-page>
+                              <sb:last-page>114</sb:last-page>
+                           </sb:pages>
+                           <ce:doi>10.1016/j.matlet.2017.03.085</ce:doi>
+                        </sb:host>
+                     </sb:reference>
+                     <ce:source-text id="stx020">C. Zhang, H. Chen, X. Zhang, Q. Wang, TPABr-grafted MWCNT as bifunctional template to synthesize hierarchical ZSM-5 zeolite, Mater. Lett. 197 (2017) 111–114. https://doi.org/10.1016/j.matlet.2017.03.085.</ce:source-text>
+                  </ce:bib-reference>
+                  <ce:bib-reference id="b0020">
+                     <ce:label>[4]</ce:label>
+                     <sb:reference id="h0020">
+                        <sb:contribution langtype="en">
+                           <sb:authors>
+                              <sb:author>
+                                 <ce:given-name>S.</ce:given-name>
+                                 <ce:surname>Han</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>Z.</ce:given-name>
+                                 <ce:surname>Wang</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>L.</ce:given-name>
+                                 <ce:surname>Meng</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>N.</ce:given-name>
+                                 <ce:surname>Jiang</ce:surname>
+                              </sb:author>
+                           </sb:authors>
+                           <sb:title>
+                              <sb:maintitle>Synthesis of uniform mesoporous ZSM-5 using hydrophilic carbon as a hard template</sb:maintitle>
+                           </sb:title>
+                        </sb:contribution>
+                        <sb:host>
+                           <sb:issue>
+                              <sb:series>
+                                 <sb:title>
+                                    <sb:maintitle>Mater. Chem. Phys.</sb:maintitle>
+                                 </sb:title>
+                                 <sb:volume-nr>177</sb:volume-nr>
+                              </sb:series>
+                              <sb:date>2016</sb:date>
+                           </sb:issue>
+                           <sb:pages>
+                              <sb:first-page>112</sb:first-page>
+                              <sb:last-page>117</sb:last-page>
+                           </sb:pages>
+                           <ce:doi>10.1016/j.matchemphys.2016.04.003</ce:doi>
+                        </sb:host>
+                     </sb:reference>
+                     <ce:source-text id="stx025">S. Han, Z. Wang, L. Meng, N. Jiang, Synthesis of uniform mesoporous ZSM-5 using hydrophilic carbon as a hard template, Mater. Chem. Phys. 177 (2016) 112–117. https://doi.org/10.1016/j.matchemphys.2016.04.003.</ce:source-text>
+                  </ce:bib-reference>
+                  <ce:bib-reference id="b0025">
+                     <ce:label>[5]</ce:label>
+                     <sb:reference id="h0025">
+                        <sb:contribution langtype="en">
+                           <sb:authors>
+                              <sb:author>
+                                 <ce:given-name>F.</ce:given-name>
+                                 <ce:surname>Ye</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>S.</ce:given-name>
+                                 <ce:surname>Fan</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>X.</ce:given-name>
+                                 <ce:surname>Lang</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>Y.</ce:given-name>
+                                 <ce:surname>Wang</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>Y.</ce:given-name>
+                                 <ce:surname>Lv</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>G.</ce:given-name>
+                                 <ce:surname>Li</ce:surname>
+                              </sb:author>
+                           </sb:authors>
+                           <sb:title>
+                              <sb:maintitle>Facile synthesis and mechanistic insights into ZSM-5 aggregates via a mesoporogen-free route</sb:maintitle>
+                           </sb:title>
+                        </sb:contribution>
+                        <sb:host>
+                           <sb:issue>
+                              <sb:series>
+                                 <sb:title>
+                                    <sb:maintitle>J. Solid State Chem.</sb:maintitle>
+                                 </sb:title>
+                                 <sb:volume-nr>341</sb:volume-nr>
+                              </sb:series>
+                              <sb:date>2025</sb:date>
+                           </sb:issue>
+                           <sb:pages>
+                              <sb:first-page>125078</sb:first-page>
+                           </sb:pages>
+                           <ce:doi>10.1016/j.jssc.2024.125078</ce:doi>
+                        </sb:host>
+                     </sb:reference>
+                     <ce:source-text id="stx030">Q. Zhang, A. Mayoral, O. Terasaki, Q. Zhang, B. Ma, C. Zhao, G. Yang, J. Yu, Amino acid-assisted construction of single-crystalline hierarchical nanozeolites via oriented-aggregation and intraparticle ripening, J. Am. Chem. Soc. 141 (2019) 3772–3776. https://doi.org/10.1021/jacs.8b11734.</ce:source-text>
+                  </ce:bib-reference>
+                  <ce:bib-reference id="b0030">
+                     <ce:label>[6]</ce:label>
+                     <sb:reference id="h0030">
+                        <sb:contribution langtype="en">
+                           <sb:authors>
+                              <sb:author>
+                                 <ce:given-name>Q.</ce:given-name>
+                                 <ce:surname>Zhang</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>A.</ce:given-name>
+                                 <ce:surname>Mayoral</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>O.</ce:given-name>
+                                 <ce:surname>Terasaki</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>Q.</ce:given-name>
+                                 <ce:surname>Zhang</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>B.</ce:given-name>
+                                 <ce:surname>Ma</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>C.</ce:given-name>
+                                 <ce:surname>Zhao</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>G.</ce:given-name>
+                                 <ce:surname>Yang</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>J.</ce:given-name>
+                                 <ce:surname>Yu</ce:surname>
+                              </sb:author>
+                           </sb:authors>
+                           <sb:title>
+                              <sb:maintitle>Amino acid-assisted construction of single-crystalline hierarchical nanozeolites via oriented-aggregation and intraparticle ripening</sb:maintitle>
+                           </sb:title>
+                        </sb:contribution>
+                        <sb:host>
+                           <sb:issue>
+                              <sb:series>
+                                 <sb:title>
+                                    <sb:maintitle>J. Am. Chem. Soc.</sb:maintitle>
+                                 </sb:title>
+                                 <sb:volume-nr>141</sb:volume-nr>
+                              </sb:series>
+                              <sb:date>2019</sb:date>
+                           </sb:issue>
+                           <sb:pages>
+                              <sb:first-page>3772</sb:first-page>
+                              <sb:last-page>3776</sb:last-page>
+                           </sb:pages>
+                           <ce:doi>10.1021/jacs.8b11734</ce:doi>
+                        </sb:host>
+                     </sb:reference>
+                     <ce:source-text id="stx035">F. Ye, S. Fan, X. Lang, Y. Wang, Y. Lv, G. Li, Facile synthesis and mechanistic insights into ZSM-5 aggregates via a mesoporogen-free route, J. Solid State Chem. 341 (2025) 125078. https://doi.org/10.1016/j.jssc.2024.125078.</ce:source-text>
+                  </ce:bib-reference>
+                  <ce:bib-reference id="b0035">
+                     <ce:label>[7]</ce:label>
+                     <sb:reference id="h0035">
+                        <sb:contribution langtype="en">
+                           <sb:authors>
+                              <sb:author>
+                                 <ce:given-name>Z.</ce:given-name>
+                                 <ce:surname>Liu</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>T.</ce:given-name>
+                                 <ce:surname>Wakihara</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>D.</ce:given-name>
+                                 <ce:surname>Nishioka</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>K.</ce:given-name>
+                                 <ce:surname>Oshima</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>T.</ce:given-name>
+                                 <ce:surname>Takewaki</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>T.</ce:given-name>
+                                 <ce:surname>Okubo</ce:surname>
+                              </sb:author>
+                           </sb:authors>
+                           <sb:title>
+                              <sb:maintitle>One-minute synthesis of crystalline microporous aluminophosphate (AlPO<ce:inf loc="post">4</ce:inf>-5) by combining fast heating with a seed-assisted method</sb:maintitle>
+                           </sb:title>
+                        </sb:contribution>
+                        <sb:host>
+                           <sb:issue>
+                              <sb:series>
+                                 <sb:title>
+                                    <sb:maintitle>Chem. Commun.</sb:maintitle>
+                                 </sb:title>
+                                 <sb:volume-nr>50</sb:volume-nr>
+                              </sb:series>
+                              <sb:date>2014</sb:date>
+                           </sb:issue>
+                           <sb:pages>
+                              <sb:first-page>2526</sb:first-page>
+                           </sb:pages>
+                           <ce:doi>10.1039/c3cc49548e</ce:doi>
+                        </sb:host>
+                     </sb:reference>
+                     <ce:source-text id="stx040">Z. Liu, T. Wakihara, D. Nishioka, K. Oshima, T. Takewaki, T. Okubo, One-minute synthesis of crystalline microporous aluminophosphate (AlPO4-5) by combining fast heating with a seed-assisted method, Chem. Commun. 50 (2014) 2526. https://doi.org/10.1039/c3cc49548e.</ce:source-text>
+                  </ce:bib-reference>
+                  <ce:bib-reference id="b0040">
+                     <ce:label>[8]</ce:label>
+                     <sb:reference id="h0040">
+                        <sb:contribution langtype="en">
+                           <sb:authors>
+                              <sb:author>
+                                 <ce:given-name>Z.</ce:given-name>
+                                 <ce:surname>Liu</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>T.</ce:given-name>
+                                 <ce:surname>Wakihara</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>K.</ce:given-name>
+                                 <ce:surname>Oshima</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>D.</ce:given-name>
+                                 <ce:surname>Nishioka</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>Y.</ce:given-name>
+                                 <ce:surname>Hotta</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>S.P.</ce:given-name>
+                                 <ce:surname>Elangovan</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>Y.</ce:given-name>
+                                 <ce:surname>Yanaba</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>T.</ce:given-name>
+                                 <ce:surname>Yoshikawa</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>W.</ce:given-name>
+                                 <ce:surname>Chaikittisilp</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>T.</ce:given-name>
+                                 <ce:surname>Matsuo</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>T.</ce:given-name>
+                                 <ce:surname>Takewaki</ce:surname>
+                              </sb:author>
+                              <sb:author>
+                                 <ce:given-name>T.</ce:given-name>
+                                 <ce:surname>Okubo</ce:surname>
+                              </sb:author>
+                           </sb:authors>
+                           <sb:title>
+                              <sb:maintitle>Widening synthesis bottlenecks: realization of ultrafast and continuous‐flow synthesis of high‐silica zeolite SSZ‐13 for NO<ce:italic>
+                                    <ce:inf loc="post">x</ce:inf>
+                                 </ce:italic> removal</sb:maintitle>
+                           </sb:title>
+                        </sb:contribution>
+                        <sb:host>
+                           <sb:issue>
+                              <sb:series>
+                                 <sb:title>
+                                    <sb:maintitle>Angew. Chem. Int. Ed.</sb:maintitle>
+                                 </sb:title>
+                                 <sb:volume-nr>127</sb:volume-nr>
+                              </sb:series>
+                              <sb:date>2015</sb:date>
+                           </sb:issue>
+                           <sb:pages>
+                              <sb:first-page>5775</sb:first-page>
+                              <sb:last-page>5779</sb:last-page>
+                           </sb:pages>
+                           <ce:doi>10.1002/ange.201501160</ce:doi>
+                        </sb:host>
+                     </sb:reference>
+                     <ce:source-text id="stx045">Z. Liu, T. Wakihara, K. Oshima, D. Nishioka, Y. Hotta, S.P. Elangovan, Y. Yanaba, T. Yoshikawa, W. Chaikittisilp, T. Matsuo, T. Takewaki, T. Okubo, Widening synthesis bottlenecks: realization of ultrafast and continuous‐flow synthesis of high‐silica zeolite SSZ‐13 for NOx removal, Angew. Chem. Int. Ed. 127 (2015) 5775–5779. https://doi.org/10.1002/ange.201501160.</ce:source-text>
+                  </ce:bib-reference>
+               </ce:bibliography-sec>
+            </ce:bibliography>
+         </tail>
+      </article>
+   </xocs:serial-item></xocs:doc></originalText></full-text-retrieval-response>
