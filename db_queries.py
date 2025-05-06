@@ -6,6 +6,13 @@ import matplotlib.pyplot as plt
 client = MongoClient("mongodb://localhost:27017/")
 db = client["zeolite_tdm"]
 
+def clear_db():
+    """Clears the database"""
+    db.papers.drop()
+    db.paragraphs.drop()
+    db.tables.drop()
+
+
 def report_collection_counts():
     collections = ['papers', 'paragraphs', 'tables']
     print(f"DOC COUNTS")
@@ -13,6 +20,7 @@ def report_collection_counts():
     for name in collections:
         count = db[name].count_documents({})
         print(f"  - {name}: {count} documents")
+
 
 def status_report():
     """
@@ -78,10 +86,11 @@ def rejection_report():
 
     labels = list(rejections.keys())
     sizes = list(rejections.values())
+    total = sum(sizes)
 
     plt.figure(figsize=(7, 7))
     plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
-    plt.title("📉 Rejection Reasons in Papers Collection")
+    plt.title(f"Total Rejections: {total}")
     plt.axis('equal')
     plt.tight_layout()
     plt.show()

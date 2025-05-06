@@ -1,0 +1,583 @@
+[
+    {
+        "doi": "10.1016/j.solidstatesciences.2022.107002",
+        "string": " <R>  <C> A <C> Sample <C> Surface area(m2\u00b7g\u22121) <C> Surface area(m2\u00b7g\u22121) <C> Surface area(m2\u00b7g\u22121) <C> Pore volume (cm3\u00b7g\u22121\uff09 <C> Pore volume (cm3\u00b7g\u22121\uff09 <C> Pore volume (cm3\u00b7g\u22121\uff09 <C> Pore Width(nm) <C> Pore Width(nm) <R>  <C> A <C> Sample <C> SBET <C> SMicro <C> SMeso <C> VMicro <C> VMeso <C> Vtotal <C> DMeso <C> DMicro <R>  <C> MBeta <C> MBeta <C> 550 <C> 345 <C> 205 <C> 0.18 <C> 0.24 <C> 0.42 <C> 5.20 <C> 0.58 <R>  <C> Beta <C> Beta <C> 475 <C> 356 <C> 119 <C> 0.22 <C> 0.05 <C> 0.27 <C> - <C> 0.55 <R>  <C> B <C> Sample <C> VMeso/Vtotal <C> VMeso/Vtotal <C> VMeso/Vtotal <C> VMeso/Vtotal <C> SMeso/SBET <C> SMeso/SBET <C> SMeso/SBET <C> SMeso/SBET <R>  <C> MBeta <C> MBeta <C> 0.57 <C> 0.57 <C> 0.57 <C> 0.57 <C> 0.37 <C> 0.37 <C> 0.37 <C> 0.37 <R>  <C> Beta <C> Beta <C> 0.20 <C> 0.20 <C> 0.20 <C> 0.20 <C> 0.24 <C> 0.24 <C> 0.24 <C> 0.24 <Cap> (A, B) Textural properties of the synthesized Beta and MBeta. </Cap> ",
+        "table": [
+            [
+                "A",
+                "Sample",
+                "Surface area(m2\u00b7g\u22121)",
+                "Surface area(m2\u00b7g\u22121)",
+                "Surface area(m2\u00b7g\u22121)",
+                "Pore volume (cm3\u00b7g\u22121\uff09",
+                "Pore volume (cm3\u00b7g\u22121\uff09",
+                "Pore volume (cm3\u00b7g\u22121\uff09",
+                "Pore Width(nm)",
+                "Pore Width(nm)"
+            ],
+            [
+                "A",
+                "Sample",
+                "SBET",
+                "SMicro",
+                "SMeso",
+                "VMicro",
+                "VMeso",
+                "Vtotal",
+                "DMeso",
+                "DMicro"
+            ],
+            [
+                "MBeta",
+                "MBeta",
+                "550",
+                "345",
+                "205",
+                "0.18",
+                "0.24",
+                "0.42",
+                "5.20",
+                "0.58"
+            ],
+            [
+                "Beta",
+                "Beta",
+                "475",
+                "356",
+                "119",
+                "0.22",
+                "0.05",
+                "0.27",
+                "-",
+                "0.55"
+            ],
+            [
+                "B",
+                "Sample",
+                "VMeso/Vtotal",
+                "VMeso/Vtotal",
+                "VMeso/Vtotal",
+                "VMeso/Vtotal",
+                "SMeso/SBET",
+                "SMeso/SBET",
+                "SMeso/SBET",
+                "SMeso/SBET"
+            ],
+            [
+                "MBeta",
+                "MBeta",
+                "0.57",
+                "0.57",
+                "0.57",
+                "0.57",
+                "0.37",
+                "0.37",
+                "0.37",
+                "0.37"
+            ],
+            [
+                "Beta",
+                "Beta",
+                "0.20",
+                "0.20",
+                "0.20",
+                "0.20",
+                "0.24",
+                "0.24",
+                "0.24",
+                "0.24"
+            ]
+        ],
+        "flat_table": [
+            [
+                "A",
+                "Sample",
+                "Surface area(m2\u00b7g\u22121) | SBET",
+                "Surface area(m2\u00b7g\u22121) | SMicro",
+                "Surface area(m2\u00b7g\u22121) | SMeso",
+                "Pore volume (cm3\u00b7g\u22121\uff09 | VMicro",
+                "Pore volume (cm3\u00b7g\u22121\uff09 | VMeso",
+                "Pore volume (cm3\u00b7g\u22121\uff09 | Vtotal",
+                "Pore Width(nm) | DMeso",
+                "Pore Width(nm) | DMicro"
+            ],
+            [
+                "MBeta",
+                "MBeta",
+                "550",
+                "345",
+                "205",
+                "0.18",
+                "0.24",
+                "0.42",
+                "5.20",
+                "0.58"
+            ],
+            [
+                "Beta",
+                "Beta",
+                "475",
+                "356",
+                "119",
+                "0.22",
+                "0.05",
+                "0.27",
+                "-",
+                "0.55"
+            ],
+            [
+                "B",
+                "Sample",
+                "VMeso/Vtotal",
+                "VMeso/Vtotal",
+                "VMeso/Vtotal",
+                "VMeso/Vtotal",
+                "SMeso/SBET",
+                "SMeso/SBET",
+                "SMeso/SBET",
+                "SMeso/SBET"
+            ],
+            [
+                "MBeta",
+                "MBeta",
+                "0.57",
+                "0.57",
+                "0.57",
+                "0.57",
+                "0.37",
+                "0.37",
+                "0.37",
+                "0.37"
+            ],
+            [
+                "Beta",
+                "Beta",
+                "0.20",
+                "0.20",
+                "0.20",
+                "0.20",
+                "0.24",
+                "0.24",
+                "0.24",
+                "0.24"
+            ]
+        ],
+        "samples": [
+            {
+                "sample": "MBeta",
+                "S_BET": "550 m²/g",
+                "S_Micro": "345 m²/g",
+                "S_Meso": "205 m²/g",
+                "V_Micro": "0.18 cm³/g",
+                "V_Meso": "0.24 cm³/g",
+                "V_total": "0.42 cm³/g",
+                "D_Meso": "5.20 nm",
+                "D_Micro": "0.58 nm"
+            },
+            {
+                "sample": "Beta",
+                "S_BET": "475 m²/g",
+                "S_Micro": "356 m²/g",
+                "S_Meso": "119 m²/g",
+                "V_Micro": "0.22 cm³/g",
+                "V_Meso": "0.05 cm³/g",
+                "V_total": "0.27 cm³/g",
+                "D_Meso": "–",
+                "D_Micro": "0.55 nm"
+            }
+        ]
+    },
+    {
+        "doi": "10.1016/j.apcata.2020.117664",
+        "string": " <R>  <C> Sample <C> Si/Al (mol) <C> SBET (m2/g) <C> Sexter (m2/g) <C> Vmeso (cm3/g) <C> Vmicro (cm3/g) <C> Pore diameter(d/nm) <C> Pore diameter(d/nm) <C> Crystallinity (%) [NOTE] Calculated from XRD data. <R>  <C> Sample <C> Si/Al (mol) <C> SBET (m2/g) <C> Sexter (m2/g) <C> Vmeso (cm3/g) <C> Vmicro (cm3/g) <C> Micropore <C> Mesopore <C> Crystallinity (%) [NOTE] Calculated from XRD data. <R>  <C> H-SSZ-32 <C> 55 <C> 85. <C> 37 <C> 0.16 <C> 0.02 <C> 0.82 <C> \u2013 <C> 93.2 <R>  <C> HSSZ@M-C12 <C> 53 <C> 148 <C> 63 <C> 0.25 <C> 0.04 <C> 0.93 <C> 2.94 <C> 91.5 <R>  <C> HSSZ@M-C14 <C> 52 <C> 201 <C> 79 <C> 0.29 <C> 0.05 <C> 0.94 <C> 3.72 <C> 87.8 <R>  <C> HSSZ@M-C16 <C> 50 <C> 214 <C> 97 <C> 0.42 <C> 0.05 <C> 0.98 <C> 4.23 <C> 89.2 <Cap> Physical properties of different catalysts. </Cap> ",
+        "table": [
+            [
+                "Sample",
+                "Si/Al (mol)",
+                "SBET (m2/g)",
+                "Sexter (m2/g)",
+                "Vmeso (cm3/g)",
+                "Vmicro (cm3/g)",
+                "Pore diameter(d/nm)",
+                "Pore diameter(d/nm)",
+                "Crystallinity (%) [NOTE] Calculated from XRD data."
+            ],
+            [
+                "Sample",
+                "Si/Al (mol)",
+                "SBET (m2/g)",
+                "Sexter (m2/g)",
+                "Vmeso (cm3/g)",
+                "Vmicro (cm3/g)",
+                "Micropore",
+                "Mesopore",
+                "Crystallinity (%) [NOTE] Calculated from XRD data."
+            ],
+            [
+                "H-SSZ-32",
+                "55",
+                "85.",
+                "37",
+                "0.16",
+                "0.02",
+                "0.82",
+                "\u2013",
+                "93.2"
+            ],
+            [
+                "HSSZ@M-C12",
+                "53",
+                "148",
+                "63",
+                "0.25",
+                "0.04",
+                "0.93",
+                "2.94",
+                "91.5"
+            ],
+            [
+                "HSSZ@M-C14",
+                "52",
+                "201",
+                "79",
+                "0.29",
+                "0.05",
+                "0.94",
+                "3.72",
+                "87.8"
+            ],
+            [
+                "HSSZ@M-C16",
+                "50",
+                "214",
+                "97",
+                "0.42",
+                "0.05",
+                "0.98",
+                "4.23",
+                "89.2"
+            ]
+        ],
+        "flat_table": [
+            [
+                "Sample",
+                "Si/Al (mol)",
+                "SBET (m2/g)",
+                "Sexter (m2/g)",
+                "Vmeso (cm3/g)",
+                "Vmicro (cm3/g)",
+                "Pore diameter(d/nm) | Micropore",
+                "Pore diameter(d/nm) | Mesopore",
+                "Crystallinity (%) [NOTE] Calculated from XRD data."
+            ],
+            [
+                "H-SSZ-32",
+                "55",
+                "85.",
+                "37",
+                "0.16",
+                "0.02",
+                "0.82",
+                "\u2013",
+                "93.2"
+            ],
+            [
+                "HSSZ@M-C12",
+                "53",
+                "148",
+                "63",
+                "0.25",
+                "0.04",
+                "0.93",
+                "2.94",
+                "91.5"
+            ],
+            [
+                "HSSZ@M-C14",
+                "52",
+                "201",
+                "79",
+                "0.29",
+                "0.05",
+                "0.94",
+                "3.72",
+                "87.8"
+            ],
+            [
+                "HSSZ@M-C16",
+                "50",
+                "214",
+                "97",
+                "0.42",
+                "0.05",
+                "0.98",
+                "4.23",
+                "89.2"
+            ]
+        ],
+        "samples": [
+            {
+              "sample": "H-SSZ-32",
+              "Si_Al": "55 mol",
+              "S_BET": "85 m²/g",
+              "S_exter": "37 m²/g",
+              "V_meso": "0.16 cm³/g",
+              "V_micro": "0.02 cm³/g",
+              "D_micro": "0.82 nm",
+              "D_meso": "–",
+              "crystallinity": "93.2 % - XRD"
+            },
+            {
+              "sample": "HSSZ@M-C12",
+              "Si_Al": "53 mol",
+              "S_BET": "148 m²/g",
+              "S_ext": "63 m²/g",
+              "V_meso": "0.25 cm³/g",
+              "V_micro": "0.04 cm³/g",
+              "D_micro": "0.93 nm",
+              "D_meso": "2.94 nm",
+              "crystallinity": "91.5 % - XRD"
+            },
+            {
+              "sample": "HSSZ@M-C14",
+              "Si_Al": "52 mol",
+              "S_BET": "201 m²/g",
+              "S_ext": "79 m²/g",
+              "V_meso": "0.29 cm³/g",
+              "V_micro": "0.05 cm³/g",
+              "D_micro": "0.94 nm",
+              "D_meso": "3.72 nm",
+              "crystallinity": "87.8 % - XRD"
+            },
+            {
+              "sample": "HSSZ@M-C16",
+              "Si_Al": "50 mol",
+              "S_BET": "214 m²/g",
+              "S_ext": "97 m²/g",
+              "V_meso": "0.42 cm³/g",
+              "V_micro": "0.05 cm³/g",
+              "D_micro": "0.98 nm",
+              "D_meso": "4.23 nm",
+              "crystallinity": "89.2 % - XRD"
+            }
+        ]
+    },
+    {
+        "doi": "10.1016/j.micromeso.2021.111028",
+        "string": " <R>  <C> sample <C> Metal content (wt %) [NOTE] The contents of Ti or W species detected by ICP-OES. <C> SBET (m2.g\u22121) [NOTE] Calculated by Brunnauer-Emmet-Teller method. <C> Sext (m2.g\u22121) [NOTE] Determined by t-plot method. <C> Vmicro (cm3.g\u22121) [NOTE] Determined by t-plot method. <C> Vtotal (cm3.g\u22121) [NOTE] Single-pointed total pore volume at p/p 0 of 0.95. <C> Vmeso (cm3.g\u22121) [NOTE] V meso = V total - V micro. <R>  <C> TS-1 <C> 0.9 <C> 466 <C> 62 <C> 0.13 <C> 0.24 <C> 0.11 <R>  <C> WS-1 <C> 0.01 <C> 352 <C> 68 <C> 0.10 <C> 0.23 <C> 0.13 <R>  <C> HWS-1_0/1 <C> 0.14 <C> 379 <C> 92 <C> 0.11 <C> 0.34 <C> 0.23 <R>  <C> HWS-1_1/2 <C> 0.13 <C> 385 <C> 91 <C> 0.12 <C> 0.34 <C> 0.22 <R>  <C> HWS-1_1/1 <C> 0.12 <C> 395 <C> 92 <C> 0.12 <C> 0.38 <C> 0.26 <R>  <C> HWS-1_2/1 <C> 0.05 <C> 390 <C> 90 <C> 0.12 <C> 0.40 <C> 0.28 <Cap> Metal (Ti or W) contents and textual properties of the TS-1, WS-1 and HWS-1 samples. </Cap> ",
+        "table": [
+            [
+                "sample",
+                "Metal content (wt %) [NOTE] The contents of Ti or W species detected by ICP-OES.",
+                "SBET (m2.g\u22121) [NOTE] Calculated by Brunnauer-Emmet-Teller method.",
+                "Sext (m2.g\u22121) [NOTE] Determined by t-plot method.",
+                "Vmicro (cm3.g\u22121) [NOTE] Determined by t-plot method.",
+                "Vtotal (cm3.g\u22121) [NOTE] Single-pointed total pore volume at p/p 0 of 0.95.",
+                "Vmeso (cm3.g\u22121) [NOTE] V meso = V total - V micro."
+            ],
+            [
+                "TS-1",
+                "0.9",
+                "466",
+                "62",
+                "0.13",
+                "0.24",
+                "0.11"
+            ],
+            [
+                "WS-1",
+                "0.01",
+                "352",
+                "68",
+                "0.10",
+                "0.23",
+                "0.13"
+            ],
+            [
+                "HWS-1_0/1",
+                "0.14",
+                "379",
+                "92",
+                "0.11",
+                "0.34",
+                "0.23"
+            ],
+            [
+                "HWS-1_1/2",
+                "0.13",
+                "385",
+                "91",
+                "0.12",
+                "0.34",
+                "0.22"
+            ],
+            [
+                "HWS-1_1/1",
+                "0.12",
+                "395",
+                "92",
+                "0.12",
+                "0.38",
+                "0.26"
+            ],
+            [
+                "HWS-1_2/1",
+                "0.05",
+                "390",
+                "90",
+                "0.12",
+                "0.40",
+                "0.28"
+            ]
+        ],
+        "flat_table": [
+            [
+                "sample",
+                "Metal content (wt %) [NOTE] The contents of Ti or W species detected by ICP-OES.",
+                "SBET (m2.g\u22121) [NOTE] Calculated by Brunnauer-Emmet-Teller method.",
+                "Sext (m2.g\u22121) [NOTE] Determined by t-plot method.",
+                "Vmicro (cm3.g\u22121) [NOTE] Determined by t-plot method.",
+                "Vtotal (cm3.g\u22121) [NOTE] Single-pointed total pore volume at p/p 0 of 0.95.",
+                "Vmeso (cm3.g\u22121) [NOTE] V meso = V total - V micro."
+            ],
+            [
+                "TS-1",
+                "0.9",
+                "466",
+                "62",
+                "0.13",
+                "0.24",
+                "0.11"
+            ],
+            [
+                "WS-1",
+                "0.01",
+                "352",
+                "68",
+                "0.10",
+                "0.23",
+                "0.13"
+            ],
+            [
+                "HWS-1_0/1",
+                "0.14",
+                "379",
+                "92",
+                "0.11",
+                "0.34",
+                "0.23"
+            ],
+            [
+                "HWS-1_1/2",
+                "0.13",
+                "385",
+                "91",
+                "0.12",
+                "0.34",
+                "0.22"
+            ],
+            [
+                "HWS-1_1/1",
+                "0.12",
+                "395",
+                "92",
+                "0.12",
+                "0.38",
+                "0.26"
+            ],
+            [
+                "HWS-1_2/1",
+                "0.05",
+                "390",
+                "90",
+                "0.12",
+                "0.40",
+                "0.28"
+            ]
+        ],
+        "samples": [
+            {
+              "sample": "TS-1",
+              "metal_content": "0.9 wt% - ICP-OES",
+              "S_BET": "466 m²/g - BET",
+              "S_ext": "62 m²/g",
+              "V_micro": "0.13 cm³/g - t-plot",
+              "V_total": "0.24 cm³/g",
+              "V_meso": "0.11 cm³/g"
+            },
+            {
+              "sample": "WS-1",
+              "metal_content": "0.01 wt% - ICP-OES",
+              "S_BET": "352 m²/g - BET",
+              "S_ext": "68 m²/g",
+              "V_micro": "0.10 cm³/g - t-plot",
+              "V_total": "0.23 cm³/g",
+              "V_meso": "0.13 cm³/g"
+            },
+            {
+              "sample": "HWS-1_0/1",
+              "metal_content": "0.14 wt% - ICP-OES",
+              "S_BET": "379 m²/g - BET",
+              "S_ext": "92 m²/g",
+              "V_micro": "0.11 cm³/g - t-plot",
+              "V_total": "0.34 cm³/g",
+              "V_meso": "0.23 cm³/g"
+            },
+            {
+              "sample": "HWS-1_1/2",
+              "metal_content": "0.13 wt% - ICP-OES",
+              "S_BET": "385 m²/g - BET",
+              "S_ext": "91 m²/g",
+              "V_micro": "0.12 cm³/g - t-plot",
+              "V_total": "0.34 cm³/g",
+              "V_meso": "0.22 cm³/g"
+            },
+            {
+              "sample": "HWS-1_1/1",
+              "metal_content": "0.12 wt% - ICP-OES",
+              "S_BET": "395 m²/g - BET",
+              "S_ext": "92 m²/g",
+              "V_micro": "0.12 cm³/g - t-plot",
+              "V_total": "0.38 cm³/g",
+              "V_meso": "0.26 cm³/g"
+            },
+            {
+              "sample": "HWS-1_2/1",
+              "metal_content": "0.05 wt% - ICP-OES",
+              "S_BET": "390 m²/g - BET",
+              "S_ext": "90 m²/g",
+              "V_micro": "0.12 cm³/g - t-plot",
+              "V_total": "0.40 cm³/g",
+              "V_meso": "0.28 cm³/g"
+            }
+        ]
+    },
+    {
+        "doi": "10.1016/j.apcata.2020.117664",
+        "string": " <R>  <C> Catalyst <C> Lewis (Py) [NOTE] Lewis (Py) and Bronsted (Py) acidity calculated from the peak areas of FTIR spectra by Py-IR. <C> Lewis (Py) [NOTE] Lewis (Py) and Bronsted (Py) acidity calculated from the peak areas of FTIR spectra by Py-IR. <C> Lewis (Py) [NOTE] Lewis (Py) and Bronsted (Py) acidity calculated from the peak areas of FTIR spectra by Py-IR. <C> Brønsted (Py)a <C> Brønsted (Py)a <C> Brønsted (Py)a <C> B/L <C> Brønsted (TMpy) (mmol/g) [NOTE] Brønsted (TMpy) acidity calculated from the peak areas of FTIR spectra by TMPy-IR. <R>  <C> Catalyst <C> (mmol /g) <C> (mmol /g) <C> (mmol /g) <C> (mmol/g) <C> (mmol/g) <C> (mmol/g) <C> B/L <C> Brønsted (TMpy) (mmol/g) [NOTE] Brønsted (TMpy) acidity calculated from the peak areas of FTIR spectra by TMPy-IR. <R>  <C> Catalyst <C> S [NOTE] S: strong acid site, W: weak acid site, T: total acid site. <C> W [NOTE] S: strong acid site, W: weak acid site, T: total acid site. <C> T [NOTE] S: strong acid site, W: weak acid site, T: total acid site. <C> S <C> W <C> T <C> B/L <C> S <R>  <C> H-SSZ-32 <C> 0.072 <C> 0.067 <C> 0.139 <C> 0.685 <C> 0.682 <C> 1.367 <C> 9.835 <C> 0.449 <R>  <C> HSSZ@M-C12 <C> 0.089 <C> 0.092 <C> 0.181 <C> 0.245 <C> 0.247 <C> 0.492 <C> 2.718 <C> 0.301 <R>  <C> HSSZ@M-C14 <C> 0.095 <C> 0.100 <C> 0.195 <C> 0.186 <C> 0.187 <C> 0.373 <C> 1.913 <C> 0.243 <R>  <C> HSSZ@M-C16 <C> 0.191 <C> 0.194 <C> 0.385 <C> 0.182 <C> 0.182 <C> 0.364 <C> 0.945 <C> 0.239 <Cap> The acid properties of different samples determined by Py-FTIR and TMPy-FTIR spectra. </Cap> ",
+        "table": [["Catalyst", "Lewis (Py) [NOTE] Lewis (Py) and Bronsted (Py) acidity calculated from the peak areas of FTIR spectra by Py-IR.", "Lewis (Py) [NOTE] Lewis (Py) and Bronsted (Py) acidity calculated from the peak areas of FTIR spectra by Py-IR.", "Lewis (Py) [NOTE] Lewis (Py) and Bronsted (Py) acidity calculated from the peak areas of FTIR spectra by Py-IR.", "Brønsted (Py)a", "Brønsted (Py)a", "Brønsted (Py)a", "B/L", "Brønsted (TMpy) (mmol/g) [NOTE] Brønsted (TMpy) acidity calculated from the peak areas of FTIR spectra by TMPy-IR."], ["Catalyst", "(mmol /g)", "(mmol /g)", "(mmol /g)", "(mmol/g)", "(mmol/g)", "(mmol/g)", "B/L", "Brønsted (TMpy) (mmol/g) [NOTE] Brønsted (TMpy) acidity calculated from the peak areas of FTIR spectra by TMPy-IR."], ["Catalyst", "S [NOTE] S: strong acid site, W: weak acid site, T: total acid site.", "W [NOTE] S: strong acid site, W: weak acid site, T: total acid site.", "T [NOTE] S: strong acid site, W: weak acid site, T: total acid site.", "S", "W", "T", "B/L", "S"], ["H-SSZ-32", "0.072", "0.067", "0.139", "0.685", "0.682", "1.367", "9.835", "0.449"], ["HSSZ@M-C12", "0.089", "0.092", "0.181", "0.245", "0.247", "0.492", "2.718", "0.301"], ["HSSZ@M-C14", "0.095", "0.100", "0.195", "0.186", "0.187", "0.373", "1.913", "0.243"], ["HSSZ@M-C16", "0.191", "0.194", "0.385", "0.182", "0.182", "0.364", "0.945", "0.239"]],
+        "flat_table": [["Catalyst", "Lewis (Py) [NOTE] Lewis (Py) and Bronsted (Py) acidity calculated from the peak areas of FTIR spectra by Py-IR. | (mmol /g) | S [NOTE] S: strong acid site, W: weak acid site, T: total acid site.", "Lewis (Py) [NOTE] Lewis (Py) and Bronsted (Py) acidity calculated from the peak areas of FTIR spectra by Py-IR. | (mmol /g) | W [NOTE] S: strong acid site, W: weak acid site, T: total acid site.", "Lewis (Py) [NOTE] Lewis (Py) and Bronsted (Py) acidity calculated from the peak areas of FTIR spectra by Py-IR. | (mmol /g) | T [NOTE] S: strong acid site, W: weak acid site, T: total acid site.", "Brønsted (Py)a | (mmol/g) | S", "Brønsted (Py)a | (mmol/g) | W", "Brønsted (Py)a | (mmol/g) | T", "B/L", "Brønsted (TMpy) (mmol/g) [NOTE] Brønsted (TMpy) acidity calculated from the peak areas of FTIR spectra by TMPy-IR. | S"], ["H-SSZ-32", "0.072", "0.067", "0.139", "0.685", "0.682", "1.367", "9.835", "0.449"], ["HSSZ@M-C12", "0.089", "0.092", "0.181", "0.245", "0.247", "0.492", "2.718", "0.301"], ["HSSZ@M-C14", "0.095", "0.100", "0.195", "0.186", "0.187", "0.373", "1.913", "0.243"], ["HSSZ@M-C16", "0.191", "0.194", "0.385", "0.182", "0.182", "0.364", "0.945", "0.239"]],
+        "samples": [
+            {
+                "sample": "H-SSZ-32",
+                "Bronsted_Acid_Sites": "1.367 mmol/g - Py-IR | 0.449 mmol/g - TMPy-IR",
+                "Lewis_Acid_Sites": "0.139 mmol/g - Py-IR"
+            },
+            {
+                "sample": "HSSZ@M-C12",
+                "Bronsted_Acid_Sites": "0.492 mmol/g - Py-IR | 0.301 mmol/g - TMPy-IR",
+                "Lewis_Acid_Sites": "0.181 mmol/g - Py-IR"
+            },
+            {
+                "sample": "HSSZ@M-C14",
+                "Bronsted_Acid_Sites": "0.373 mmol/g - Py-IR | 0.243 mmol/g - TMPy-IR",
+                "Lewis_Acid_Sites": "0.195 mmol/g - Py-IR"
+            },
+            {
+                "sample": "HSSZ@M-C16",
+                "Bronsted_Acid_Sites": "0.364 mmol/g - Py-IR | 0.239 mmol/g - TMPy-IR",
+                "Lewis_Acid_Sites": "0.385 mmol/g - Py-IR"
+            }
+        ]
+    }
+]

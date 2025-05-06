@@ -9,15 +9,15 @@ import re
 import uuid
 import time
 
-def load_mongo():
+def load_mongo(uri="mongodb://localhost:27017/", db_name="zeolite_tdm"):
     """
     Load MongoDB collections for papers, paragraphs, tables, and sections.
     Returns:
         tuple: MongoDB collections for papers, paragraphs, tables, and sections.
     """
     import pymongo
-    client = pymongo.MongoClient("mongodb://localhost:27017/")
-    db = client["zeolite_tdm"]
+    client = pymongo.MongoClient(uri)
+    db = client[db_name]
     papers = db["papers"]
     paras = db["paragraphs"]
     tables_collection = db["tables"]
@@ -51,7 +51,7 @@ def batch_vectorize_paragraphs(paragraphs, model=None, tokenizer=None, batch_siz
         print("Please provide a field name to store the embeddings.")
         return
     
-    _, paras = load_mongo()
+    _, paras = load_mongo(db_name='papers')
 
     all_ids = [p['_id'] for p in paragraphs]
     all_texts = [p['text'] for p in paragraphs]
@@ -247,8 +247,8 @@ def get_extract(doi):
     clean_text = clean_text.replace('⁻', '-')           # Superscript minus (U+207B)
     return clean_text
 
-def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batch_size=32, use_cls=True):
-    papers, paras, _ = load_mongo()
+def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batch_size=32, use_cls=True, mongo_uri="mongodb://localhost:27017/", db_name="zeolite_tdm"):
+    papers, paras, _ = load_mongo(mongo_uri, db_name)
     bert, tokenizer = load_model(bert_model)
     classifier = load_head(head)
     if classifier is None:
