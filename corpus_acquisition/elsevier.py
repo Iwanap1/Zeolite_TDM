@@ -108,10 +108,9 @@ def collect_elsevier_to_mongo(
     max_minutes: int,
     api_key: str,
     mongo_uri: str = "mongodb://localhost:27017/",
-    db_name: str = "zeolite_tdm",
-    start_batch: int = 0
+    db_name: str = "zeolite_tdm"
 ) -> None:
-    
+
     import time
     from pymongo import MongoClient
     from elsevier_parser import ElsevierParser
@@ -120,14 +119,22 @@ def collect_elsevier_to_mongo(
     db = client[db_name]
     parser = ElsevierParser()
 
+    latest_batch = db.papers.find_one(
+        {"batch": {"$exists": True}},
+        sort=[("batch", -1)],
+        projection={"batch": 1}
+    )
+    batch_number = (latest_batch["batch"] + 1) if latest_batch else 0
+
+    print(f"Starting from batch {batch_number}...")
+
     start_time = time.time()
     end_time = start_time + (max_minutes * 60)
-    batch_number = 0
     total_success = 0
     total_failure = 0
 
     while time.time() < end_time:
-        start = start_batch + batch_number * PAPERS_PER_BATCH
+        start = batch_number * PAPERS_PER_BATCH
         params = {
             'query': query,
             'count': PAPERS_PER_BATCH,
@@ -145,7 +152,7 @@ def collect_elsevier_to_mongo(
             result = response.json()
         except requests.RequestException as e:
             print(f"Batch {batch_number} failed: {e}")
-            time.sleep(1)  # wait a bit before retrying
+            time.sleep(1)
             batch_number += 1
             continue
 
@@ -156,7 +163,7 @@ def collect_elsevier_to_mongo(
 
         for entry in entries:
             if time.time() >= end_time:
-                print("⏱️ Time limit reached, stopping.")
+                print("Time limit reached, stopping.")
                 break
 
             pii = entry.get('pii')
@@ -178,7 +185,8 @@ def collect_elsevier_to_mongo(
                     paper_doc = {
                         "doi": parsed.get("doi"),
                         "rejected_because": parsed.get("rejected_because"),
-                        "status": "rejected"
+                        "status": "rejected",
+                        "batch": batch_number
                     }
                 else:
                     paper_doc = {
@@ -186,7 +194,8 @@ def collect_elsevier_to_mongo(
                             'file_path', 'type', 'title', 'doi', 'authors', 'year',
                             'publication', 'keywords', 'abstract', 'rejected_because'
                         )},
-                        "status": "awaiting paragraph classification"
+                        "status": "awaiting paragraph classification",
+                        "batch": batch_number
                     }
 
                 paper_id = db.papers.insert_one(paper_doc).inserted_id
@@ -198,18 +207,19 @@ def collect_elsevier_to_mongo(
                             for sec in parsed["sections"]
                             for para in sec["content"]
                         ])
-
                     if parsed.get('tables'):
                         db.tables.insert_many([
                             {"paper_id": paper_id, **table}
                             for table in parsed["tables"]
                         ])
+
                 total_success += 1
 
             except Exception as e:
                 total_failure += 1
+                print(f"Error processing PII {pii}: {e}")
 
         batch_number += 1
 
-    print(f"\n✅ Inserted {total_success} papers.")
-    print(f"❌ Failed on {total_failure} papers.")
+    print(f"\nInserted {total_success} papers.")
+    print(f"Failed on {total_failure} papers.")

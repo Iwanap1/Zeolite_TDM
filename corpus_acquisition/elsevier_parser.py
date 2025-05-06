@@ -404,11 +404,12 @@ class ElsevierParser:
         publication = core_data.findtext('prism:publicationName', default=None, namespaces=self.namespaces)
         abstract_elem = core_data.find('dc:description', self.namespaces)
         abstract_text = abstract_elem.text.strip() if abstract_elem is not None and abstract_elem.text else None
+        tables = self.extract_tables(root, file_path)
 
         return {
             'file_path': file_path,
             'type': docsubtype,
-            'rejected_because': self.classify_paper(abstract_text, title, keywords, docsubtype) if abstract_text else 'no abstract',
+            'rejected_because': self.classify_paper(abstract_text, title, keywords, docsubtype, tables) if abstract_text else 'no abstract',
             'authors': authors,
             'doi': doi,
             'title': title,
@@ -417,7 +418,7 @@ class ElsevierParser:
             'keywords': keywords,
             'abstract': abstract_text,
             'sections': self._get_sections(root),
-            'tables': self.extract_tables(root, file_path)
+            'tables': tables
         }
 
     def extract_tables(self, root, file_path):
@@ -449,13 +450,16 @@ class ElsevierParser:
         body = root.find('.//ce:sections', self.namespaces)
         return [] if body is None else [sec for section in body.findall('ce:section', self.namespaces) for sec in recurse_sections(section)]
     
-    def classify_paper(self, abstract: str, title: str, keywords: list[str], docsubtype: str = "") -> str:
+    def classify_paper(self, abstract: str, title: str, keywords: list[str], tables, docsubtype: str = "") -> str:
         if not abstract:
             return "no abstract"
 
         if docsubtype == "rev":
             return "review article"
 
+        if tables is None or len(tables) == 0:
+            return "no tables"
+        
         combined = " ".join([
             abstract or "",
             title or "",
