@@ -4,10 +4,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from outlines import generate
 from outlines.models import transformers as outlines_transformers
 import os
-import json
 import pandas as pd
 from tabulate import tabulate
-import pymongo
 import time
 import uuid
 from pymongo import MongoClient
