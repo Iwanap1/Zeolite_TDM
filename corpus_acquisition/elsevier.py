@@ -56,7 +56,6 @@ def extract_articles(search_results: list, api_key: str, max_articles: int) -> t
 
     return success_count, failure_count
 
-
 def collect_elsevier_papers(
     query: str,
     paper_count: int,
@@ -103,3 +102,114 @@ def collect_elsevier_papers(
     print(f"Successfully collected {success} papers.")
     print(f"Failed to collect {failure} papers.")
 
+
+def collect_elsevier_to_mongo(
+    query: str,
+    max_minutes: int,
+    api_key: str,
+    mongo_uri: str = "mongodb://localhost:27017/",
+    db_name: str = "zeolite_tdm",
+    start_batch: int = 0
+) -> None:
+    
+    import time
+    from pymongo import MongoClient
+    from elsevier_parser import ElsevierParser
+
+    client = MongoClient(mongo_uri)
+    db = client[db_name]
+    parser = ElsevierParser()
+
+    start_time = time.time()
+    end_time = start_time + (max_minutes * 60)
+    batch_number = 0
+    total_success = 0
+    total_failure = 0
+
+    while time.time() < end_time:
+        start = start_batch + batch_number * PAPERS_PER_BATCH
+        params = {
+            'query': query,
+            'count': PAPERS_PER_BATCH,
+            'start': start,
+            'field': 'pii'
+        }
+        headers = {
+            "X-ELS-APIKey": api_key,
+            "Accept": "application/json"
+        }
+
+        try:
+            response = requests.get('https://api.elsevier.com/content/search/scopus', params=params, headers=headers)
+            response.raise_for_status()
+            result = response.json()
+        except requests.RequestException as e:
+            print(f"Batch {batch_number} failed: {e}")
+            time.sleep(1)  # wait a bit before retrying
+            batch_number += 1
+            continue
+
+        entries = result.get('search-results', {}).get('entry', [])
+        if not entries:
+            print("No more entries returned. Ending early.")
+            break
+
+        for entry in entries:
+            if time.time() >= end_time:
+                print("⏱️ Time limit reached, stopping.")
+                break
+
+            pii = entry.get('pii')
+            if not pii:
+                total_failure += 1
+                continue
+
+            article_url = f'https://api.elsevier.com/content/article/pii/{pii}'
+            try:
+                article_resp = requests.get(article_url, headers={"X-ELS-APIKey": api_key, "Accept": "text/xml"})
+                article_resp.raise_for_status()
+
+                parsed = parser.parse_from_string(article_resp.text, file_path=f"pii:{pii}")
+                if parsed is None:
+                    total_failure += 1
+                    continue
+
+                if parsed['rejected_because'] != 'accepted':
+                    paper_doc = {
+                        "doi": parsed.get("doi"),
+                        "rejected_because": parsed.get("rejected_because"),
+                        "status": "rejected"
+                    }
+                else:
+                    paper_doc = {
+                        **{k: parsed[k] for k in (
+                            'file_path', 'type', 'title', 'doi', 'authors', 'year',
+                            'publication', 'keywords', 'abstract', 'rejected_because'
+                        )},
+                        "status": "awaiting paragraph classification"
+                    }
+
+                paper_id = db.papers.insert_one(paper_doc).inserted_id
+
+                if parsed['rejected_because'] == 'accepted':
+                    if parsed.get('sections'):
+                        db.paragraphs.insert_many([
+                            {"paper_id": paper_id, "section": sec["section_name"], "text": para}
+                            for sec in parsed["sections"]
+                            for para in sec["content"]
+                        ])
+
+                    if parsed.get('tables'):
+                        db.tables.insert_many([
+                            {"paper_id": paper_id, **table}
+                            for table in parsed["tables"]
+                        ])
+                total_success += 1
+
+            except Exception as e:
+                total_failure += 1
+
+        batch_number += 1
+
+    print(f"\n✅ Inserted {total_success} papers.")
+    print(f"❌ Failed on {total_failure} papers.")

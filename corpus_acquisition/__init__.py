@@ -1,2 +1,2 @@
-from .elsevier import collect_elsevier_papers
+from .elsevier import collect_elsevier_papers, collect_elsevier_to_mongo
 from .elsevier_parser import ElsevierParser
