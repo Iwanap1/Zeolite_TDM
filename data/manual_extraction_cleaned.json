@@ -2866,7 +2866,7 @@
                         "microwave": "",
                         "ultrasound": "",
                         "repeats": "",
-                        "repeated_with_calcination": "n/a"
+                        "repeated_with_calcination": ""
                     },
                     {
                         "process": "calcination",
@@ -7743,7 +7743,7 @@
                         "time": "5 h"
                     },
                     {
-                        "process": "recrystallisation",
+                        "process": "recrystallization",
                         "did_step": "true",
                         "composite": "MCM-41/ZSM-5",
                         "dissolvent": "NaOH (10 ml, 0.5 M)",
@@ -7805,7 +7805,7 @@
                         "time": "5 h"
                     },
                     {
-                        "process": "recrystallisation",
+                        "process": "recrystallization",
                         "did_step": "true",
                         "composite": "MCM-41/ZSM-5",
                         "dissolvent": "NaOH (10 ml, 0.5 M)",
@@ -7867,7 +7867,7 @@
                         "time": "5 h"
                     },
                     {
-                        "process": "recrystallisation",
+                        "process": "recrystallization",
                         "did_step": "true",
                         "composite": "MCM-41/ZSM-5",
                         "dissolvent": "NaOH (10 ml, 0.5 M)",
@@ -7929,7 +7929,7 @@
                         "time": "5 h"
                     },
                     {
-                        "process": "recrystallisation",
+                        "process": "recrystallization",
                         "did_step": "true",
                         "composite": "MCM-41/ZSM-5",
                         "dissolvent": "NaOH (10 ml, 0.5 M)",
@@ -7991,7 +7991,7 @@
                         "time": "5 h"
                     },
                     {
-                        "process": "recrystallisation",
+                        "process": "recrystallization",
                         "did_step": "true",
                         "composite": "MCM-41/ZSM-5",
                         "dissolvent": "NaOH (10 ml, 0.5 M)",

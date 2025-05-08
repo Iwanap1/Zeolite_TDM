@@ -2,7 +2,7 @@
 import json
 from collections import OrderedDict
 
-with open('data/final_true.json') as f:
+with open('data/manual_extraction_raw.json') as f:
     data = json.load(f)
 
 process_fields = {

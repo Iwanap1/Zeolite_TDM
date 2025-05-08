@@ -1,21 +1,30 @@
 import json
 
-def prepare_process_identifation_data(data):
-    system = "you are a zeolite expert. You will be given a list of zeolite names and a text. Your task is to identify the processes and original zeolite source involved in the synthesis or modification of a zeolite"
+system = "you are a zeolite expert. You will be given a list of zeolite names and a text. Your task is to identify the processes and original zeolite source involved in the synthesis or modification of a zeolite"
+
+def prepare_process_identifation_data(data, output_path='../data/process_identification_data.jsonl', assistant_prompt=True):
     new = []
     for paper in data:
         zeolite_names = [sample['name'] for sample in paper['samples']]
         new_paper = {
             'doi': paper['doi'],
-            'messages': [{'role': 'system', 'content': system}, 
-                        {'role': 'user', 'content': construct_process_identification_user_prompt(zeolite_names, paper['text'])},
-                        {'role': 'assistant', 'content': construct_process_identification_assistant_prompt(paper['samples'])}]
+            'messages': [
+                        {'role': 'system', 'content': system}, 
+                        {'role': 'user', 'content': construct_process_identification_user_prompt(zeolite_names, paper['text'])}
+            ]
         }
+        if assistant_prompt:
+            assistant_msg = {'role': 'assistant', 'content': construct_process_identification_assistant_prompt(paper['samples'])}
+            new_paper['messages'].append(assistant_msg)
         new.append(new_paper)
 
-    with open('process_identification_data.jsonl', 'w') as file:
-        for paper in new:
-            file.write(json.dumps(paper) + '\n')
+    if output_path is not None:
+        with open(output_path, 'w') as file:
+            for paper in new:
+                file.write(json.dumps(paper) + '\n')
+        return
+    else:
+        return new
 
 
 def construct_process_identification_user_prompt(zeolite_names, text):
@@ -45,11 +54,8 @@ def construct_process_identification_assistant_prompt(samples):
     return json.dumps(output, indent=2)
 
 
-# def prepare_extraction_data(data):
-#     return
-
 if __name__ == '__main__':
-    data_file = "../manual_extraction.json"
+    data_file = "../data/manual_extraction_cleaned.json"
     with open(data_file, 'r') as file:
         data = json.load(file)
     prepare_process_identifation_data(data)
