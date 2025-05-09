@@ -96,6 +96,7 @@ def load_head(head_model):
     classifier.load_state_dict(torch.load(head_model, map_location=torch.device("cpu")))
     return classifier
 
+
 def paragraph_classification_from_json(bert_model, head, input_path, output_path, batch_size=32, use_cls=True):
     # Load BERT and tokenizer
     """
@@ -205,6 +206,7 @@ def paragraph_classification_from_json(bert_model, head, input_path, output_path
     print(f"Papers with synthesis text:    {papers_with_synthesis}")
     print(f"Papers without synthesis text: {papers_without_synthesis}")
 
+
 def get_extract(doi):
     """once all paragraphs are classified, get the text extract for the subsequent LLMs"""
     papers, paras, tables_collection = load_mongo()
@@ -247,7 +249,9 @@ def get_extract(doi):
     clean_text = clean_text.replace('⁻', '-')           # Superscript minus (U+207B)
     return clean_text
 
+
 def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batch_size=32, use_cls=True, mongo_uri="mongodb://localhost:27017/", db_name="zeolite_tdm"):
+    from pymongo import UpdateOne
     papers, paras, _ = load_mongo(mongo_uri, db_name)
     bert, tokenizer = load_model(bert_model)
     classifier = load_head(head)
@@ -277,7 +281,7 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
             "paper_id": {"$in": target_paper_ids},
             "synthesis": {"$exists": False},
             "claimed": {"$exists": False}
-        }).limit(batch_size * 10):
+        }, {"_id": 1}).limit(batch_size * 10):
 
             result = paras.update_one(
                 {"_id": doc["_id"], "claimed": {"$exists": False}},
@@ -297,7 +301,7 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
             print("⏱️ Time expired, processing final claimed batch before exit.")
 
         # Step 2: Classify paragraphs (either in-loop or final batch)
-        paragraph_data = list(paras.find({"_id": {"$in": claimed_ids}}))
+        paragraph_data = list(paras.find({"_id": {"$in": claimed_ids}}, {"_id": 1, "text": 1}))
 
         for i in tqdm(range(0, len(paragraph_data), batch_size), desc="Classifying paragraphs"):
             batch = paragraph_data[i:i + batch_size]
@@ -329,8 +333,8 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
             if probs.ndim == 0:
                 probs = probs.unsqueeze(0)
 
-            for para_doc, prob in zip(batch, probs):
-                paras.update_one(
+            ops = [
+                UpdateOne(
                     {'_id': para_doc['_id']},
                     {"$set": {
                         "synthesis": prob.item() > 0.5,
@@ -339,6 +343,12 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
                         "claimed": worker_id
                     }}
                 )
+                for para_doc, prob in zip(batch, probs)
+            ]
+
+            if ops:
+                paras.bulk_write(ops, ordered=False)
+
 
         # Step 3: Update completed papers
         for paper_id in target_paper_ids:

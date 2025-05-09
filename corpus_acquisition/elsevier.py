@@ -110,11 +110,12 @@ def collect_elsevier_to_mongo(
     mongo_uri: str = "mongodb://localhost:27017/",
     db_name: str = "zeolite_tdm"
 ) -> None:
-
     import time
-    from pymongo import MongoClient
+    import requests
+    from pymongo import MongoClient, InsertOne
     from elsevier_parser import ElsevierParser
 
+    PAPERS_PER_BATCH = 25  # You might want to configure this at the top level
     client = MongoClient(mongo_uri)
     db = client[db_name]
     parser = ElsevierParser()
@@ -161,6 +162,10 @@ def collect_elsevier_to_mongo(
             print("No more entries returned. Ending early.")
             break
 
+        paper_ops = []
+        paragraph_docs = []
+        table_docs = []
+
         for entry in entries:
             if time.time() >= end_time:
                 print("Time limit reached, stopping.")
@@ -177,39 +182,46 @@ def collect_elsevier_to_mongo(
                 article_resp.raise_for_status()
 
                 parsed = parser.parse_from_string(article_resp.text, file_path=f"pii:{pii}")
-                if parsed is None:
+                if parsed is None or not parsed.get("doi"):
                     total_failure += 1
                     continue
 
+                # Skip if already exists (optional pre-check)
+                if db.papers.count_documents({'doi': parsed["doi"]}, limit=1):
+                    print(f"Skipping duplicate DOI: {parsed['doi']}")
+                    continue
+
+                paper_doc = {
+                    "doi": parsed.get("doi"),
+                    "batch": batch_number,
+                }
+
                 if parsed['rejected_because'] != 'accepted':
-                    paper_doc = {
-                        "doi": parsed.get("doi"),
-                        "rejected_because": parsed.get("rejected_because"),
+                    paper_doc.update({
                         "status": "rejected",
-                        "batch": batch_number
-                    }
+                        "rejected_because": parsed.get("rejected_because")
+                    })
                 else:
-                    paper_doc = {
-                        **{k: parsed[k] for k in (
-                            'file_path', 'type', 'title', 'doi', 'authors', 'year',
+                    paper_doc.update({
+                        **{k: parsed.get(k) for k in (
+                            'file_path', 'type', 'title', 'authors', 'year',
                             'publication', 'keywords', 'abstract', 'rejected_because'
                         )},
-                        "status": "awaiting paragraph classification",
-                        "batch": batch_number
-                    }
+                        "status": "awaiting paragraph classification"
+                    })
 
-                paper_id = db.papers.insert_one(paper_doc).inserted_id
+                paper_ops.append(InsertOne(paper_doc))
 
                 if parsed['rejected_because'] == 'accepted':
                     if parsed.get('sections'):
-                        db.paragraphs.insert_many([
-                            {"paper_id": paper_id, "section": sec["section_name"], "text": para}
+                        paragraph_docs.extend([
+                            {"doi": parsed["doi"], "section": sec["section_name"], "text": para}
                             for sec in parsed["sections"]
                             for para in sec["content"]
                         ])
                     if parsed.get('tables'):
-                        db.tables.insert_many([
-                            {"paper_id": paper_id, **table}
+                        table_docs.extend([
+                            {"doi": parsed["doi"], **table}
                             for table in parsed["tables"]
                         ])
 
@@ -219,7 +231,27 @@ def collect_elsevier_to_mongo(
                 total_failure += 1
                 print(f"Error processing PII {pii}: {e}")
 
+        # Insert in bulk
+        if paper_ops:
+            try:
+                db.papers.bulk_write(paper_ops, ordered=False)
+            except Exception as e:
+                print(f"Error during bulk insert to papers: {e}")
+
+        if paragraph_docs:
+            try:
+                db.paragraphs.insert_many(paragraph_docs, ordered=False)
+            except Exception as e:
+                print(f"Error during insert_many to paragraphs: {e}")
+
+        if table_docs:
+            try:
+                db.tables.insert_many(table_docs, ordered=False)
+            except Exception as e:
+                print(f"Error during insert_many to tables: {e}")
+
         batch_number += 1
 
     print(f"\nInserted {total_success} papers.")
     print(f"Failed on {total_failure} papers.")
+
