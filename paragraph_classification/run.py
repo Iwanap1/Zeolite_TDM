@@ -12,5 +12,6 @@ paragraph_classification_from_mongo(
     mongo_uri=os.getenv("MONGO"),
     max_minutes=15, # how long to run for, important to set to less than walltime in run.sh to allow time to process final batch and clean up
     max_no_work=1, # how many loops to run despite no paragraphs to process - only worth increasing if corpus acquisition is running
-    max_claim_mins=60 # how long a paper can be claimed for processing by a worker - prevents stale claims
+    max_claim_mins=60, # how long a paper can be claimed for processing by a worker - prevents stale claims,
+    reset_claims=False # Set to True if you know there are stale claims and this is the only worker running
     )
