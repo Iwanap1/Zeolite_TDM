@@ -250,7 +250,8 @@ def get_extract(doi):
     return clean_text
 
 
-def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batch_size=32, use_cls=True, mongo_uri="mongodb://localhost:27017/", db_name="zeolite_tdm", max_no_work=1):
+
+def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batch_size=32, use_cls=True, mongo_uri="mongodb://localhost:27017/", db_name="zeolite_tdm", max_no_work=1, max_claim_mins=300):
     from pymongo import UpdateOne
     client, papers, paras, _ = load_mongo(mongo_uri, db_name)
     bert, tokenizer = load_model(bert_model)
@@ -279,15 +280,22 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
 
         # Step 1: Try to claim paragraphs
         claimed_ids = []
+        now_ts = time.time()
         for doc in paras.find({
             "paper_id": {"$in": target_paper_ids},
             "synthesis": {"$exists": False},
-            "claimed": {"$exists": False}
+            "$or": [
+                {"claimed": {"$exists": False}},
+                {"claim_time": {"$lt": now_ts - max_claim_mins*60}}
+            ]
         }, {"_id": 1}).limit(batch_size * 10):
 
             result = paras.update_one(
                 {"_id": doc["_id"], "claimed": {"$exists": False}},
-                {"$set": {"claimed": worker_id}}
+                {"$set": {
+                    "claimed": worker_id,
+                    "claim_time": now_ts
+                }}
             )
             if result.modified_count == 1:
                 claimed_ids.append(doc["_id"])
