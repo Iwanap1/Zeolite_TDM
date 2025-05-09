@@ -275,7 +275,6 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
         target_paper_ids = papers.find({"status": "awaiting paragraph classification"}).distinct("_id")
         if not target_paper_ids:
             print("✅ All papers processed.")
-            client.close()
             break
 
         # Step 1: Try to claim paragraphs
@@ -355,7 +354,6 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
                     {"$set": {
                         "synthesis": prob.item() > 0.5,
                         "probability": prob.item(),
-                        "manually_classified": False,
                         "claimed": worker_id
                     }}
                 )
@@ -364,56 +362,56 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
 
             if ops:
                 paras.bulk_write(ops, ordered=False)
-        done_papers = paras.aggregate([
-            {"$match": {"paper_id": {"$in": target_paper_ids}}},
-            {"$group": {
-                "_id": "$paper_id",
-                "total": {"$sum": 1},
-                "done": {
-                    "$sum": {
-                        "$cond": [{"$ne": ["$synthesis", None]}, 1, 0]
-                    }
-                }
-            }},
-            {"$match": {"$expr": {"$eq": ["$total", "$done"]}}}
-        ])
-
-        for doc in done_papers:
-            paper_id = doc["_id"]
-            paper = papers.find_one({"_id": paper_id}, {"doi": 1})
-            doi = paper.get("doi")
-
-            if not doi:
-                print(f"⚠️ Skipping paper {paper_id} with no DOI.")
-                continue
-
-            has_synthesis = paras.find_one({"paper_id": paper_id, "synthesis": True}) is not None
-            if not has_synthesis:
-                papers.update_one(
-                    {"_id": paper_id},
-                    {"$set": {
-                        "status": "rejected",
-                        "rejected_because": "no synthesis paragraphs"
-                    }}
-                )
-                paras.delete_many({"paper_id": paper_id})
-                continue
-
-            try:
-                extract = get_extract(doi)
-                papers.update_one(
-                    {"_id": paper_id},
-                    {"$set": {"status": "awaiting table extraction", "extract": extract}}
-                )
-                paras.delete_many({"paper_id": paper_id})
-                print(f"✅ Extracted and cleaned up paper: {doi}")
-            except Exception as e:
-                print(f"⚠️ Failed extract/cleanup for {doi}: {e}")
         # Final break if time's up
         if now >= end_time:
             print("🛑 Time limit reached. Exiting after processing final claimed batch.")
-            client.close()
             break
 
     print("🏁 Finished processing (time limit or no more work).")
+    print('Checking for finished papers')
+    done_papers = paras.aggregate([
+        {"$match": {"paper_id": {"$in": target_paper_ids}}},
+        {"$group": {
+            "_id": "$paper_id",
+            "total": {"$sum": 1},
+            "done": {
+                "$sum": {
+                    "$cond": [{"$ne": ["$synthesis", None]}, 1, 0]
+                }
+            }
+        }},
+        {"$match": {"$expr": {"$eq": ["$total", "$done"]}}}
+    ])
+
+    for doc in done_papers:
+        paper_id = doc["_id"]
+        paper = papers.find_one({"_id": paper_id}, {"doi": 1})
+        doi = paper.get("doi")
+
+        if not doi:
+            print(f"⚠️ Skipping paper {paper_id} with no DOI.")
+            continue
+
+        has_synthesis = paras.find_one({"paper_id": paper_id, "synthesis": True}) is not None
+        if not has_synthesis:
+            papers.update_one(
+                {"_id": paper_id},
+                {"$set": {
+                    "status": "rejected",
+                    "rejected_because": "no synthesis paragraphs"
+                }}
+            )
+            # paras.delete_many({"paper_id": paper_id})
+            continue
+
+        try:
+            extract = get_extract(doi)
+            papers.update_one(
+                {"_id": paper_id},
+                {"$set": {"status": "awaiting table extraction", "extract": extract}}
+            )
+            # paras.delete_many({"paper_id": paper_id})
+            print(f"✅ Extracted and cleaned up paper: {doi}")
+        except Exception as e:
+            print(f"⚠️ Failed extract/cleanup for {doi}: {e}")
     client.close()
