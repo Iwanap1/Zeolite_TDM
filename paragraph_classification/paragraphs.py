@@ -206,11 +206,12 @@ def paragraph_classification_from_json(bert_model, head, input_path, output_path
     print(f"Papers with synthesis text:    {papers_with_synthesis}")
     print(f"Papers without synthesis text: {papers_without_synthesis}")
 
-
-def get_extract(doi):
-    """once all paragraphs are classified, get the text extract for the subsequent LLMs"""
-    client, papers, paras, tables_collection = load_mongo()
+def get_extract(doi, papers, paras, tables_collection):
+    """Generate extract text from synthesis and materials sections + relevant tables for LLMs"""
     paper = papers.find_one({'doi': doi})
+    if not paper:
+        raise ValueError(f"No paper found for DOI {doi}")
+
     text = ""
     synth_paragraphs = paras.find({"paper_id": paper["_id"], 'synthesis': True})
 
@@ -232,27 +233,25 @@ def get_extract(doi):
         ]
     })
 
-    if materials_paragraph is not None:
-        text = materials_paragraph['text'] + '\n' + text if materials_paragraph['text'] not in text else text
+    if materials_paragraph and materials_paragraph['text'] not in text:
+        text = materials_paragraph['text'] + '\n' + text
 
-    # Convert tables to headers: [...], rows: [[...], ...]
-    tables_dict = {table['label']: table for table in tables_collection.find({'paper_id': paper['_id']})}
+    tables_dict = {t['label']: t for t in tables_collection.find({'paper_id': paper['_id']})}
     table_numbers = re.findall(r'Table \d+', text)
     for table_no in table_numbers:
         if table_no in tables_dict:
             table = tables_dict[table_no]
             text = text.replace(table_no, f"the following table - {table.get('as_string', '[TABLE MISSING]')}")
-    text = text.replace('−', '-').replace('−', '-').replace('⁻', '-')
-    clean_text = re.sub(r'[°ºÂâ]', ' ', text).strip()  # remove degree symbols and artifacts
-    clean_text = re.sub(r'\s+', ' ', clean_text)  # remove extra spaces
-    clean_text = clean_text.replace('−', '-')           # Unicode minus (U+2212)
-    clean_text = clean_text.replace('⁻', '-')           # Superscript minus (U+207B)
+
+    text = text.replace('−', '-').replace('⁻', '-')
+    clean_text = re.sub(r'[°ºÂâ]', ' ', text)
+    clean_text = re.sub(r'\s+', ' ', clean_text).strip()
     return clean_text
 
 
 def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batch_size=32, use_cls=True, mongo_uri="mongodb://localhost:27017/", db_name="zeolite_tdm", max_no_work=1, max_claim_mins=300):
     from pymongo import UpdateOne
-    client, papers, paras, _ = load_mongo(mongo_uri, db_name)
+    client, papers, paras, tables = load_mongo(mongo_uri, db_name)
     bert, tokenizer = load_model(bert_model)
     classifier = load_head(head)
     if classifier is None:
@@ -369,6 +368,7 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
 
     print("🏁 Finished processing (time limit or no more work).")
     print('Checking for finished papers')
+    target_paper_ids = papers.find({"status": "awaiting paragraph classification"}).distinct("_id")
     done_papers = paras.aggregate([
         {"$match": {"paper_id": {"$in": target_paper_ids}}},
         {"$group": {
@@ -405,7 +405,7 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
             continue
 
         try:
-            extract = get_extract(doi)
+            extract = get_extract(doi, papers, paras, tables)
             papers.update_one(
                 {"_id": paper_id},
                 {"$set": {"status": "awaiting table extraction", "extract": extract}}
