@@ -8,7 +8,7 @@ with open('data/manual_extraction_raw.json') as f:
 process_fields = {
     key.replace(" ", "_"): [field.replace(" ", "_") for field in fields]
     for key, fields in {
-        "calcination": ['process', "did step", "start_form", "end_form", "gas", "gas_flow", "heat_rate", "temperature", "time"],
+        "calcination": ['process', "did step", "gas", "gas_flow", "heat_rate", "temperature", "time"],
         "ion_exchange": ['process', "did step", "initial_form", "final_form", "solutes", "temperature", "time", "solvent", "repeats"],
         "commercial": ['process', "did step", "name", "supplier", "form", "cbv", "Si/Al", "SiO2/Al2O3", "M", "Si/M"],
         "solvent_etching": ['process', "did step", "mass_parent", "solutes", "solvent", "temperature", "time", "microwave", "ultrasound", "repeats"],

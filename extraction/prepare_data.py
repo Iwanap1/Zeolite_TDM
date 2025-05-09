@@ -4,23 +4,40 @@ from schemas import process_templates
 import json
 import numpy as np
 
-system = ""
+system = "You are an expert on zeolite materials who extracts structured synthesis data from experimental procedures described in research papers."
 
 def construct_user_prompt(name, source, processes, text):
-    prompt = """
-You are provided with the name of a zeolite and a list of processes used to synthesize it. Your job is to extract the required
+    prompt = f"""
+You are provided with a text passage describing the synthesis of zeolite materials from a research article alongside a zeolite sample name, the source of the original zeolite and a list of any post-synthetic modifications.
+Your task is to extract the key synthesis or commercial information from the source and each of the post-synthetic modifications in structured JSON format.
+If you do not believe a step in the post-synthetic processes applies to this sample, you should return "did step": "false" in the dictionary for that step.
+Only include the information that is mentioned in the text. Do not hallucinate.
 
+Sample: {name}
 
+Original Zeolite Source: {source}
+
+Post-synthesis processes: {', '.join(processes)}
+
+Text: {text}
 """
-    return
+    return prompt.strip()
 
 def construct_assistant_prompt(sample):
     output = {
-        "source": sample['zeolite_source']['source'],
-        "post_synthesis": [step['process'] for step in sample['post-synthesis']]
+        "zeolite_source": sample['zeolite_source'],
+        "post_synthesis": [step for step in sample['post-synthesis']]
     }
     return json.dumps(output, indent=2)
 
+def clean_calcination_steps(data):
+    for paper in data:
+        for sample in paper.get("samples", []):
+            for step in sample.get("post-synthesis", []):
+                if step.get("process") == "calcination":
+                    step.pop("start_form", None)
+                    step.pop("end_form", None)
+    return data
 
 def select_one_sample_per_history_length(paper, biases):
     """
@@ -31,7 +48,7 @@ def select_one_sample_per_history_length(paper, biases):
     grouped = {}
 
     if paper['doi'] in biases:
-        return paper.get("samples", [])
+        return paper.get("samples", []), []
 
     for sample in paper.get("samples", []):
         post_synth = sample.get("post-synthesis", [])
@@ -60,8 +77,8 @@ def reject_sample(source, processes):
         return False, "accepted"
 
     for process in processes:
-        if process.replace('_', " ").strip().lower() not in supported_processes:
-            return True, f"unsupported post-synthetic process: {process}"
+        if process['process'].replace('_', " ").strip().lower() not in supported_processes:
+            return True, f"unsupported post-synthesis: {process}"
         
     return False, "accepted"
 
@@ -71,10 +88,10 @@ def generate_fake_step(process_name, type):
     step = deepcopy(process_templates.get(process_name, {}))
     if type == 'process':
         step["process"] = process_name 
-        step['did step'] = "false"
+        step['did_step'] = "false"
     elif type == 'source':
         step["source"] = process_name
-        step['did step'] = "false"
+        step['did_step'] = "false"
     else:
         raise ValueError(f"Unknown type: {type}")
     return step
@@ -122,6 +139,8 @@ def prepare_train_and_test_data(datafile, outfile_train, outfile_test, fake_proc
     test = []
     with open(datafile, 'r') as file:
         data = json.load(file)
+
+    data = clean_calcination_steps(data)
     data_with_fakes = inject_fake_steps(data, fake_process_rate, swap_source_rate) 
     for paper in data_with_fakes:
         selected_samples, unselected_samples = select_one_sample_per_history_length(paper, biases)
@@ -163,8 +182,17 @@ def prepare_train_and_test_data(datafile, outfile_train, outfile_test, fake_proc
                 ]
             }
             test.append(new)
-    with open(outfile_train, 'w') as file:
-        json.dump(train, file, indent=4)
+    with open(outfile_train, 'w') as f_train:
+        for example in train:
+            f_train.write(json.dumps(example) + '\n')
 
-    with open(outfile_test, 'w') as file:
-        json.dump(test, file, indent=4)
+    with open(outfile_test, 'w') as f_test:
+        for example in test:
+            f_test.write(json.dumps(example) + '\n')
+
+
+if __name__ == "__main__":
+    datafile = '../data/manual_extraction_cleaned.json'
+    outfile_train = 'extraction_train.jsonl'
+    outfile_test = 'extraction_test.jsonl'
+    prepare_train_and_test_data(datafile, outfile_train, outfile_test, fake_process_rate=0.25, swap_source_rate=0.25)

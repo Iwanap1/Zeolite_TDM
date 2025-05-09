@@ -33,8 +33,6 @@
                     {
                         "process": "calcination",
                         "did_step": "true",
-                        "start_form": "NH4",
-                        "end_form": "H",
                         "gas": "air",
                         "gas_flow": "static",
                         "heat_rate": "",
@@ -85,8 +83,6 @@
                     {
                         "process": "calcination",
                         "did_step": "true",
-                        "start_form": "NH4",
-                        "end_form": "H",
                         "gas": "air",
                         "gas_flow": "static",
                         "heat_rate": "",
@@ -137,8 +133,6 @@
                     {
                         "process": "calcination",
                         "did_step": "true",
-                        "start_form": "NH4",
-                        "end_form": "H",
                         "gas": "air",
                         "gas_flow": "static",
                         "heat_rate": "",
@@ -201,8 +195,6 @@
                     {
                         "process": "calcination",
                         "did_step": "true",
-                        "start_form": "NH4",
-                        "end_form": "H",
                         "gas": "air",
                         "gas_flow": "static",
                         "heat_rate": "",

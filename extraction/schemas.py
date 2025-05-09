@@ -105,16 +105,13 @@ def get_process_class(process_name: str):
         "commercial": CommercialSource,
         "calcination": CalcinationProcess,
         "alkaline treatment": SolventEtchingProcess,
-        "acid treatment": SolventEtchingProcess,
+        "solvent_etching": SolventEtchingProcess,
         "hydrothermal crystallization": HydrothermalCrystallizationProcess,
         "chemical liquid deposition": ChemicalLiquidDepositionProcess,
-        "purchased zeolite": CommercialSource,
-        "steam treatment": SteamTreatmentProcess
+        "steam_treatment": SteamTreatmentProcess,
+        "ion_exchange": IonExchangeProcess,
+
     }
-
-    if re.match(r"^-->\s*\w+", process_name):
-        return IonExchangeProcess
-
     return base_map.get(process_name, None)
 
 
