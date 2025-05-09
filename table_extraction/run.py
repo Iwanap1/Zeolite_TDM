@@ -14,11 +14,12 @@ load_dotenv(dotenv_path="../.env")
 
 
 def load_mongo():
-    db = MongoClient(os.environ["MONGO_URI"])["zeolite_tdm"]
+    client = MongoClient(os.environ["MONGO_URI"])
+    db = client["zeolite_tdm"]
     papers = db["papers"]
     tables = db["tables"]
     samples = db["samples"]
-    return papers, tables, samples
+    return client, papers, tables, samples
 
 
 def classify_tables(tables):
@@ -31,25 +32,32 @@ def classify_tables(tables):
                     {'caption': {'$regex': 'surface area', '$options': 'i'}},
                     {'caption': {'$regex': 'pore volume', '$options': 'i'}},
                     
-                    {'as_string': {'$elemMatch': {'$regex': 'sbet', '$options': 'i'}}},
-                    {'as_string': {'$elemMatch': {'$regex': 'vmicro', '$options': 'i'}}},
-                    {'as_string': {'$elemMatch': {'$regex': 'Sext'}}},
-                    {'as_string': {'$elemMatch': {'$regex': 'pore volume', '$options': 'i'}}},
-                    {'as_string': {'$elemMatch': {'$regex': 'surface area', '$options': 'i'}}},
-                    {'as_string': {'$elemMatch': {'$regex': 'm2/g', '$options': 'i'}}},
-                    {'as_string': {'$elemMatch': {'$regex': 'cm3/g', '$options': 'i'}}},
+                    {'as_string': {'$regex': 'sbet', '$options': 'i'}},
+                    {'as_string': {'$regex': 'vmicro', '$options': 'i'}},
+                    {'as_string': {'$regex': 'Sext'}},
+                    {'as_string': {'$regex': 'pore volume', '$options': 'i'}},
+                    {'as_string': {'$regex': 'surface area', '$options': 'i'}},
+                    {'as_string': {'$regex': 'm2/g', '$options': 'i'}},
+                    {'as_string': {'$regex': 'cm3/g', '$options': 'i'}},
                     {
                         "$and": [
-                            {'as_string': {'$elemMatch': {'$regex': 'cm3', '$options': 'i'}}},
-                            {'as_string': {'$elemMatch': {'$regex': 'g-1', '$options': 'i'}}}
+                            {'as_string': {'$regex': 'cm3', '$options': 'i'}},
+                            {'as_string': {'$regex': 'g-1', '$options': 'i'}}
                         ]
                     },                
                     {
                         "$and": [
-                            {'as_string': {'$elemMatch': {'$regex': 'm2', '$options': 'i'}}},
-                            {'as_string': {'$elemMatch': {'$regex': 'g-1', '$options': 'i'}}}
+                            {'as_string': {'$regex': 'm2', '$options': 'i'}},
+                            {'as_string': {'$regex': 'g-1', '$options': 'i'}}
                         ]
                     },
+                    {'single_head_table': {'$elemMatch': {'$regex': 'sbet', '$options': 'i'}}},
+                    {'single_head_table': {'$elemMatch': {'$regex': 'vmicro', '$options': 'i'}}},
+                    {'single_head_table': {'$elemMatch': {'$regex': 'Sext'}}},
+                    {'single_head_table': {'$elemMatch': {'$regex': 'pore volume', '$options': 'i'}}},
+                    {'single_head_table': {'$elemMatch': {'$regex': 'surface area', '$options': 'i'}}},
+                    {'single_head_table': {'$elemMatch': {'$regex': 'm2/g', '$options': 'i'}}},
+                    {'single_head_table': {'$elemMatch': {'$regex': 'cm3/g', '$options': 'i'}}}
                 ]
             }
         ]
@@ -101,8 +109,9 @@ def load_model():
     return model, tokenizer
 
 
-
-def main(max_minutes=1000, batch_size=1):
+def main(max_minutes=1000, batch_size=1, papers=None, tables=None, samples=None):
+    if papers is None or tables is None or samples is None:
+        client, papers, tables, samples = load_mongo()
     model, tokenizer = load_model()
     generator = generate.json(model, Output)
     papers, tables, samples = load_mongo()
@@ -146,6 +155,10 @@ def main(max_minutes=1000, batch_size=1):
 
         for table_dict in table_data:
             try:
+                if not table_dict.get('single_head_table'):
+                    print(f"⚠️ Skipping table {table_dict.get('_id')} (no single_head_table)")
+                    continue
+
                 df = pd.DataFrame(table_dict['single_head_table'])
                 markdown_table = tabulate(df.values.tolist(), tablefmt="github", showindex=False, headers=[])
                 prompt = create_prompt(markdown_table)
@@ -194,8 +207,11 @@ def main(max_minutes=1000, batch_size=1):
                 print(f"Deleted {deleted} tables for paper {paper_id}")
 
 
+
+
 if __name__ == "__main__":
-    papers, tables, samples = load_mongo()
+    client, papers, tables, samples = load_mongo()
     classify_tables(tables)
     reject_papers_without_bet_table()
-    main(max_minutes=1000, batch_size=1, papers=papers, tables=tables, samples=samples)
+    main(max_minutes=30, batch_size=1, papers=papers, tables=tables, samples=samples)
+    client.close()
