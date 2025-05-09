@@ -2,18 +2,17 @@ import pymongo
 from pymongo import MongoClient
 from collections import Counter
 import matplotlib.pyplot as plt
+import os
 
-client = MongoClient("mongodb://localhost:27017/")
-db = client["zeolite_tdm"]
 
-def clear_db():
+def clear_db(db):
     """Clears the database"""
-    db.papers.drop()
-    db.paragraphs.drop()
-    db.tables.drop()
+    db.papers.delete_many({})
+    db.paragraphs.delete_many({})
+    db.tables.delete_many({})
 
 
-def report_collection_counts():
+def report_collection_counts(db):
     collections = ['papers', 'paragraphs', 'tables']
     print(f"DOC COUNTS")
     print("================")
@@ -22,18 +21,18 @@ def report_collection_counts():
         print(f"  - {name}: {count} documents")
 
 
-def status_report():
+def status_report(db):
     """
     Print a status report of the pipeline.
     """
-    status = get_val_counts_of_field('papers', 'status')
+    status = get_val_counts_of_field(db, 'papers', 'status')
     print("STATUS REPORT")
     print("================")
     for key, value in status.items():
         print(f"- {key}: {value}")
 
 
-def get_all_fields(collection_name):
+def get_all_fields(db, collection_name):
     coll = db[collection_name]
     if coll is None:
         print(f"Collection '{collection_name}' not found.")
@@ -44,7 +43,7 @@ def get_all_fields(collection_name):
     return unique_keys
 
 
-def get_val_counts_of_field(collection_or_cursor, field):
+def get_val_counts_of_field(db, collection_or_cursor, field):
     # Check if the input is a collection (string name) or a cursor (list of documents)
     if isinstance(collection_or_cursor, str):  
         collection = db[collection_or_cursor]  # Get collection from name
@@ -66,8 +65,8 @@ def get_val_counts_of_field(collection_or_cursor, field):
     return None  # If input is neither a collection nor a valid cursor
 
 
-def rejection_report():
-    rejections = get_val_counts_of_field('papers', 'rejected_because')
+def rejection_report(db):
+    rejections = get_val_counts_of_field(db, 'papers', 'rejected_because')
     
     if not rejections:
         print("❌ No rejection data found.")

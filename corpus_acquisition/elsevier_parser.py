@@ -409,7 +409,7 @@ class ElsevierParser:
         return {
             'file_path': file_path,
             'type': docsubtype,
-            'rejected_because': self.classify_paper(abstract_text, title, keywords, docsubtype, tables) if abstract_text else 'no abstract',
+            'rejected_because': self.classify_paper(abstract_text, title, keywords, tables, docsubtype) if abstract_text else 'no abstract',
             'authors': authors,
             'doi': doi,
             'title': title,
