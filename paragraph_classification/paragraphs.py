@@ -206,6 +206,7 @@ def paragraph_classification_from_json(bert_model, head, input_path, output_path
     print(f"Papers with synthesis text:    {papers_with_synthesis}")
     print(f"Papers without synthesis text: {papers_without_synthesis}")
 
+
 def get_extract(doi, papers, paras, tables_collection):
     """Generate extract text from synthesis and materials sections + relevant tables for LLMs"""
     paper = papers.find_one({'doi': doi})
@@ -249,11 +250,17 @@ def get_extract(doi, papers, paras, tables_collection):
     return clean_text
 
 
-def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batch_size=32, use_cls=True, mongo_uri="mongodb://localhost:27017/", db_name="zeolite_tdm", max_no_work=1, max_claim_mins=300, reset_claims=False):
+def paragraph_classification_from_mongo(
+    bert_model, head, max_minutes=1000, batch_size=32, use_cls=True,
+    mongo_uri="mongodb://localhost:27017/", db_name="zeolite_tdm",
+    max_no_work=1, max_claim_mins=300, reset_claims=False
+):
     from pymongo import UpdateOne
+
     client, papers, paras, tables = load_mongo(mongo_uri, db_name)
     bert, tokenizer = load_model(bert_model)
     classifier = load_head(head)
+
     if classifier is None:
         print('❌ Provide a valid linear head for the appropriate BERT model.')
         return
@@ -268,21 +275,20 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
     start_time = time.time()
     end_time = start_time + max_minutes * 60
     no_work_counter = 0
-    target_paper_ids = []
+
     if reset_claims:
         result = paras.update_many(
             {"claimed": {"$exists": True}},
             {"$unset": {"claimed": "", "claim_time": ""}}
         )
         print(f"Reset claims on {result.modified_count} paragraphs.")
-        
+
     while time.time() < end_time:
         target_paper_ids = papers.find({"status": "awaiting paragraph classification"}).distinct("_id")
         if not target_paper_ids:
             print("All papers processed.")
             break
-        
-        # Step 1: Try to claim paragraphs
+
         claimed_ids = []
         now_ts = time.time()
         for doc in paras.find({
@@ -290,16 +296,13 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
             "synthesis": {"$exists": False},
             "$or": [
                 {"claimed": {"$exists": False}},
-                {"claim_time": {"$lt": now_ts - max_claim_mins*60}}
+                {"claim_time": {"$lt": now_ts - max_claim_mins * 60}}
             ]
         }, {"_id": 1}).limit(batch_size * 10):
 
             result = paras.update_one(
                 {"_id": doc["_id"], "claimed": {"$exists": False}},
-                {"$set": {
-                    "claimed": worker_id,
-                    "claim_time": now_ts
-                }}
+                {"$set": {"claimed": worker_id, "claim_time": now_ts}}
             )
             if result.modified_count == 1:
                 claimed_ids.append(doc["_id"])
@@ -315,12 +318,10 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
         else:
             no_work_counter = 0
 
-        # Check time again before processing
         now = time.time()
         if now >= end_time:
             print("Time expired, processing final claimed batch before exit.")
 
-        # Step 2: Classify paragraphs (either in-loop or final batch)
         paragraph_data = list(paras.find({"_id": {"$in": claimed_ids}}, {"_id": 1, "text": 1}))
 
         for i in tqdm(range(0, len(paragraph_data), batch_size), desc="Classifying paragraphs"):
@@ -340,7 +341,7 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
                 last_hidden = outputs.last_hidden_state
 
                 if use_cls:
-                    embeddings = last_hidden[:, 0, :]  # CLS token
+                    embeddings = last_hidden[:, 0, :]
                 else:
                     attention_mask = inputs["attention_mask"].unsqueeze(-1)
                     sum_hidden = torch.sum(last_hidden * attention_mask, dim=1)
@@ -364,60 +365,71 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
                 )
                 for para_doc, prob in zip(batch, probs)
             ]
-
             if ops:
                 paras.bulk_write(ops, ordered=False)
-        # Final break if time's up
+
         if now >= end_time:
             print("Time limit reached. Exiting after processing final claimed batch.")
             break
 
     print("Finished processing (time limit or no more work).")
-    print('Checking for finished papers')
-    target_paper_ids = papers.find({"status": "awaiting paragraph classification"}).distinct("_id")
-    done_papers = paras.aggregate([
-        {"$match": {"paper_id": {"$in": target_paper_ids}}},
-        {"$group": {
-            "_id": "$paper_id",
-            "total": {"$sum": 1},
-            "done": {
-                "$sum": {
-                    "$cond": [{"$ne": ["$synthesis", None]}, 1, 0]
-                }
-            }
-        }},
-        {"$match": {"$expr": {"$eq": ["$total", "$done"]}}}
-    ])
+    client.close()
 
-    for doc in done_papers:
-        paper_id = doc["_id"]
-        paper = papers.find_one({"_id": paper_id}, {"doi": 1})
+
+def progress_papers_to_table_extraction(uri="mongodb://localhost:27017/", db_name="zeolite_tdm"):
+    client, papers, paras, tables = load_mongo(uri, db_name)
+
+    progressed = 0
+    rejected = 0
+    partial = 0
+
+    unprogressed = papers.find({"status": "awaiting paragraph classification"}, {"_id": 1, "doi": 1})
+
+    for paper in unprogressed:
+        paper_id = paper["_id"]
         doi = paper.get("doi")
 
-        if not doi:
-            print(f"Skipping paper {paper_id} with no DOI.")
+        all_paras_count = paras.count_documents({"paper_id": paper_id})
+        processed_count = paras.count_documents({"paper_id": paper_id, "synthesis": {"$exists": True}})
+
+        if all_paras_count == 0:
+            print(f"⚠️ No paragraphs found for paper: {doi}")
             continue
 
-        has_synthesis = paras.find_one({"paper_id": paper_id, "synthesis": True}) is not None
-        if not has_synthesis:
-            papers.update_one(
-                {"_id": paper_id},
-                {"$set": {
-                    "status": "rejected",
-                    "rejected_because": "no synthesis paragraphs"
-                }}
-            )
-            # paras.delete_many({"paper_id": paper_id})
-            continue
+        if all_paras_count == processed_count:
+            has_synthesis = paras.count_documents({"paper_id": paper_id, "synthesis": True}) > 0
 
-        try:
-            extract = get_extract(doi, papers, paras, tables)
-            papers.update_one(
-                {"_id": paper_id},
-                {"$set": {"status": "awaiting table extraction", "extract": extract}}
-            )
-            # paras.delete_many({"paper_id": paper_id})
-            print(f"Extracted and cleaned up paper: {doi}")
-        except Exception as e:
-            print(f"Failed extract/cleanup for {doi}: {e}")
+            if has_synthesis:
+                try:
+                    extract = get_extract(doi, papers, paras, tables)
+                    papers.update_one(
+                        {"_id": paper_id},
+                        {"$set": {"status": "awaiting table extraction", "extract": extract}}
+                    )
+                    progressed += 1
+                    print(f"Progressed paper: {doi}")
+                except Exception as e:
+                    print(f"Failed to get extract for {doi}: {e}")
+                    papers.update_one(
+                        {"_id": paper_id},
+                        {"$set": {"status": "rejected", "rejected_because": "could not get text extract"}}
+                    )
+            else:
+                papers.update_one(
+                    {"_id": paper_id},
+                    {"$set": {
+                        "status": "rejected",
+                        "rejected_because": "no synthesis paragraphs"
+                    }}
+                )
+                rejected += 1
+                print(f"❌ Rejected paper: {doi} — no synthesis found.")
+        else:
+            partial += 1
+
+    print(f"\nSummary:")
+    print("===============")
+    print(f"Progressed: {progressed}")
+    print(f"Rejected (no synthesis): {rejected}")
+    print(f"Still part-classified: {partial}")
     client.close()

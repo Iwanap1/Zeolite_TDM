@@ -7,9 +7,32 @@ import os
 
 def clear_db(db):
     """Clears the database"""
-    db.papers.delete_many({})
-    db.paragraphs.delete_many({})
-    db.tables.delete_many({})
+    db['papers'].delete_many({})
+    paras = db["paragraphs"]
+    tables = db["tables"]
+    BATCH_SIZE = 500
+    total_deleted = 0
+
+    while True:
+        to_delete = paras.find({}, {"_id": 1}).limit(BATCH_SIZE)
+        ids = [doc["_id"] for doc in to_delete]
+        if not ids:
+            break
+
+        result = paras.delete_many({"_id": {"$in": ids}})
+        total_deleted += result.deleted_count
+
+    print(f"✅ Finished. Total paragraphs deleted: {total_deleted}")
+
+    while True:
+        to_delete = tables.find({}, {"_id": 1}).limit(BATCH_SIZE)
+        ids = [doc["_id"] for doc in to_delete]
+        if not ids:
+            break
+
+        result = tables.delete_many({"_id": {"$in": ids}})
+        total_deleted += result.deleted_count
+
 
 
 def report_collection_counts(db):
@@ -93,3 +116,28 @@ def rejection_report(db):
     plt.axis('equal')
     plt.tight_layout()
     plt.show()
+
+
+def delete_orphaned_paragraphs(db):
+    papers = db['papers']
+    paras = db['paragraphs']
+    BATCH_SIZE = 500
+    accepted_ids = set(p['_id'] for p in papers.find({"status": "awaiting paragraph classification"}, {"_id": 1}))
+
+    deleted_total = 0
+    while True:
+        # Find orphaned paragraph _ids in small chunks
+        orphan_ids = list(paras.find(
+            {"paper_id": {"$nin": list(accepted_ids)}},
+            {"_id": 1}
+        ).limit(BATCH_SIZE))
+
+        if not orphan_ids:
+            break
+
+        ids_to_delete = [doc["_id"] for doc in orphan_ids]
+        result = paras.delete_many({"_id": {"$in": ids_to_delete}})
+        deleted_total += result.deleted_count
+        print(f"🧹 Deleted {result.deleted_count} more orphaned paragraphs...")
+
+    print(f"✅ Finished. Total deleted: {deleted_total}")
