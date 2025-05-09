@@ -21,7 +21,7 @@ def load_mongo(uri="mongodb://localhost:27017/", db_name="zeolite_tdm"):
     papers = db["papers"]
     paras = db["paragraphs"]
     tables_collection = db["tables"]
-    return papers, paras, tables_collection
+    return client, papers, paras, tables_collection
 
 def load_model(transformers_model, lower_case=None):
     if lower_case is None:
@@ -209,7 +209,7 @@ def paragraph_classification_from_json(bert_model, head, input_path, output_path
 
 def get_extract(doi):
     """once all paragraphs are classified, get the text extract for the subsequent LLMs"""
-    papers, paras, tables_collection = load_mongo()
+    client, papers, paras, tables_collection = load_mongo()
     paper = papers.find_one({'doi': doi})
     text = ""
     synth_paragraphs = paras.find({"paper_id": paper["_id"], 'synthesis': True})
@@ -250,7 +250,6 @@ def get_extract(doi):
     return clean_text
 
 
-
 def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batch_size=32, use_cls=True, mongo_uri="mongodb://localhost:27017/", db_name="zeolite_tdm", max_no_work=1, max_claim_mins=300):
     from pymongo import UpdateOne
     client, papers, paras, _ = load_mongo(mongo_uri, db_name)
@@ -270,6 +269,7 @@ def paragraph_classification_from_mongo(bert_model, head, max_minutes=1000, batc
     start_time = time.time()
     end_time = start_time + max_minutes * 60
     no_work_counter = 0
+    target_paper_ids = []
 
     while time.time() < end_time:
         target_paper_ids = papers.find({"status": "awaiting paragraph classification"}).distinct("_id")
