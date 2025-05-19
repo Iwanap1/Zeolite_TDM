@@ -6,7 +6,7 @@ from outlines import models, generate
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import re
 import os
-import datetime
+from datetime import datetime
 from prepare_data import construct_process_identification_user_prompt, system
 import time
 
@@ -260,11 +260,12 @@ def run_process_identification_pipe(
     model, tokenizer = load_model(model_path, use_outlines=True)
     while True:
         now = time.time()
-        if now - start_time > max_runtime:
+        if now - start_time > max_runtime * 60:
             print("Time expired, exiting")
             break
 
         claimed = claim_papers(papers_collection, claim_size)
+        print(f"Claimed {len(claimed)} papers.")
 
         if not claimed:
             print("No more papers to process.")
@@ -278,7 +279,7 @@ def run_process_identification_pipe(
                     {"$set": {"status": "rejected", 'rejected_because': 'could not find any samples for process identification'}}
                 )
                 continue
-            samples_names = [paper_sample["name"] for paper_sample in paper_samples]
+            samples_names = [paper_sample["sample"] for paper_sample in paper_samples]
             try:
                 paper_extract = paper["extract"]
             except KeyError:
@@ -294,8 +295,16 @@ def run_process_identification_pipe(
                 {"role": "user", "content": user_prompt}
             ]
 
-            ZeoliteProcesses = make_schema(samples_names)
-            generator = generate.json(model, ZeoliteProcesses)
+            try:
+                ZeoliteProcesses = make_schema(samples_names)
+                generator = generate.json(model, ZeoliteProcesses)
+            except Exception as e:
+                print(f"⚠️ Schema generation failed for paper {paper.get('doi', '[no DOI]')}: {e}")
+                # papers_collection.find_one_and_update(
+                #     {"_id": paper["_id"]},
+                #     {"$set": {"status": "rejected", "rejected_because": "failed to create schema"}}
+                # )
+                continue
 
             try:
                 chat_input = tokenizer.apply_chat_template(
@@ -333,18 +342,68 @@ def run_process_identification_pipe(
                     }
                 )
                 continue
+
+
+def reset_stuck_papers(db):
+    """
+    Reset papers incorrectly marked as 'processing' but aren't actively being processed.
+    """
+    # Define the criteria for being "stuck" (e.g. status is 'processing' but no active job or too old)
+    stuck_papers = db.papers.find({
+        "status": "processing"
+    })
+
+    reset_count = 0
+
+    for paper in stuck_papers:
+        paper_id = paper["_id"]
         
+        # Example: Optional check to see if it was claimed too long ago (>2 hours)
+        import time
+        now = time.time() * 1000  # milliseconds
+        claimed_at = paper.get("process_claimed_at", {}).get("$date", 0)
+
+        if now - claimed_at > 2 * 60 * 60 * 1000:
+            db.papers.update_one(
+                {"_id": paper_id},
+                {
+                    "$set": {"status": "unprocessed"},
+                    "$unset": {"process_claimed_at": ""}
+                }
+            )
+            reset_count += 1
+
+    print(f"Reset {reset_count} stuck papers.")
+
 
 def claim_papers(papers, n):
+    """
+    Atomically claim up to `n` papers for process identification.
+    """
+    now = datetime.utcnow()
+
+    # Atomically claim papers
     paper_ids = []
-    for paper in papers.find({"status": "awaiting process identification"}).limit(n):
+    for paper in papers.find({"status": "awaiting process identification", "process_claimed_at": {"$exists": False}}).limit(n):
         res = papers.update_one(
-            {"_id": paper["_id"], "status": "awaiting process identification", "process_claimed_at": {"$exists": False}},
-            {"$set": {"status": "processing", "process_claimed_at": datetime.utcnow()}}
+            {
+                "_id": paper["_id"],
+                "status": "awaiting process identification",
+                "process_claimed_at": {"$exists": False}
+            },
+            {
+                "$set": {
+                    "status": "processing",
+                    "process_claimed_at": now
+                }
+            }
         )
         if res.modified_count > 0:
             paper_ids.append(paper["_id"])
+
     return list(papers.find({"_id": {"$in": paper_ids}}))
+
+
 
 
 def get_samples_for_paper(samples_collection, paper_id):

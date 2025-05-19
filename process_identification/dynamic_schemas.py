@@ -11,11 +11,12 @@ POSTSYNTH = [
 SOURCE = ['commercial', 'hydrothermal crystallization', 'unknown']
 
 
+
 def make_schema(zeolite_names: List[str]):
     class ZeoliteInfo(BaseModel):
         morphological_description: str
-        zeolite_source: Literal[*SOURCE]
-        post_synthesis: List[Literal[*POSTSYNTH]]
+        zeolite_source: Literal.__getitem__(tuple(SOURCE))
+        post_synthesis: List[Literal.__getitem__(tuple(POSTSYNTH))]
 
     fields = {
         name: (ZeoliteInfo, ...)
@@ -23,6 +24,7 @@ def make_schema(zeolite_names: List[str]):
     }
 
     ZeoliteStepsModel = create_model("ZeoliteStepsModel", **fields)
+
     class ZeoliteProcesses(RootModel[ZeoliteStepsModel]):
         pass
 
