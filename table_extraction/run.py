@@ -47,8 +47,7 @@ def classify_tables(tables):
                     },                
                     {
                         "$and": [
-                            {'as_string': {'$regex': 'm2', '$options': 'i'}},
-                            {'as_string': {'$regex': 'g-1', '$options': 'i'}}
+                            {'as_string': {'$regex': 'm2', '$options': 'i'}}
                         ]
                     },
                     {'single_head_table': {'$elemMatch': {'$regex': 'sbet', '$options': 'i'}}},

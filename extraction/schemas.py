@@ -105,12 +105,11 @@ def get_process_class(process_name: str):
         "commercial": CommercialSource,
         "calcination": CalcinationProcess,
         "alkaline treatment": SolventEtchingProcess,
-        "solvent_etching": SolventEtchingProcess,
+        "solution_treatment": SolventEtchingProcess,
         "hydrothermal crystallization": HydrothermalCrystallizationProcess,
         "chemical liquid deposition": ChemicalLiquidDepositionProcess,
         "steam_treatment": SteamTreatmentProcess,
         "ion_exchange": IonExchangeProcess,
-
     }
     return base_map.get(process_name, None)
 

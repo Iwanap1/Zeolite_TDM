@@ -1,0 +1,498 @@
+[
+    {
+        "doi": "10.1016/j.cattod.2025.115343",
+        "text": "<header>Synthesis of hierarchical zeolites<text>The H-ZSM-5 zeolite with hierarchical porosity (h-H-ZSM-5) was synthesised using the silanised nuclei crystallization method outlined in prior studies [28]. The materials used included aluminium isopropoxide (IPA, Aldrich, 98 wt.%) as the aluminium source, tetraethyl orthosilicate (TEOS, Aldrich, 98 wt.%) as the silica source, tetrapropylammonium hydroxide (TPAOH, Alfa Aesar, 40 wt.%) as the structure-directing agent, and Milli-Q water. The molar composition of the initial synthesis gel was 1 Al2O3: 90 SiO2: 16.5 TPAOH: 2250 H2O. Silanisation step was performed at 90 C under reflux and atmospheric pressure for 6 h, with N-(2-N-benzylaminoethyl)-3-aminopropyltrimethoxysilane (Ph-2A, Gelest, 92 wt.%) used as the silanising agent (8 mol.% in respect to the silicon content in the initial gel). The resulting gel was placed into PTFE-lined steel autoclaves and subjected to crystallization under autogenous pressure at 170 C for 7 days. After crystallization, the solid was recovered by centrifugation and dried at 110 C. To remove both the structure-directing and silanising agents and activate the catalyst, the material was calcined in static air at 550 C for 5 h with a heating rate of 1.8 C/min. The H-Beta zeolite with hierarchical porosity (h-H-Beta) was also synthesised using the silanised nuclei crystallization method according to prior studies [29,30]. A solution comprising aluminium flakes (Aldrich, 99.9 wt.%), fumed silica (Aldrich), tetraethylammonium hydroxide (TEAOH, Alfa Aesar, 35 wt.% aqueous solution), and Milli-Q water was aged at room temperature for 20 h. Afterwards, it underwent precrystallisation in steel autoclave reactors lined with PTFE at 135 C for 3 days to encourage the development of Beta protozeolitic nanounits. The molar composition of the initial synthesis gel was 1.5 Al2O3: 60 SiO2: 15.5 TPAOH: 2400 H2O. The resulting gel was subjected to the crystallization process (135 C for 7 days) using the same silanising agent (Ph-2A) previously described for the h-H-ZSM-5 sample. Likewise, the solid product obtained from the crystallization treatment was recovered and processed following the same procedure described before for h-H-ZSM-5 zeolite.<header>Preparation of ion-exchanged zeolites<text>The two previously synthesised hierarchical zeolites were subjected to ion exchange with alkaline earth (Mg2+) and alkali (Na+ and K+) cations according to the procedure earlier described [17]. Typically, 5 g of zeolite powder were immersed in 50 mL of a 0.4 M aqueous solution of the corresponding chloride salt for 24 h at 25 C. The salts employed for the ion exchange included NaCl (Sigma Aldrich, 99.0 wt.%), KCl (Scharlab, 99.0 wt.%) and MgCl2 (Fisher Scientific, 99.0 wt.%). After the ion exchange, the zeolites were separated by centrifugation, rinsed with Milli-Q water, dried at 110 C overnight, and subsequently calcined in static air at 550 C for 5 h with a heating rate of 1.8 C/min. Prior to their utilisation as catalysts, both the hierarchical and ion-exchanged zeolites were pelletised by compression under 8 tons of pressure force for 30 s, then crushed and sieved through ASTM standard sieves to obtain particles in the 180\u2013250 \u03bcm size range.",
+        "h-H-ZSM-5": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "h-MgH-ZSM-5": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "h-KH-ZSM-5": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "h-NaH-ZSM-5": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "h-H-Beta": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "h-MgH-Beta": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "h-KH-Beta": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "h-NaH-Beta": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        }
+    },
+    {
+        "doi": "10.1016/j.matlet.2025.138557",
+        "text": "Tetraethyl orthosilicate (TEOS) (98 %), sodium aluminate (NaAlO2) (56 wt% Al2O3, 44 wt% Na2O), sodium hydroxide (NaOH) (97 %), aluminum isopropoxide (AIP) (98.5 wt%), and fumed silica (99.8 %) were purchased from Aladdin. Ludox 40 colloidal silica (40 wt%) was supplied by Sigma-Aldrich, and tetrapropylammonium hydroxide (TPAOH) (25 wt% aqueous solution) was obtained from Innochem. <header>Synthesis of hierarchical ZSM-5 zeolites<text>A silicon source (TEOS, colloidal silica, or fumed silica) was dispersed in a TPAOH solution and stirred for 12 h. An aluminum source (NaAlO2 or AIP), water, and NaOH (if needed) were mixed and stirred for 12 h, then added dropwise to the silicon solution. After stirring for 3 h, the final gel had a molar composition of 1SiO2: 0.033Al2O3: 0.033Na2O: 0.26 TPAOH: 50H2O. The gel was transferred into a stainless-steel tubular reactor (length: 20 cm, outer diameter: 8 mm, inner diameter: 6 mm) and crystallized under autogenous pressure in a preheated oven. After the reaction, the solid product was centrifuged, washed with deionized water, and dried at 80 C overnight. It was then calcined at 550 C for 4 h to obtain the hierarchical ZSM-5 zeolite. Samples made with TEOS and NaAlO2 were labeled ZSM-5@x-y, where x and y represent the crystallization temperature ( C) and time (min), respectively. For the seed-assisted synthesis, the procedure was identical to that described above, except that 5 wt% ZSM-5 seeds (based on SiO2 in the gel), prepared according to our reported work [5], were added to the final gel, followed by an additional 30 min of stirring. The samples were labeled ZSM-5-s@x-y.",
+        "ZSM-5@200\u201360": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination"
+            ],
+            "phi-source": "unknown",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        },
+        "ZSM-5@250\u201320": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination"
+            ],
+            "phi-source": "unknown",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        }
+    },
+    {
+        "doi": "10.1016/j.micromeso.2025.113647",
+        "text": "Colloidal silica (AS-40, SiO2, 40 wt%, Sigma-Aldrich), phosphoric acid (H3PO4, 85 %, Aladdin), triethylamine (TEA, 99 %, Aladdin), ammonium fluoride (NH4F, 99 %, Aladdin), tetraethylammonium hydroxide solution (TEAOH, 35 %, Aladdin), pseudo-boehmite (PB, 67 % Al2O3, Chalco), methanol (CH3OH, 99.9 %, Aladdin). <header>Synthesis of SAPO-34 zeolite via a seed-assisted approach combined with fluoride addition<text>The zeolite was prepared under hydrothermal condition and the molar composition of the starting gel was set to 1.0Al2O3: 1 P2O5: 4TEA: 0.4SiO2: 70H2O: 8 % seed:0.1 NH4F. Typically, Pseudo-boehmite was initially mixed with phosphoric acid as well as deionized water until a uniform solution was achieved. The TEA solution was then introduced into the mixture and stirred for 1 h. Subsequently, colloidal silica was added into the obtained mixture and stirred for an additional 1 h. The calcined SAPO-34 zeolite seed was then added and stirred for 1 h. Finally, NH4F was introduced into the aforementioned mixture and stirred for 1 h. The mixture was subsequently transferred into an autoclave and subjected to crystallization at 200 C for 2 days. After that, the product was thoroughly washed with deionized water until the pH approached near-neutral, which was then dried at 70 C overnight and calcined at 550 C for 6 h. The resulting sample was denoted as SAPO-34-S-F, with S and F indicating that the sample was prepared using a seed-assisted method combined with fluoride addition. The detail procedures for the synthesis of SAPO-34 zeolite seeds, SAPO-34-S and SAPO-34-C, the sample characterizations and catalytic evaluation were provided in the supplementary data.",
+        "SAPO-34-C": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination"
+            ],
+            "notes": "synthesis info was in the SI",
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination",
+                "steam treatment"
+            ]
+        },
+        "SAPO-34-S": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination"
+            ],
+            "notes": "synthesis info was in the SI",
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination",
+                "steam treatment"
+            ]
+        },
+        "SAPO-34-S-F": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination",
+                "steam treatment"
+            ]
+        }
+    },
+    {
+        "doi": "10.1016/j.micromeso.2025.113629",
+        "text": "<header>Preparation of USY zeolite with uniform mesoporosity and high Si/Al ratio<text>The procedure harnessed to obtain USY zeolite with uniform mesoporosity and high Si/Al atomic ratio was a surfactant-templating post-synthetic treatment [21,22]. The used chemicals in this research were the following ones: commercial dealuminated USY zeolite (Zeolyst CBV-780, Si/Al = 40), 0.05 M aqueous ammonia solution prepared from concentrated ammonia solution (28\u201330 wt% NH3, Honeywell), and the surfactant hexadecyltrimethylammonium bromide (CTAB, Sigma-Aldrich, purity \u226598 wt%). In a typical recipe, Teflon-lined autoclaves were loaded with 1 g of the zeolite, 0.2 g of ammonia, 0.7 g of CTAB, and 62.5 g of Mili-Q water. Subsequently, they were then placed in an oven at temperatures ranging from 40 to 135 C under static heating for 20 h. After ending the heating process, the solid was separated using vacuum filtration and dried in a stove at 110 C overnight under air atmosphere. Finally, the zeolite underwent calcination in a muffle furnace under static air at 550 C for 5 h to remove any residual organic materials and further stabilize the zeolite structure. The obtained samples were named as USY-X, wherein X stands for the temperature used during the surfactant-templating procedure.",
+        "USY": {
+            "real_source": "commercial",
+            "real_post_synthesis": [
+                "solution_treatment",
+                "calcination"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "solution_treatment",
+                "calcination"
+            ]
+        },
+        "USY- 40": {
+            "real_source": "commercial",
+            "real_post_synthesis": [
+                "solution_treatment",
+                "calcination"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "solution_treatment",
+                "calcination"
+            ]
+        },
+        "USY-60": {
+            "real_source": "commercial",
+            "real_post_synthesis": [
+                "solution_treatment",
+                "calcination"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "solution_treatment",
+                "calcination"
+            ]
+        },
+        "USY- 80": {
+            "real_source": "commercial",
+            "real_post_synthesis": [
+                "solution_treatment",
+                "calcination"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "solution_treatment",
+                "calcination"
+            ]
+        },
+        "USY- 100": {
+            "real_source": "commercial",
+            "real_post_synthesis": [
+                "solution_treatment",
+                "calcination"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "solution_treatment",
+                "calcination"
+            ]
+        },
+        "USY- 135": {
+            "real_source": "commercial",
+            "real_post_synthesis": [
+                "solution_treatment",
+                "calcination"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "solution_treatment",
+                "calcination"
+            ]
+        }
+    },
+    {
+        "doi": "10.1016/j.ccst.2025.100424",
+        "text": "<header>Preparation of functionalized h13X<text>The h13X powder was overnight degassed at 150 C under a vacuum. A 30 ml of toluene was added to the three-neck flask. The flask was connected to the reflux condenser, N2 gas, and placed in an oil bath. The system was purged with N2 for one hour to ensure complete removal of air and moisture. Then, degassed h13X was added to the toluene and kept on stirring. Meanwhile, purging with N2 continued for another 30 min, followed by the addition of a certain amount of APTES and again purging for another 30 min. After that, the system was closed (airtight), and the temperature was increased to 80 C. The solution was stirred under these conditions for 6 h, and the functionalized powder was separated by centrifuge. The obtained product was oven-dried overnight and labeled as AF(1)-h13X, AF(1.5)-h13X, AF(2)-h13X corresponding to the molar ratio of APTES/Ni (1, 1.5, 2). Further, a sample was prepared by increasing the reaction temperature to 110 C to analyze the effect of temperature on functionalization and was labeled as AF(1.5\u2033)-h13X.<header>Synthesis of catalysts<text>The catalysts were synthesized using the wet-impregnation method. A certain amount of the nickel precursor was dissolved in 150 ml of DI water. Then, AF-h13X powder was added to the above solution. The temperature of the solution was increased to 50 C along with mild stirring. The solution was kept at this temperature by stirring until water was fully evaporated. The obtained product was vacuum-dried in an oven at 60 C overnight. The prepared material was calcined at 500 C for 4 h with a heating rate of 1 C/min in a muffle furnace. A slower heating rate ensures uniform transformation of Ni precursor into NiO with good dispersion. All the prepared catalysts contain the 10 wt. % Ni and were labeled as AF(1)-Ni/h13X, AF(1.5)-Ni/h13X, AF(2)-Ni/h13X and AF(1.5\u2033)-Ni/h13X, respectively based on the type of functionalized support materials.",
+        "Ni/h13X": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+                "something else",
+                "impregnation"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        },
+        "AF(1)-Ni/h13X": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+                "something else",
+                "impregnation"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        },
+        "AF(1.5)-Ni/h13X": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+                "something else",
+                "impregnation"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        },
+        "AF(2)-Ni/h13X": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+                "something else",
+                "impregnation"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination",
+                "recrystallization"
+            ]
+        },
+        "AF(1.5\u2033)-Ni/h13X": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+                "something else",
+                "impregnation"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        }
+    },
+    {
+        "doi": "10.1016/j.jcis.2025.01.154",
+        "text": "For detailed information see Text S1 in the Supporting Information (SI). <header>Preparation of Ce-Zn/ZSM-5<text>Metal-loaded zeolites were prepared using an incipient wet impregnation method [9]. 0.15 g Ce(NO3)2\u00b76H2O or 0.15 g Zn(NO3)2\u00b76H2O was weighed into a 50 mL beaker, and deionized water was added to dissolve the solids to form a cerium nitrate or zinc nitrate solution. After that 1 g ZSM-5 zeolite was added to the above solution and similarly stirred until it was dissolved. The above mixed solution was then dried at 80 C for 12 h. The solid was calcined in a muffle furnace at 550 C for 4 h to obtain Ce/ZSM-5 or Zn/ZSM-5. The preparation method of Ce-Zn/ZSM-5 was the same as the above, except that only ZSM-5 (1 g) was added into the mixture of Zn(NO3)2\u00b76H2O (0.0867 g) and Ce(NO3)2\u00b76H2O (0.0633 g), and the other steps were the same. And the optimal catalyst was determined by controlling the amount of metal added and the molar ratio of cerium nitrate and zinc nitrate.<header>Preparation of hierarchical MFI nanosheets<text>The hierarchical MFI nanosheets [9,20,23] were prepared by using alkali lignin or our previous work BKC1:3 [24] as the template, respectively. For ZSM-5 as the parent zeolite, 25 g of ZSM-5 was placed in 100 mL of 0.2 M NaOH at 75 C for 1 h to decompose the parent zeolite to form solution A. An aqueous solution of the template (10 wt%) was then emulsified by mixing it with an ethyl acetate/aqueous solution (3:7, vol%) to form solution B, which was then mixed with solution A where the ratio of template relative to zeolite parent was 2 wt%. The pH was then adjusted to 9. The mixture was placed in a PTFE liner and aged at 160 C for 72 h. After cooling, it was washed and dried at 105 C. Finally, the above solid was ion-exchanged with 1 M NH4NO3 at 90 C for 4 h. After drying, the solid product was then placed in a muffle furnace and calcined at 550 C for 4 h. The hierarchical zeolite synthesized using BKC1:3 as a template was named BKC-MFI; the hierarchical zeolite using alkali lignin as a template was named AL-MFI. Next, M-BKC@MFI and M-AL-MFI were prepared by the method in chapter 2.2.1, respectively.",
+        "ZSM-5": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "Zn/ZSM-5": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+                "impregnation"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "Ce/ZSM-5": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+                "impregnation"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        },
+        "Ce/Zn-ZSM-5": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+                "impregnation"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "AL-MFI": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+                "solution_treatment",
+                "ion_exchange",
+                "calcination"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "M-AL-MFI": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+                "solution_treatment",
+                "ion_exchange",
+                "calcination",
+                "impregnation"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "BKC-MFI": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+                "solution_treatment",
+                "ion_exchange",
+                "calcination"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        },
+        "M-BKC-MFI": {
+            "real_source": "unknown",
+            "real_post_synthesis": [
+                "solution_treatment",
+                "ion_exchange",
+                "calcination",
+                "impregnation"
+            ],
+            "phi-source": "commercial",
+            "phi-post_synthesis": [
+                "calcination",
+                "ion_exchange"
+            ]
+        }
+    },
+    {
+        "doi": "10.1016/j.micromeso.2025.113509",
+        "text": "<header>Catalyst preparation<text>Synthesis of Monodispersed Polystyrene Spheres with Tunable Sizes: Monodispersed PS spheres were synthesized by Soap-free emulsion polymerization. Firstly, styrene (Sinopharm, AR) and the pre-made 1.0 M sodium hydroxide (NaOH, Sinopharm, AR) solution were stirred to remove polymerization inhibitor in styrene solution, an amount of above supernatant was added in a three-necked round bottom flask (500 mL) equipped with a reflux condenser, followed by addition of 360 g deionized H2O and sodium laurylsulfonate (C12H25NaO3S, Aladdin, AR). The mixed solution was stirred 10 min at room temperature under oil bath. Then adding potassium persulfate (K2S2O8, Aladdin, AR) after raising temperature to the desired temperature under an argon or nitrogen atmosphere. After performing for a certain time, monodispersed PS spheres with tunable diameters can be obtained. Specific reaction conditions have been described in Table S1. Synthesis of Ordered Macro-Mesoporous Carbon (OMMC) Template with Tunable Sizes: On the basis of the mass composition 100 PS: 15 SiO2: 15 C12H22O11: 15 H2SO4, the above as-synthesized PS spheres, silica sol (SiO2, Ludox AS-40 colloidal silica) and sucrose (C12H22O11, Aladdin, AR) were mixed and stirred for 1 h, then H2SO4 (10 wt.% aqueous solution) was slowly added under stirring for 15 min. The mixture was directly dried in an oven at 60 C for 12 h, 110 C for 6 h and 160 C for 6 h, then the solid carbon materials was transferred to a tubular furnace, and calcine at 400 C for 1 h, 500 C for 1 h and 650 C for 4 h with a rate of 1 C min-1 under a nitrogen flow. Finally, the obtained composite was added in a HF solution (10 wt.% aqueous solution) and stirred for 4 h, followed by washing with deionized water and drying at 60 C. Synthesis of ZSM-5 Single Crystals with Tunable Porosity and SiO2/Al2O3 Molar Ratio: The hierarchical ZSM-5(x, y) catalysts, where x represents the zeolite sphere unit size and y represents the SiO2/Al2O3 molar ratio, were synthesized through steam assisted crystallization strategy confined by carbon template. In detail, initial precursor (molar composition is 0.18 TPAOH: 1 SiO2: z Al2O3: 19.2 H2O, z = 0.001, 0.002, 0.005, 0.01) was mixed by deionized H2O, tetrapropylammonium hydroxide (TPAOH, Aladdin, 2 M in H2O), tetraethyl orthosilicate (TEOS, Sinopharm, AR) and aluminum isopropoxide (C9H21AlO3, Aladdin, 99.99% metals basis). The precursor was stirred at room temperature until the TEOS hydrolyzed completely. Then, the precursor was dropwise added in the flask containing OMMC template. After aging at 40 C for 12 h, the mixture was transferred into a Teflon-lined autoclave, heating at 180 C under static conditions for 8 h. The steam assisted crystallization was achieved by placing a custom-made porous Teflon plate on a 2 mL H2O flask in the Teflon-lining. At last, the samples were washed by filtration, and calcined at 550 C for 7 h after drying at 60 C overnight. Commercial ZSM-5 (C-ZSM-5) micrometer zeolites with SiO2/Al2O3 molar ratios of 100 and 200 shown in Figs. S4 and S9 were purchased in NANKAI catalyst company.",
+        "ZSM-5(180,200)": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination"
+            ],
+            "phi-source": "unknown",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        },
+        "ZSM-5(280,200)": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination"
+            ],
+            "phi-source": "unknown",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        },
+        "ZSM-5(380,200)": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination"
+            ],
+            "phi-source": "unknown",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        },
+        "ZSM-5(480,200)": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination"
+            ],
+            "phi-source": "unknown",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        },
+        "ZSM-5(580,200)": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "calcination"
+            ],
+            "phi-source": "unknown",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        },
+        "C-ZSM-5(200)": {
+            "real_source": "commercial",
+            "real_post_synthesis": [
+                "calcination"
+            ],
+            "phi-source": "hydrothermal crystallization",
+            "phi-post_synthesis": [
+                "calcination"
+            ]
+        }
+    },
+    {
+        "doi": "10.1016/j.radphyschem.2024.111919",
+        "text": "<header>Synthesis<text>Chemicals used for the synthesis of parent and modified zeolites were: colloidal silica, (40 wt% SiO2 suspension in water, Ludox 40 HS, Grace), aluminium nitrate nonahydrate (Al(NO3)3 × 9 H2O, 98%, Sigma), sodium hydroxide (NaOH, 98%, Kemika), tetrapropylammonium bromide (TPABr, 98%, Sigma), hexadecyltrimethylammonium bromide (CTAB, 98%, Sigma), polydiallyldimethylammonium chloride (PDADMAC, 20 wt%, MW 200 000–350 000, Alfa Aesar), distilled water, and were used as obtained. The parent ZSM-5 zeolite was synthesized after (Ong et al., 2012), from starting precursor gel with molar composition 100 SiO2: 0.2 Al2O3: 5 Na2O: 10 TPABr: 4000 H2O. Aluminium nitrate nonahydrate was dissolved in appropriate amount of water, subsequently sodium hydroxide was added. In obtained clear solution tetrapropylammonium bromide was added, and finally appropriate amount of silica solution. Reaction mixture prepared in this way was additionally mixed with a magnetic stirrer at room temperature (RT) for an hour to assure homogeneity of the system. Modified zeolites were synthesized from the same precursor as the parent ZSM-5 zeolite, but in the presence of the CTAB (CTAB/SiO2 = 0.055) or PDADMAC (PDADMAC/SiO2 = 0.025). Before adding a modifier, zeolite precursor was aged at 80 C for 1 h. Obtained reaction mixtures were additionally mixed at RT for an hour. All homogenized reaction mixtures were transferred into Teflon lined autoclaves with metal jacket firmly closed and heated at 180 C for 72 h. After the synthesis was completed, the obtained white precipitates were washed with copious amount of distilled water and dried at 60 C overnight. Dried samples were calcined at 550 C for 5 h (heating rate 5 C per minute) in static air atmosphere. The zeolite sample modified by etching was prepared by dispersing dry and calcined parent zeolite in the solution of sodium hydroxide and aluminium nitrate after (Verboekend and Pérez-Ramírez, 2011) for 30 min at 65 C. After etching, the sample was washed with water and dried at 60 C overnight. All samples, parent and modified, were converted to NH4 + form via ion exchange by suspending them in 0.5 M NH4Cl solution. The suspensions were shaken for 1 h at 65 C. Then the samples were separated by centrifuging and the process has been repeated. Finally, samples were washed with water and dried at 60 C overnight. Prepared samples were denoted as follows, parent zeolite: ZSM-5-Parent, etched parent zeolite: ZSM-5-NaOH, parent zeolite synthesized in the presence of CTAB: ZSM-5-CTAB, and parent zeolite synthesized in the presence of PDADMAC: ZSM-5-PDADMAC.",
+        "ZSM-5-Parent": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "ion_exchange",
+                "calcination"
+            ]
+        },
+        "ZSM-5-NaOH": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "solution_treatment",
+                "ion_exchange",
+                "calcination"
+            ]
+        },
+        "ZSM-5-CTAB": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "ion_exchange",
+                "calcination"
+            ]
+        },
+        "ZSM-5-PDADMAC": {
+            "real_source": "hydrothermal crystallization",
+            "real_post_synthesis": [
+                "ion_exchange",
+                "calcination"
+            ]
+        }
+    }
+]

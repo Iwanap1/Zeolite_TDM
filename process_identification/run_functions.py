@@ -404,8 +404,6 @@ def claim_papers(papers, n):
     return list(papers.find({"_id": {"$in": paper_ids}}))
 
 
-
-
 def get_samples_for_paper(samples_collection, paper_id):
     return list(samples_collection.find({"paper_id": paper_id}))
 

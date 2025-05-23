@@ -6,8 +6,8 @@ load_dotenv(dotenv_path="../.env")
 uri=os.getenv("MONGO")
 
 paragraph_classification_from_mongo(
-    bert_model='../models/matbert/matbert-base-uncased', 
-    head='../models/matbert_bsc_cls.pth',
+    bert_model='allenai/scibert_scivocab_uncased', 
+    head='../models/scibert_cls.pth',
     batch_size=16,
     use_cls=True,
     mongo_uri=uri,

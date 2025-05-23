@@ -4,7 +4,7 @@ import re
 
 POSTSYNTH = [
     "calcination", "recrystallization",
-    "solvent_etching", "steam treatment", "ion_exchange",
+    "solution_treatment", "steam treatment", "ion_exchange",
     "chemical_liquid_deposition", "impregnation", "something_else"
 ]
 
