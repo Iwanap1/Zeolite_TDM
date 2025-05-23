@@ -1,0 +1,330 @@
+[
+  {
+    "doi": "10.1016/j.solidstatesciences.2022.107002",
+    "real": [
+      {
+        "sample": "MBeta",
+        "S_BET": "550 m²/g",
+        "S_Micro": "345 m²/g",
+        "S_Meso": "205 m²/g",
+        "V_Micro": "0.18 cm³/g",
+        "V_Meso": "0.24 cm³/g",
+        "V_total": "0.42 cm³/g",
+        "D_Meso": "5.20 nm",
+        "D_Micro": "0.58 nm"
+      },
+      {
+        "sample": "Beta",
+        "S_BET": "475 m²/g",
+        "S_Micro": "356 m²/g",
+        "S_Meso": "119 m²/g",
+        "V_Micro": "0.22 cm³/g",
+        "V_Meso": "0.05 cm³/g",
+        "V_total": "0.27 cm³/g",
+        "D_Meso": "–",
+        "D_Micro": "0.55 nm"
+      }
+    ],
+    "pred": [
+      {
+        "sample": "MBeta",
+        "V_total": "5.20 cm\u00b3/g - t-plot",
+        "V_micro": "0.58 cm\u00b3/g - t-plot",
+        "V_meso": "0.42 cm\u00b3/g - t-plot",
+        "S_BET": "550 m\u00b2/g",
+        "D_meso": "0.37 nm"
+      },
+      {
+        "sample": "Beta",
+        "V_micro": "0.55 cm\u00b3/g - t-plot",
+        "V_meso": "0.27 cm\u00b3/g - t-plot",
+        "S_BET": "475 m\u00b2/g",
+        "D_meso": "0.24 nm"
+      }
+    ],
+    "evaluation": {
+      "correct_fields": 0,
+      "total_fields": 0,
+      "accuracy": 0.0,
+      "unmatched_samples": 3
+    }
+  },
+  {
+    "doi": "10.1016/j.apcata.2020.117664",
+    "real": [
+      {
+        "sample": "H-SSZ-32",
+        "Si_Al": "55 mol",
+        "S_BET": "85 m\u00b2/g",
+        "S_exter": "37 m\u00b2/g",
+        "V_meso": "0.16 cm\u00b3/g",
+        "V_micro": "0.02 cm\u00b3/g",
+        "D_micro": "0.82 nm",
+        "D_meso": "\u2013",
+        "crystallinity": "93.2 % - XRD"
+      },
+      {
+        "sample": "HSSZ@M-C12",
+        "Si_Al": "53 mol",
+        "S_BET": "148 m\u00b2/g",
+        "S_ext": "63 m\u00b2/g",
+        "V_meso": "0.25 cm\u00b3/g",
+        "V_micro": "0.04 cm\u00b3/g",
+        "D_micro": "0.93 nm",
+        "D_meso": "2.94 nm",
+        "crystallinity": "91.5 % - XRD"
+      },
+      {
+        "sample": "HSSZ@M-C14",
+        "Si_Al": "52 mol",
+        "S_BET": "201 m\u00b2/g",
+        "S_ext": "79 m\u00b2/g",
+        "V_meso": "0.29 cm\u00b3/g",
+        "V_micro": "0.05 cm\u00b3/g",
+        "D_micro": "0.94 nm",
+        "D_meso": "3.72 nm",
+        "crystallinity": "87.8 % - XRD"
+      },
+      {
+        "sample": "HSSZ@M-C16",
+        "Si_Al": "50 mol",
+        "S_BET": "214 m\u00b2/g",
+        "S_ext": "97 m\u00b2/g",
+        "V_meso": "0.42 cm\u00b3/g",
+        "V_micro": "0.05 cm\u00b3/g",
+        "D_micro": "0.98 nm",
+        "D_meso": "4.23 nm",
+        "crystallinity": "89.2 % - XRD"
+      }
+    ],
+    "pred": [
+      {
+        "sample": "H-SSZ-32",
+        "Si_Al": "55",
+        "V_micro": "0.02 cm3/g",
+        "V_meso": "0.16 cm3/g",
+        "S_BET": "85 m2/g",
+        "S_ext": "37 m2/g",
+        "D_micro": "0.82 nm",
+        "crystallinity": "\u2013"
+      },
+      {
+        "sample": "HSSZ@M-C12",
+        "Si_Al": "53",
+        "V_micro": "0.04 cm3/g",
+        "V_meso": "0.25 cm3/g",
+        "Bronsted_Acid_Sites": "2.94",
+        "S_BET": "148 m2/g",
+        "S_ext": "63 m2/g",
+        "D_micro": "0.93 nm",
+        "D_meso": "91.5 nm"
+      },
+      {
+        "sample": "HSSZ@M-C14",
+        "Si_Al": "52",
+        "V_micro": "0.05 cm3/g",
+        "V_meso": "0.29 cm3/g",
+        "Lewis_Acid_Sites": "3.72",
+        "S_BET": "201 m2/g",
+        "S_ext": "79 m2/g",
+        "D_micro": "0.94 nm",
+        "D_meso": "87.8 nm"
+      },
+      {
+        "sample": "HSSZ@M-C16",
+        "Si_Al": "50",
+        "V_micro": "0.05 cm3/g",
+        "V_meso": "0.42 cm3/g",
+        "S_BET": "214 m2/g",
+        "S_ext": "97 m2/g",
+        "D_micro": "0.98 nm",
+        "D_meso": "89.2 nm",
+        "crystallinity": "\u2013"
+      }
+    ],
+    "evaluation": {
+      "correct_fields": 4,
+      "total_fields": 32,
+      "accuracy": 12.5,
+      "unmatched_samples": 0
+    }
+  },
+  {
+    "doi": "10.1016/j.micromeso.2021.111028",
+    "real": [
+      {
+        "sample": "TS-1",
+        "metal_content": "0.9 wt% - ICP-OES",
+        "S_BET": "466 m\u00b2/g - BET",
+        "S_ext": "62 m\u00b2/g",
+        "V_micro": "0.13 cm\u00b3/g - t-plot",
+        "V_total": "0.24 cm\u00b3/g",
+        "V_meso": "0.11 cm\u00b3/g"
+      },
+      {
+        "sample": "WS-1",
+        "metal_content": "0.01 wt% - ICP-OES",
+        "S_BET": "352 m\u00b2/g - BET",
+        "S_ext": "68 m\u00b2/g",
+        "V_micro": "0.10 cm\u00b3/g - t-plot",
+        "V_total": "0.23 cm\u00b3/g",
+        "V_meso": "0.13 cm\u00b3/g"
+      },
+      {
+        "sample": "HWS-1_0/1",
+        "metal_content": "0.14 wt% - ICP-OES",
+        "S_BET": "379 m\u00b2/g - BET",
+        "S_ext": "92 m\u00b2/g",
+        "V_micro": "0.11 cm\u00b3/g - t-plot",
+        "V_total": "0.34 cm\u00b3/g",
+        "V_meso": "0.23 cm\u00b3/g"
+      },
+      {
+        "sample": "HWS-1_1/2",
+        "metal_content": "0.13 wt% - ICP-OES",
+        "S_BET": "385 m\u00b2/g - BET",
+        "S_ext": "91 m\u00b2/g",
+        "V_micro": "0.12 cm\u00b3/g - t-plot",
+        "V_total": "0.34 cm\u00b3/g",
+        "V_meso": "0.22 cm\u00b3/g"
+      },
+      {
+        "sample": "HWS-1_1/1",
+        "metal_content": "0.12 wt% - ICP-OES",
+        "S_BET": "395 m\u00b2/g - BET",
+        "S_ext": "92 m\u00b2/g",
+        "V_micro": "0.12 cm\u00b3/g - t-plot",
+        "V_total": "0.38 cm\u00b3/g",
+        "V_meso": "0.26 cm\u00b3/g"
+      },
+      {
+        "sample": "HWS-1_2/1",
+        "metal_content": "0.05 wt% - ICP-OES",
+        "S_BET": "390 m\u00b2/g - BET",
+        "S_ext": "90 m\u00b2/g",
+        "V_micro": "0.12 cm\u00b3/g - t-plot",
+        "V_total": "0.40 cm\u00b3/g",
+        "V_meso": "0.28 cm\u00b3/g"
+      }
+    ],
+    "pred": [
+      {
+        "sample": "TS-1",
+        "V_total": "0.24 cm\u00b3/g - single-pointed total pore volume at p/p 0 of 0.95",
+        "V_micro": "0.13 cm\u00b3/g - t-plot method",
+        "V_meso": "0.11 cm\u00b3/g",
+        "S_BET": "466 m\u00b2/g - Brunnauer-Emmet-Teller method",
+        "S_ext": "62 m\u00b2/g - t-plot method",
+        "metal_content": "0.9 wt % - ICP-OES"
+      },
+      {
+        "sample": "WS-1",
+        "V_total": "0.23 cm\u00b3/g - single-pointed total pore volume at p/p 0 of 0.95",
+        "V_micro": "0.10 cm\u00b3/g - t-plot method",
+        "V_meso": "0.13 cm\u00b3/g",
+        "S_BET": "352 m\u00b2/g - Brunnauer-Emmet-Teller method",
+        "S_ext": "68 m\u00b2/g - t-plot method",
+        "metal_content": "0.01 wt % - ICP-OES"
+      },
+      {
+        "sample": "HWS-1_0/1",
+        "V_total": "0.34 cm\u00b3/g - single-pointed total pore volume at p/p 0 of 0.95",
+        "V_micro": "0.11 cm\u00b3/g - t-plot method",
+        "V_meso": "0.23 cm\u00b3/g",
+        "S_BET": "379 m\u00b2/g - Brunnauer-Emmet-Teller method",
+        "S_ext": "92 m\u00b2/g - t-plot method",
+        "metal_content": "0.14 wt % - ICP-OES"
+      },
+      {
+        "sample": "HWS-1_1/2",
+        "V_total": "0.34 cm\u00b3/g - single-pointed total pore volume at p/p 0 of 0.95",
+        "V_micro": "0.12 cm\u00b3/g - t-plot method",
+        "V_meso": "0.22 cm\u00b3/g",
+        "S_BET": "385 m\u00b2/g - Brunnauer-Emmet-Teller method",
+        "S_ext": "91 m\u00b2/g - t-plot method",
+        "metal_content": "0.13 wt % - ICP-OES"
+      },
+      {
+        "sample": "HWS-1_1/1",
+        "V_total": "0.38 cm\u00b3/g - single-pointed total pore volume at p/p 0 of 0.95",
+        "V_micro": "0.12 cm\u00b3/g - t-plot method",
+        "V_meso": "0.26 cm\u00b3/g",
+        "S_BET": "395 m\u00b2/g - Brunnauer-Emmet-Teller method",
+        "S_ext": "92 m\u00b2/g - t-plot method",
+        "metal_content": "0.12 wt % - ICP-OES"
+      },
+      {
+        "sample": "HWS-1_2/1",
+        "V_total": "0.40 cm\u00b3/g - single-pointed total pore volume at p/p 0 of 0.95",
+        "V_micro": "0.12 cm\u00b3/g - t-plot method",
+        "V_meso": "0.28 cm\u00b3/g",
+        "S_BET": "390 m\u00b2/g - Brunnauer-Emmet-Teller method",
+        "S_ext": "90 m\u00b2/g - t-plot method",
+        "metal_content": "0.05 wt % - ICP-OES"
+      }
+    ],
+    "evaluation": {
+      "correct_fields": 24,
+      "total_fields": 36,
+      "accuracy": 66.67,
+      "unmatched_samples": 0
+    }
+  },
+  {
+    "doi": "10.1016/j.apcata.2020.117664",
+    "real": [
+      {
+        "sample": "H-SSZ-32",
+        "Bronsted_Acid_Sites": "1.367 mmol/g - Py-IR | 0.449 mmol/g - TMPy-IR",
+        "Lewis_Acid_Sites": "0.139 mmol/g - Py-IR"
+      },
+      {
+        "sample": "HSSZ@M-C12",
+        "Bronsted_Acid_Sites": "0.492 mmol/g - Py-IR | 0.301 mmol/g - TMPy-IR",
+        "Lewis_Acid_Sites": "0.181 mmol/g - Py-IR"
+      },
+      {
+        "sample": "HSSZ@M-C14",
+        "Bronsted_Acid_Sites": "0.373 mmol/g - Py-IR | 0.243 mmol/g - TMPy-IR",
+        "Lewis_Acid_Sites": "0.195 mmol/g - Py-IR"
+      },
+      {
+        "sample": "HSSZ@M-C16",
+        "Bronsted_Acid_Sites": "0.364 mmol/g - Py-IR | 0.239 mmol/g - TMPy-IR",
+        "Lewis_Acid_Sites": "0.385 mmol/g - Py-IR"
+      }
+    ],
+    "pred": [
+      {
+        "sample": "H-SSZ-32",
+        "Bronsted_Acid_Sites": "0.139 mmol/g - t-plot (0.072 mmol/g - Py-IR), 0.067 mmol/g - TMpy-IR",
+        "Lewis_Acid_Sites": "0.685 mmol/g - t-plot, 0.449 mmol/g - S BET",
+        "S_BET": "9.835 cm\u00b3/g"
+      },
+      {
+        "sample": "HSSZ@M-C12",
+        "Bronsted_Acid_Sites": "0.181 mmol/g - t-plot (0.089 mmol/g - Py-IR), 0.092 mmol/g - TMpy-IR",
+        "Lewis_Acid_Sites": "0.245 mmol/g - t-plot, 0.301 mmol/g - S BET",
+        "S_BET": "2.718 cm\u00b3/g"
+      },
+      {
+        "sample": "HSSZ@M-C14",
+        "Bronsted_Acid_Sites": "0.195 mmol/g - t-plot (0.095 mmol/g - Py-IR), 0.100 mmol/g - TMpy-IR",
+        "Lewis_Acid_Sites": "0.186 mmol/g - t-plot, 0.243 mmol/g - S BET",
+        "S_BET": "1.913 cm\u00b3/g"
+      },
+      {
+        "sample": "HSSZ@M-C16",
+        "Bronsted_Acid_Sites": "0.385 mmol/g - t-plot (0.191 mmol/g - Py-IR), 0.194 mmol/g - TMpy-IR",
+        "Lewis_Acid_Sites": "0.182 mmol/g - t-plot, 0.239 mmol/g - S BET",
+        "S_BET": "0.945 cm\u00b3/g"
+      }
+    ],
+    "evaluation": {
+      "correct_fields": 0,
+      "total_fields": 8,
+      "accuracy": 0.0,
+      "unmatched_samples": 0
+    }
+  }
+]

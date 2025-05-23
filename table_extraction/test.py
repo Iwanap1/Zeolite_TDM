@@ -9,12 +9,13 @@ import pandas as pd
 from tabulate import tabulate
 
 
-def load_model():
+def load_model(name):
     model = outlines_transformers(
-        model_name="meta-llama/Meta-Llama-3-8B-Instruct",
+        name,
+        torch_dtype=torch.float16,
         device="cuda" if torch.cuda.is_available() else "cpu"
     )
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct")
+    tokenizer = AutoTokenizer.from_pretrained(name)
     return model, tokenizer
 
 
@@ -52,31 +53,60 @@ def evaluate_accuracy(real_samples, pred_samples):
         "unmatched_samples": unmatched_samples
     }
 
+def format_llama2_chat_prompt(messages):
+    """
+    Format messages using the LLaMA-2 chat template.
+    """
+    system_prompt = "You are a helpful, respectful and honest assistant. Always answer as helpfully as possible."
+    formatted = f"<s>[INST] <<SYS>>\n{system_prompt}\n<</SYS>>\n\n"
 
-def main():
-    model, tokenizer = load_model()
+    for i, message in enumerate(messages):
+        role = message["role"]
+        content = message["content"]
+        if role == "user":
+            if i > 0:
+                formatted += "</s><s>[INST] "
+            formatted += content + " [/INST]"
+        elif role == "assistant":
+            formatted += f" {content}"
+    formatted += " </s>"
+    return formatted
+
+
+def main(data_format, model="meta-llama/Meta-Llama-3-8B-Instruct"):
+    model, tokenizer = load_model(model)
     generator = generate.json(model, Output)
 
-    file_path = os.path.join(os.environ["HOME"], "tdm/table_extraction/data.json")
+    file_path = os.path.join(os.environ["HOME"], "Zeolite_TDM/table_extraction/test_data.json")
     with open(file_path, "r") as f:
         data = json.load(f)
 
     results = []
 
     for test_table in data:
-        df = pd.DataFrame(test_table['flat_table'])
-        markdown_table = tabulate(df.values.tolist(), tablefmt="github", showindex=False, headers=[])
-        prompt = create_prompt(markdown_table)
+        if data_format != 'string':
+            df = pd.DataFrame(test_table[data_format])
+            markdown_table = tabulate(df.values.tolist(), tablefmt="github", showindex=False, headers=[])
+            prompt = create_prompt(markdown_table)
+        else:
+            prompt = create_prompt(test_table["string"])
 
-        print("⏳ Generating...")
-        chat_prompt = tokenizer.apply_chat_template(
-        [
+        messages = [
             {"role": "system", "content": "You are a helpful assistant that extracts structured zeolite data from tables."},
             {"role": "user", "content": prompt}
-        ],
-        tokenize=False,
-        add_generation_prompt=True
-    )
+        ]
+        print("⏳ Generating...")
+
+        try:
+            chat_prompt = tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True
+            )
+        except Exception as e:
+            print("Could not apply chat template, constructing it manually")
+            chat_prompt = tokenizer.tokenize(format_llama2_chat_prompt(messages))
+
         output = generator(chat_prompt)
         pred = output.model_dump(exclude_none=True)["samples"]
 
@@ -92,7 +122,7 @@ def main():
             "evaluation": eval
         })
 
-    with open(os.path.join(os.environ["HOME"], "tdm/table_extraction/test_results.json"), "w") as f:
+    with open(os.path.join(os.environ["HOME"], f"Zeolite_TDM/table_extraction/test_results_{data_format}.json"), "w") as f:
         json.dump(results, f, indent=2)
 
 
@@ -101,4 +131,7 @@ def main():
 # 5. Run
 # -----------------------------
 if __name__ == "__main__":
-    main()
+    main("string")
+    main("table")
+    main("flat_table")
+    main("string", model='../models/llama2-7b-chat-hf-table')

@@ -45,9 +45,10 @@ Extract structured sample characterization data from the following table. Return
 }}
 
 Guidelines:
-- Use "" or omit fields that are not available for a given sample.
+- Only include actual sample rows (ignore headings or column labels).
+- Use `null` or omit fields that are not available for a given sample.
 - Preserve any units and the measurement method (e.g., "cm³/g - t-plot", "mol - EDS", "mmol/g - IR").
-- If multiple measurement methods are listed for the same property, include both sets of data, joined with a pipe `|`.
+- If multiple measurement methods are listed for the same property (e.g. Brønsted acidity from both Py-IR and TMPy-IR), include both, joined with a pipe `|`.
 - Keep the `sample` name exactly as shown in the text.
 - Do not include extra commentary.
 - Only report values in the table. Do not hallucinate.

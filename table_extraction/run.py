@@ -14,12 +14,13 @@ load_dotenv(dotenv_path="../.env")
 
 
 def load_mongo():
-    client = MongoClient(os.environ["MONGO_URI"])
+    client = MongoClient(os.environ["MONGO"])
     db = client["zeolite_tdm"]
     papers = db["papers"]
+    paragraphs = db["paragraphs"]
     tables = db["tables"]
     samples = db["samples"]
-    return client, papers, tables, samples
+    return client, papers, tables, samples, paragraphs
 
 
 def classify_tables(tables):
@@ -47,7 +48,8 @@ def classify_tables(tables):
                     },                
                     {
                         "$and": [
-                            {'as_string': {'$regex': 'm2', '$options': 'i'}}
+                            {'as_string': {'$regex': 'm2', '$options': 'i'}},
+                            {'as_string': {'$regex': 'g-1', '$options': 'i'}}
                         ]
                     },
                     {'single_head_table': {'$elemMatch': {'$regex': 'sbet', '$options': 'i'}}},
@@ -66,8 +68,7 @@ def classify_tables(tables):
     print(update)
 
 
-def reject_papers_without_bet_table():
-    papers, tables, paras = load_mongo()
+def reject_papers_without_bet_table(papers, tables, paras):
 
     # Find paper IDs that have any BET table
     papers_with_bet = tables.distinct("paper_id", {"contains_bet": True})
@@ -90,13 +91,13 @@ def reject_papers_without_bet_table():
                 "rejected_because": "no BET table"
             }
         })
-        tables.delete_many({"paper_id": paper_id})
-        paras.delete_many({"paper_id": paper_id})
-        print(f"🚫 Rejected paper {doi} (no BET table)")
+        # tables.delete_many({"paper_id": paper_id})
+        # paras.delete_many({"paper_id": paper_id})
+        print(f"Rejected paper {doi} (no BET table)")
 
         rejected_count += 1
 
-    print(f"✅ Rejected {rejected_count} papers due to missing BET tables.")
+    print(f"Rejected {rejected_count} papers due to missing BET tables.")
 
 
 def load_model():
@@ -110,10 +111,9 @@ def load_model():
 
 def main(max_minutes=1000, batch_size=1, papers=None, tables=None, samples=None):
     if papers is None or tables is None or samples is None:
-        client, papers, tables, samples = load_mongo()
+        client, papers, tables, samples, paragraphs = load_mongo()
     model, tokenizer = load_model()
     generator = generate.json(model, Output)
-    papers, tables, samples = load_mongo()
     worker_id = str(uuid.uuid4())
 
     print(f"🧠 Worker ID: {worker_id}")
@@ -202,15 +202,15 @@ def main(max_minutes=1000, batch_size=1, papers=None, tables=None, samples=None)
             if unfinished == 0:
                 papers.update_one({"_id": paper_id}, {"$set": {"status": "awaiting process identification"}})
                 print(f"Completed extraction for paper {paper_id}")
-                deleted = tables.delete_many({"paper_id": paper_id}).deleted_count
-                print(f"Deleted {deleted} tables for paper {paper_id}")
+                # deleted = tables.delete_many({"paper_id": paper_id}).deleted_count
+                # print(f"Deleted {deleted} tables for paper {paper_id}")
 
 
 
 
 if __name__ == "__main__":
-    client, papers, tables, samples = load_mongo()
+    client, papers, tables, samples, paragraphs = load_mongo()
     classify_tables(tables)
-    reject_papers_without_bet_table()
-    main(max_minutes=30, batch_size=1, papers=papers, tables=tables, samples=samples)
+    reject_papers_without_bet_table(papers, tables, paragraphs)
+    main(max_minutes=130, batch_size=1, papers=papers, tables=tables, samples=samples)
     client.close()
