@@ -1,63 +1,65 @@
-sample,Si_Al,V_total,V_micro,V_meso,Bronsted_Acid_Sites,Lewis_Acid_Sites,S_BET,S_ext,D_micro,D_meso,crystallinity,metal_content,doi,source
-H-SSZ-32,,,,,0.685 mmol/g - Py-IR,0.072 mmol /g,,,,,,,10.1016/j.apcata.2020.117664,test_llama3_table
-H-SSZ-32,55,,0.02 cm³/g,0.16 cm³/g,,,85,,,0.82 nm,93.2,,10.1016/j.apcata.2020.117664,test_llama3_string
-H-SSZ-32,,,,,"Brønsted (Py) 0.067 mmol/g, Brønsted (Py) 0.083 mmol/g",Lewis (Py) 0.072 mmol/g | Lewis (Py) 0.067 mmol/g | Lewis (Py) 0.139 mmol/g,9.835 cm³/g - t-plot,,,,,,10.1016/j.apcata.2020.117664,test_llama3_flat_table
-H-SSZ-32,55,,0.02 cm³/g,0.16 cm³/g,,,85 m2/g,37 m2/g,0.82 nm,,93.2%,,10.1016/j.apcata.2020.117664,test_llama3_table
-H-SSZ-32,,,,,0.072|0.139 (mmol/g - Py-IR),0.067|0.139 (mmol/g - Py-IR),,,,,,,10.1016/j.apcata.2020.117664,test_llama3_string
-H-SSZ-32,55 mol,,0.02 cm³/g,0.16 cm³/g,,,85 m²/g,,0.82 nm,–,93.2 % - XRD,,10.1016/j.apcata.2020.117664,real
-H-SSZ-32,55,,0.02 cm³/g,0.16 cm³/g,,,85 m²/g,,0.82 nm,,,,10.1016/j.apcata.2020.117664,test_llama3_flat_table
-H-SSZ-32,,,,,1.367 mmol/g - Py-IR | 0.449 mmol/g - TMPy-IR,0.139 mmol/g - Py-IR,,,,,,,10.1016/j.apcata.2020.117664,real
-HSSZ@M-C12,53,,0.04 cm³/g,0.25 cm³/g,,,148,,,0.93 nm,91.5,,10.1016/j.apcata.2020.117664,test_llama3_string
-HSSZ@M-C12,,,,,0.089|0.181 (mmol/g - Py-IR),0.092|0.181 (mmol/g - Py-IR),,,,,,,10.1016/j.apcata.2020.117664,test_llama3_string
-HSSZ@M-C12,53,,0.04 cm³/g,0.25 cm³/g,,,148 m2/g,63 m2/g,0.93 nm,2.94 nm,91.5%,,10.1016/j.apcata.2020.117664,test_llama3_table
-HSSZ@M-C12,,,,,"Brønsted (Py) 0.092 mmol/g, Brønsted (TMpy) 0.682 mmol/g",Lewis (Py) 0.089 mmol/g | Lewis (Py) 0.092 mmol/g | Lewis (Py) 0.181 mmol/g,2.718 cm³/g - t-plot,,,,,,10.1016/j.apcata.2020.117664,test_llama3_flat_table
-HSSZ@M-C12,,,,,0.245 mmol/g - Py-IR,0.089 mmol /g,,,,,,,10.1016/j.apcata.2020.117664,test_llama3_table
-HSSZ@M-C12,53 mol,,0.04 cm³/g,0.25 cm³/g,,,148 m²/g,63 m²/g,0.93 nm,2.94 nm,91.5 % - XRD,,10.1016/j.apcata.2020.117664,real
-HSSZ@M-C12,53,,0.04 cm³/g,0.25 cm³/g,,2.94 nm,148 m²/g,,,0.93 nm,,,10.1016/j.apcata.2020.117664,test_llama3_flat_table
-HSSZ@M-C12,,,,,0.492 mmol/g - Py-IR | 0.301 mmol/g - TMPy-IR,0.181 mmol/g - Py-IR,,,,,,,10.1016/j.apcata.2020.117664,real
-HSSZ@M-C14,,,,,"Brønsted (Py) 0.100 mmol/g, Brønsted (TMpy) 0.187 mmol/g",Lewis (Py) 0.095 mmol/g | Lewis (Py) 0.100 mmol/g | Lewis (Py) 0.195 mmol/g,1.913 cm³/g - t-plot,,,,,,10.1016/j.apcata.2020.117664,test_llama3_flat_table
-HSSZ@M-C14,,,,,0.186 mmol/g - Py-IR,0.095 mmol /g,,,,,,,10.1016/j.apcata.2020.117664,test_llama3_table
-HSSZ@M-C14,52,,0.05 cm³/g,0.29 cm³/g,,,201,,,0.94 nm,87.8,,10.1016/j.apcata.2020.117664,test_llama3_string
-HSSZ@M-C14,,,,,0.095|0.195 (mmol/g - Py-IR),0.100|0.195 (mmol/g - Py-IR),,,,,,,10.1016/j.apcata.2020.117664,test_llama3_string
-HSSZ@M-C14,52,,0.05 cm³/g,0.29 cm³/g,,,201 m2/g,79 m2/g,0.94 nm,3.72 nm,87.8%,,10.1016/j.apcata.2020.117664,test_llama3_table
-HSSZ@M-C14,,,,,0.373 mmol/g - Py-IR | 0.243 mmol/g - TMPy-IR,0.195 mmol/g - Py-IR,,,,,,,10.1016/j.apcata.2020.117664,real
-HSSZ@M-C14,52,,0.05 cm³/g,0.29 cm³/g,,3.72 nm,201 m²/g,,,0.94 nm,,,10.1016/j.apcata.2020.117664,test_llama3_flat_table
-HSSZ@M-C14,52 mol,,0.05 cm³/g,0.29 cm³/g,,,201 m²/g,79 m²/g,0.94 nm,3.72 nm,87.8 % - XRD,,10.1016/j.apcata.2020.117664,real
-HSSZ@M-C16,,,,,0.182 mmol/g - Py-IR,0.191 mmol /g,,,,,,,10.1016/j.apcata.2020.117664,test_llama3_table
-HSSZ@M-C16,,,,,"Brønsted (Py) 0.194 mmol/g, Brønsted (TMpy) 0.182 mmol/g",Lewis (Py) 0.191 mmol/g | Lewis (Py) 0.194 mmol/g | Lewis (Py) 0.385 mmol/g,0.945 cm³/g - t-plot,,,,,,10.1016/j.apcata.2020.117664,test_llama3_flat_table
-HSSZ@M-C16,50,,0.05 cm³/g,0.42 cm³/g,,,214,,,0.98 nm,89.2,,10.1016/j.apcata.2020.117664,test_llama3_string
-HSSZ@M-C16,,,,,0.191|0.385 (mmol/g - Py-IR),0.194|0.385 (mmol/g - Py-IR),,,,,,,10.1016/j.apcata.2020.117664,test_llama3_string
-HSSZ@M-C16,50,,0.05 cm³/g,0.42 cm³/g,,,214 m2/g,97 m2/g,0.98 nm,4.23 nm,89.2%,,10.1016/j.apcata.2020.117664,test_llama3_table
-HSSZ@M-C16,50,,0.05 cm³/g,0.42 cm³/g,,,214 m²/g,,,0.98 nm,,,10.1016/j.apcata.2020.117664,test_llama3_flat_table
-HSSZ@M-C16,,,,,0.364 mmol/g - Py-IR | 0.239 mmol/g - TMPy-IR,0.385 mmol/g - Py-IR,,,,,,,10.1016/j.apcata.2020.117664,real
-HSSZ@M-C16,50 mol,,0.05 cm³/g,0.42 cm³/g,,,214 m²/g,97 m²/g,0.98 nm,4.23 nm,89.2 % - XRD,,10.1016/j.apcata.2020.117664,real
-HWS-1_0/1,,0.34 cm³/g,0.11 cm³/g - t-plot,0.23 cm³/g,,,379 m²/g - BET,92 m²/g,,,,0.14 wt% - ICP-OES,10.1016/j.micromeso.2021.111028,real
-HWS-1_0/1,,0.34 cm³/g,0.11 cm³/g - t-plot,0.23 cm³/g,,,379 m²/g,,,,,0.14 wt. %,10.1016/j.micromeso.2021.111028,test_llama3_string
-HWS-1_0/1,,0.34 cm³/g - Single-pointed total pore volume at p/p 0 of 0.95,0.11 cm³/g - t-plot method,0.23 cm³/g,,,379 m2/g - Brunnauer-Emmet-Teller method,92 m2/g - t-plot method,,,,0.14 wt % - ICP-OES,10.1016/j.micromeso.2021.111028,test_llama3_table
-HWS-1_0/1,,0.34 cm³/g - single-pointed,0.11 cm³/g - t-plot,0.23 cm³/g - calculated,,,379 m²/g - Brunnauer-Emmet-Teller,,,,,0.14 wt %,10.1016/j.micromeso.2021.111028,test_llama3_flat_table
-HWS-1_1/1,,0.38 cm³/g - Single-pointed total pore volume at p/p 0 of 0.95,0.12 cm³/g - t-plot method,0.26 cm³/g,,,395 m2/g - Brunnauer-Emmet-Teller method,92 m2/g - t-plot method,,,,0.12 wt % - ICP-OES,10.1016/j.micromeso.2021.111028,test_llama3_table
-HWS-1_1/1,,0.38 cm³/g,0.12 cm³/g - t-plot,0.26 cm³/g,,,395 m²/g - BET,92 m²/g,,,,0.12 wt% - ICP-OES,10.1016/j.micromeso.2021.111028,real
-HWS-1_1/1,,0.38 cm³/g - single-pointed,0.12 cm³/g - t-plot,0.26 cm³/g - calculated,,,395 m²/g - Brunnauer-Emmet-Teller,,,,,0.12 wt %,10.1016/j.micromeso.2021.111028,test_llama3_flat_table
-HWS-1_1/1,,,0.12 cm³/g - t-plot,,,,395 m²/g,,,,,0.12 wt. %,10.1016/j.micromeso.2021.111028,test_llama3_string
-HWS-1_1/2,,,0.12 cm³/g - t-plot,,,,385 m²/g,,,,,0.13 wt. %,10.1016/j.micromeso.2021.111028,test_llama3_string
-HWS-1_1/2,,0.34 cm³/g,0.12 cm³/g - t-plot,0.22 cm³/g,,,385 m²/g - BET,91 m²/g,,,,0.13 wt% - ICP-OES,10.1016/j.micromeso.2021.111028,real
-HWS-1_1/2,,0.34 cm³/g - single-pointed,0.12 cm³/g - t-plot,0.22 cm³/g - calculated,,,385 m²/g - Brunnauer-Emmet-Teller,,,,,0.13 wt %,10.1016/j.micromeso.2021.111028,test_llama3_flat_table
-HWS-1_1/2,,0.34 cm³/g - Single-pointed total pore volume at p/p 0 of 0.95,0.12 cm³/g - t-plot method,0.22 cm³/g,,,385 m2/g - Brunnauer-Emmet-Teller method,91 m2/g - t-plot method,,,,0.13 wt % - ICP-OES,10.1016/j.micromeso.2021.111028,test_llama3_table
-HWS-1_2/1,,0.40 cm³/g - Single-pointed total pore volume at p/p 0 of 0.95,0.12 cm³/g - t-plot method,0.28 cm³/g,,,390 m2/g - Brunnauer-Emmet-Teller method,90 m2/g - t-plot method,,,,0.05 wt % - ICP-OES,10.1016/j.micromeso.2021.111028,test_llama3_table
-HWS-1_2/1,,,0.12 cm³/g - t-plot,,,,390 m²/g,,,,,0.05 wt. %,10.1016/j.micromeso.2021.111028,test_llama3_string
-HWS-1_2/1,,0.40 cm³/g,0.12 cm³/g - t-plot,0.28 cm³/g,,,390 m²/g - BET,90 m²/g,,,,0.05 wt% - ICP-OES,10.1016/j.micromeso.2021.111028,real
-HWS-1_2/1,,0.40 cm³/g - single-pointed,0.12 cm³/g - t-plot,0.28 cm³/g - calculated,,,390 m²/g - Brunnauer-Emmet-Teller,,,,,0.05 wt %,10.1016/j.micromeso.2021.111028,test_llama3_flat_table
-TS-1,,0.24 cm³/g,0.13 cm³/g - t-plot,0.11 cm³/g,,,466 m²/g - BET,62 m²/g,,,,0.9 wt% - ICP-OES,10.1016/j.micromeso.2021.111028,real
-TS-1,,0.24 cm³/g - single-pointed,0.13 cm³/g - t-plot,0.11 cm³/g - calculated,,,466 m²/g - Brunnauer-Emmet-Teller,,,,,0.9 wt %,10.1016/j.micromeso.2021.111028,test_llama3_flat_table
-TS-1,,0.24 cm³/g - Single-pointed total pore volume at p/p 0 of 0.95,0.13 cm³/g - t-plot method,0.11 cm³/g,,,466 m2/g - Brunnauer-Emmet-Teller method,62 m2/g - t-plot method,,,,0.9 wt % - ICP-OES,10.1016/j.micromeso.2021.111028,test_llama3_table
-TS-1,,0.24 cm³/g - t-plot,0.11 cm³/g - t-plot,0.13 cm³/g,,,466 m²/g,0.13 m²/g - t-plot,,,,0.9 wt. %,10.1016/j.micromeso.2021.111028,test_llama3_string
-WS-1,,0.23 cm³/g,0.10 cm³/g - t-plot,0.13 cm³/g,,,352 m²/g - BET,68 m²/g,,,,0.01 wt% - ICP-OES,10.1016/j.micromeso.2021.111028,real
-WS-1,,0.23 cm³/g - Single-pointed total pore volume at p/p 0 of 0.95,0.10 cm³/g - t-plot method,0.13 cm³/g,,,352 m2/g - Brunnauer-Emmet-Teller method,68 m2/g - t-plot method,,,,0.01 wt % - ICP-OES,10.1016/j.micromeso.2021.111028,test_llama3_table
-WS-1,,0.23 cm³/g - t-plot,0.13 cm³/g - t-plot,0.10 cm³/g,,,352 m²/g,0.23 m²/g - t-plot,,,,0.01 wt. %,10.1016/j.micromeso.2021.111028,test_llama3_string
-WS-1,,0.23 cm³/g - single-pointed,0.10 cm³/g - t-plot,0.13 cm³/g - calculated,,,352 m²/g - Brunnauer-Emmet-Teller,,,,,0.01 wt %,10.1016/j.micromeso.2021.111028,test_llama3_flat_table
-Beta,,0.27 cm³/g - t-plot,0.05 cm³/g,,0.24 mol - IR | 0.05 mol - TP,,0.37 m²/g - BET,,0.55 nm,,,,10.1016/j.solidstatesciences.2022.107002,test_llama3_string
-Beta,,0.27 cm³/g,,,,,475 m²/g,,,,,,10.1016/j.solidstatesciences.2022.107002,real
-Beta,,0.27 cm³/g - t-plot,0.22 cm³/g - t-plot,0.05 cm³/g - t-plot,,,475 m²/g,,,0.55 nm,,,10.1016/j.solidstatesciences.2022.107002,test_llama3_table
-MBeta,,0.42 cm³/g,,,,,550 m²/g,,,,,,10.1016/j.solidstatesciences.2022.107002,real
-MBeta,,0.42 cm³/g - t-plot,0.18 cm³/g - t-plot,0.24 cm³/g - t-plot,,,550 m²/g,,0.58 nm,5.20 nm,,,10.1016/j.solidstatesciences.2022.107002,test_llama3_table
-MBeta,,0.42 cm³/g - t-plot,0.24 cm³/g,,0.05 mol - IR |,,0.37 m²/g - BET,,0.58 nm,,,,10.1016/j.solidstatesciences.2022.107002,test_llama3_string
+﻿Format,sample,Si_Al,V_total,V_micro,V_meso,Bronsted_Acid_Sites,Lewis_Acid_Sites,S_BET,S_ext,D_micro,D_meso,crystallinity,metal_content,doi,source,Table
+Truth,Beta,,0.27 cm³/g,0.22 cm³/g,0.05 cm³/g,,,475 m²/g,,0.55 nm,–,,,,real,1
+Single-Head,,,,,,,,,,,,,,,flat_table,1
+String,Beta,,0.27 cm³/g - t-plot,0.05 cm³/g,,0.24 mol - IR | 0.05 mol - TP,,0.37 m²/g - BET,,0.55 nm,,,,,string,1
+Full-Table,Beta,,0.27 cm³/g - t-plot,0.22 cm³/g - t-plot,0.05 cm³/g - t-plot,,,475 m²/g,,,0.55 nm,,,,table,1
+Truth,MBeta,,0.42 cm³/g,0.18 cm³/g,0.24 cm³/g,,,550 m²/g,,0.58 nm,5.20 nm,,,,real,1
+Single-Head,,,,,,,,,,,,,,,flat_table,1
+String,MBeta,,0.42 cm³/g - t-plot,0.24 cm³/g,,0.05 mol - IR |,,0.37 m²/g - BET,,0.58 nm,,,,,string,1
+Full-Table,MBeta,,0.42 cm³/g - t-plot,0.18 cm³/g - t-plot,0.24 cm³/g - t-plot,,,550 m²/g,,0.58 nm,5.20 nm,,,,table,1
+Truth,H-SSZ-32,55 mol,,0.02 cm³/g,0.16 cm³/g,,,85 m²/g,,0.82 nm,–,93.2 % - XRD,,10.1016/j.apcata.2020.117664,real,2
+Single-Head,H-SSZ-32,55,,0.02 cm³/g,0.16 cm³/g,,,85 m²/g,,0.82 nm,,,,10.1016/j.apcata.2020.117664,flat_table,2
+String,H-SSZ-32,55,,0.02 cm³/g,0.16 cm³/g,,,85,,,0.82 nm,93.2,,10.1016/j.apcata.2020.117664,string,2
+Full-Table,H-SSZ-32,55,,0.02 cm³/g,0.16 cm³/g,,,85 m2/g,37 m2/g,0.82 nm,,93.20%,,10.1016/j.apcata.2020.117664,table,2
+Truth,HSSZ@M-C12,53 mol,,0.04 cm³/g,0.25 cm³/g,,,148 m²/g,63 m²/g,0.93 nm,2.94 nm,91.5 % - XRD,,10.1016/j.apcata.2020.117664,real,2
+Single-Head,HSSZ@M-C12,53,,0.04 cm³/g,0.25 cm³/g,,2.94 nm,148 m²/g,,,0.93 nm,,,10.1016/j.apcata.2020.117664,flat_table,2
+String,HSSZ@M-C12,53,,0.04 cm³/g,0.25 cm³/g,,,148,,,0.93 nm,91.5,,10.1016/j.apcata.2020.117664,string,2
+Full-Table,HSSZ@M-C12,53,,0.04 cm³/g,0.25 cm³/g,,,148 m2/g,63 m2/g,0.93 nm,2.94 nm,91.50%,,10.1016/j.apcata.2020.117664,table,2
+Truth,HSSZ@M-C14,52 mol,,0.05 cm³/g,0.29 cm³/g,,,201 m²/g,79 m²/g,0.94 nm,3.72 nm,87.8 % - XRD,,10.1016/j.apcata.2020.117664,real,2
+Single-Head,HSSZ@M-C14,52,,0.05 cm³/g,0.29 cm³/g,,3.72 nm,201 m²/g,,,0.94 nm,,,10.1016/j.apcata.2020.117664,flat_table,2
+String,HSSZ@M-C14,52,,0.05 cm³/g,0.29 cm³/g,,,201,,,0.94 nm,87.8,,10.1016/j.apcata.2020.117664,string,2
+Full-Table,HSSZ@M-C14,52,,0.05 cm³/g,0.29 cm³/g,,,201 m2/g,79 m2/g,0.94 nm,3.72 nm,87.80%,,10.1016/j.apcata.2020.117664,table,2
+Truth,HSSZ@M-C16,50 mol,,0.05 cm³/g,0.42 cm³/g,,,214 m²/g,97 m²/g,0.98 nm,4.23 nm,89.2 % - XRD,,10.1016/j.apcata.2020.117664,real,2
+Single-Head,HSSZ@M-C16,50,,0.05 cm³/g,0.42 cm³/g,,,214 m²/g,,,0.98 nm,,,10.1016/j.apcata.2020.117664,flat_table,2
+String,HSSZ@M-C16,50,,0.05 cm³/g,0.42 cm³/g,,,214,,,0.98 nm,89.2,,10.1016/j.apcata.2020.117664,string,2
+Full-Table,HSSZ@M-C16,50,,0.05 cm³/g,0.42 cm³/g,,,214 m2/g,97 m2/g,0.98 nm,4.23 nm,89.20%,,10.1016/j.apcata.2020.117664,table,2
+Truth,H-SSZ-32,,,,,1.367 mmol/g - Py-IR | 0.449 mmol/g - TMPy-IR,0.139 mmol/g - Py-IR,,,,,,,10.1016/j.apcata.2020.117664,real,3
+Single-Head,H-SSZ-32,,,,,"Brønsted (Py) 0.067 mmol/g, Brønsted (Py) 0.083 mmol/g",Lewis (Py) 0.072 mmol/g | Lewis (Py) 0.067 mmol/g | Lewis (Py) 0.139 mmol/g,9.835 cm³/g - t-plot,,,,,,10.1016/j.apcata.2020.117664,flat_table,3
+String,H-SSZ-32,,,,,0.072|0.139 (mmol/g - Py-IR),0.067|0.139 (mmol/g - Py-IR),,,,,,,10.1016/j.apcata.2020.117664,string,3
+Full-Table,H-SSZ-32,,,,,0.685 mmol/g - Py-IR,0.072 mmol /g,,,,,,,10.1016/j.apcata.2020.117664,table,3
+Truth,HSSZ@M-C12,,,,,0.492 mmol/g - Py-IR | 0.301 mmol/g - TMPy-IR,0.181 mmol/g - Py-IR,,,,,,,10.1016/j.apcata.2020.117664,real,3
+Single-Head,HSSZ@M-C12,,,,,"Brønsted (Py) 0.092 mmol/g, Brønsted (TMpy) 0.682 mmol/g",Lewis (Py) 0.089 mmol/g | Lewis (Py) 0.092 mmol/g | Lewis (Py) 0.181 mmol/g,2.718 cm³/g - t-plot,,,,,,10.1016/j.apcata.2020.117664,flat_table,3
+String,HSSZ@M-C12,,,,,0.089|0.181 (mmol/g - Py-IR),0.092|0.181 (mmol/g - Py-IR),,,,,,,10.1016/j.apcata.2020.117664,string,3
+Full-Table,HSSZ@M-C12,,,,,0.245 mmol/g - Py-IR,0.089 mmol /g,,,,,,,10.1016/j.apcata.2020.117664,table,3
+Truth,HSSZ@M-C14,,,,,0.373 mmol/g - Py-IR | 0.243 mmol/g - TMPy-IR,0.195 mmol/g - Py-IR,,,,,,,10.1016/j.apcata.2020.117664,real,3
+Single-Head,HSSZ@M-C14,,,,,"Brønsted (Py) 0.100 mmol/g, Brønsted (TMpy) 0.187 mmol/g",Lewis (Py) 0.095 mmol/g | Lewis (Py) 0.100 mmol/g | Lewis (Py) 0.195 mmol/g,1.913 cm³/g - t-plot,,,,,,10.1016/j.apcata.2020.117664,flat_table,3
+String,HSSZ@M-C14,,,,,0.095|0.195 (mmol/g - Py-IR),0.100|0.195 (mmol/g - Py-IR),,,,,,,10.1016/j.apcata.2020.117664,string,3
+Full-Table,HSSZ@M-C14,,,,,0.186 mmol/g - Py-IR,0.095 mmol /g,,,,,,,10.1016/j.apcata.2020.117664,table,3
+Truth,HSSZ@M-C16,,,,,0.364 mmol/g - Py-IR | 0.239 mmol/g - TMPy-IR,0.385 mmol/g - Py-IR,,,,,,,10.1016/j.apcata.2020.117664,real,3
+Single-Head,HSSZ@M-C16,,,,,"Brønsted (Py) 0.194 mmol/g, Brønsted (TMpy) 0.182 mmol/g",Lewis (Py) 0.191 mmol/g | Lewis (Py) 0.194 mmol/g | Lewis (Py) 0.385 mmol/g,0.945 cm³/g - t-plot,,,,,,10.1016/j.apcata.2020.117664,flat_table,3
+String,HSSZ@M-C16,,,,,0.191|0.385 (mmol/g - Py-IR),0.194|0.385 (mmol/g - Py-IR),,,,,,,10.1016/j.apcata.2020.117664,string,3
+Full-Table,HSSZ@M-C16,,,,,0.182 mmol/g - Py-IR,0.191 mmol /g,,,,,,,10.1016/j.apcata.2020.117664,table,3
+Truth,TS-1,,0.24 cm³/g,0.13 cm³/g - t-plot,0.11 cm³/g,,,466 m²/g - BET,62 m²/g,,,,0.9 wt% - ICP-OES,10.1016/j.micromeso.2021.111028,real,4
+Single-Head,TS-1,,0.24 cm³/g - single-pointed,0.13 cm³/g - t-plot,0.11 cm³/g - calculated,,,466 m²/g - Brunnauer-Emmet-Teller,,,,,0.9 wt %,10.1016/j.micromeso.2021.111028,flat_table,4
+String,TS-1,,0.24 cm³/g - t-plot,0.11 cm³/g - t-plot,0.13 cm³/g,,,466 m²/g,0.13 m²/g - t-plot,,,,0.9 wt. %,10.1016/j.micromeso.2021.111028,string,4
+Full-Table,TS-1,,0.24 cm³/g - Single-pointed total pore volume at p/p 0 of 0.95,0.13 cm³/g - t-plot method,0.11 cm³/g,,,466 m2/g - Brunnauer-Emmet-Teller method,62 m2/g - t-plot method,,,,0.9 wt % - ICP-OES,10.1016/j.micromeso.2021.111028,table,4
+Truth,WS-1,,0.23 cm³/g,0.10 cm³/g - t-plot,0.13 cm³/g,,,352 m²/g - BET,68 m²/g,,,,0.01 wt% - ICP-OES,10.1016/j.micromeso.2021.111028,real,4
+Single-Head,WS-1,,0.23 cm³/g - single-pointed,0.10 cm³/g - t-plot,0.13 cm³/g - calculated,,,352 m²/g - Brunnauer-Emmet-Teller,,,,,0.01 wt %,10.1016/j.micromeso.2021.111028,flat_table,4
+String,WS-1,,0.23 cm³/g - t-plot,0.13 cm³/g - t-plot,0.10 cm³/g,,,352 m²/g,0.23 m²/g - t-plot,,,,0.01 wt. %,10.1016/j.micromeso.2021.111028,string,4
+Full-Table,WS-1,,0.23 cm³/g - Single-pointed total pore volume at p/p 0 of 0.95,0.10 cm³/g - t-plot method,0.13 cm³/g,,,352 m2/g - Brunnauer-Emmet-Teller method,68 m2/g - t-plot method,,,,0.01 wt % - ICP-OES,10.1016/j.micromeso.2021.111028,table,4
+Truth,HWS-1_0/1,,0.34 cm³/g,0.11 cm³/g - t-plot,0.23 cm³/g,,,379 m²/g - BET,92 m²/g,,,,0.14 wt% - ICP-OES,10.1016/j.micromeso.2021.111028,real,4
+Single-Head,HWS-1_0/1,,0.34 cm³/g - single-pointed,0.11 cm³/g - t-plot,0.23 cm³/g - calculated,,,379 m²/g - Brunnauer-Emmet-Teller,,,,,0.14 wt %,10.1016/j.micromeso.2021.111028,flat_table,4
+String,HWS-1_0/1,,0.34 cm³/g,0.11 cm³/g - t-plot,0.23 cm³/g,,,379 m²/g,,,,,0.14 wt. %,10.1016/j.micromeso.2021.111028,string,4
+Full-Table,HWS-1_0/1,,0.34 cm³/g - Single-pointed total pore volume at p/p 0 of 0.95,0.11 cm³/g - t-plot method,0.23 cm³/g,,,379 m2/g - Brunnauer-Emmet-Teller method,92 m2/g - t-plot method,,,,0.14 wt % - ICP-OES,10.1016/j.micromeso.2021.111028,table,4
+Truth,HWS-1_1/1,,0.38 cm³/g,0.12 cm³/g - t-plot,0.26 cm³/g,,,395 m²/g - BET,92 m²/g,,,,0.12 wt% - ICP-OES,10.1016/j.micromeso.2021.111028,real,4
+Single-Head,HWS-1_1/1,,0.38 cm³/g - single-pointed,0.12 cm³/g - t-plot,0.26 cm³/g - calculated,,,395 m²/g - Brunnauer-Emmet-Teller,,,,,0.12 wt %,10.1016/j.micromeso.2021.111028,flat_table,4
+String,HWS-1_1/1,,,0.12 cm³/g - t-plot,,,,395 m²/g,,,,,0.12 wt. %,10.1016/j.micromeso.2021.111028,string,4
+Full-Table,HWS-1_1/1,,0.38 cm³/g - Single-pointed total pore volume at p/p 0 of 0.95,0.12 cm³/g - t-plot method,0.26 cm³/g,,,395 m2/g - Brunnauer-Emmet-Teller method,92 m2/g - t-plot method,,,,0.12 wt % - ICP-OES,10.1016/j.micromeso.2021.111028,table,4
+Truth,HWS-1_1/2,,0.34 cm³/g,0.12 cm³/g - t-plot,0.22 cm³/g,,,385 m²/g - BET,91 m²/g,,,,0.13 wt% - ICP-OES,10.1016/j.micromeso.2021.111028,real,4
+Single-Head,HWS-1_1/2,,0.34 cm³/g - single-pointed,0.12 cm³/g - t-plot,0.22 cm³/g - calculated,,,385 m²/g - Brunnauer-Emmet-Teller,,,,,0.13 wt %,10.1016/j.micromeso.2021.111028,flat_table,4
+String,HWS-1_1/2,,,0.12 cm³/g - t-plot,,,,385 m²/g,,,,,0.13 wt. %,10.1016/j.micromeso.2021.111028,string,4
+Full-Table,HWS-1_1/2,,0.34 cm³/g - Single-pointed total pore volume at p/p 0 of 0.95,0.12 cm³/g - t-plot method,0.22 cm³/g,,,385 m2/g - Brunnauer-Emmet-Teller method,91 m2/g - t-plot method,,,,0.13 wt % - ICP-OES,10.1016/j.micromeso.2021.111028,table,4
+Truth,HWS-1_2/1,,0.40 cm³/g,0.12 cm³/g - t-plot,0.28 cm³/g,,,390 m²/g - BET,90 m²/g,,,,0.05 wt% - ICP-OES,10.1016/j.micromeso.2021.111028,real,4
+Single-Head,HWS-1_2/1,,0.40 cm³/g - single-pointed,0.12 cm³/g - t-plot,0.28 cm³/g - calculated,,,390 m²/g - Brunnauer-Emmet-Teller,,,,,0.05 wt %,10.1016/j.micromeso.2021.111028,flat_table,4
+String,HWS-1_2/1,,,0.12 cm³/g - t-plot,,,,390 m²/g,,,,,0.05 wt. %,10.1016/j.micromeso.2021.111028,string,4
+Full-Table,HWS-1_2/1,,0.40 cm³/g - Single-pointed total pore volume at p/p 0 of 0.95,0.12 cm³/g - t-plot method,0.28 cm³/g,,,390 m2/g - Brunnauer-Emmet-Teller method,90 m2/g - t-plot method,,,,0.05 wt % - ICP-OES,10.1016/j.micromeso.2021.111028,table,4

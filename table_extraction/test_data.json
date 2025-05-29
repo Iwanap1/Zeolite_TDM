@@ -166,24 +166,24 @@
             {
                 "sample": "MBeta",
                 "S_BET": "550 m²/g",
-                "S_Micro": "345 m²/g",
-                "S_Meso": "205 m²/g",
-                "V_Micro": "0.18 cm³/g",
-                "V_Meso": "0.24 cm³/g",
+                "S_micro": "345 m²/g",
+                "S_meso": "205 m²/g",
+                "V_micro": "0.18 cm³/g",
+                "V_meso": "0.24 cm³/g",
                 "V_total": "0.42 cm³/g",
-                "D_Meso": "5.20 nm",
-                "D_Micro": "0.58 nm"
+                "D_meso": "5.20 nm",
+                "D_micro": "0.58 nm"
             },
             {
                 "sample": "Beta",
                 "S_BET": "475 m²/g",
-                "S_Micro": "356 m²/g",
-                "S_Meso": "119 m²/g",
-                "V_Micro": "0.22 cm³/g",
-                "V_Meso": "0.05 cm³/g",
+                "S_micro": "356 m²/g",
+                "S_meso": "119 m²/g",
+                "V_micro": "0.22 cm³/g",
+                "V_meso": "0.05 cm³/g",
                 "V_total": "0.27 cm³/g",
-                "D_Meso": "–",
-                "D_Micro": "0.55 nm"
+                "D_meso": "–",
+                "D_micro": "0.55 nm"
             }
         ]
     },
